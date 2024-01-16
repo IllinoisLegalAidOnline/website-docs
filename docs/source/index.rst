@@ -12,5 +12,8 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+  design_guide
+  people
+
+
+
