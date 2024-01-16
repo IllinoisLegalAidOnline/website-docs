@@ -11,9 +11,27 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 1
 
-  design_guide
-  people
+   design_guide
+   people
+   legal_content
+   tmgmt
+   get_legal_help
+   next_step_flows
+   jobs
+   events
+   about_ilao
+   navigation
+   site_search
+   configuration_tools
+   api
+   sms
+   data_analytics
+   other_features
+
+
+
 
 
 
