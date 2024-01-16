@@ -1,0 +1,578 @@
+{
+  "name": "Being a victim of domestic violence",
+  "description": "Legal problem of being a victim of domestic violence.",
+  "identifier": "https://www.illinoislegalaid.org/legal-problems/dv",
+  "legalCode": [{
+    "codeValue": "FA-07-00-00-00",
+    "codingSystem": "NSMI V2"
+  }],
+  "lifeAreaAffected": [
+    "Family"
+  ],
+  "possibleSolution": [
+    {
+      "name": "Order of protection",
+      "alternateName": "Restraining order",
+      "description": "An Order of Protection is a court order that helps someone who is being abused. It stops the abuser from further abusing the victim.",
+      "identifier": "URL",
+      "url": "website url",
+      "solutionType": "Court solution",
+      "legalFormsNeeded": [
+        {
+          "formName": "Petition for Order of Protection",
+          "filledOutWith": [
+            {
+              "name": "Order of Protection",
+              "url": "https://www.illinoislegalaid.org/legal-information/order-protection",
+              "formPrepProgramType": "HotDocs"
+            }
+          ]
+        },
+        {
+          "formName": "Emergency Order of Protection",
+          "filledOutWith": [
+            {
+              "name": "Order of Protection",
+              "url": "https://www.illinoislegalaid.org/legal-information/order-protection",
+              "formPrepProgramType": "HotDocs"
+            }
+          ]
+        },
+        {
+          "formName": "Order of Protection",
+          "filledOutWith": [
+            {
+              "name": "Order of Protection",
+              "url": "https://www.illinoislegalaid.org/legal-information/order-protection",
+              "formPrepProgramType": "HotDocs"
+            }
+          ]
+        },
+        {
+          "formName": "Summons (Protective Orders)",
+          "filledOutWith": [
+            {
+              "name": "Order of Protection",
+              "url": "https://www.illinoislegalaid.org/legal-information/order-protection",
+              "formPrepProgramType": "HotDocs"
+            }
+          ]
+        },
+        {
+          "formName": "Additional Incidents of Abuse",
+          "filledOutWith": [
+            {
+              "name": "Order of Protection",
+              "url": "https://www.illinoislegalaid.org/legal-information/order-protection",
+              "formPrepProgramType": "HotDocs"
+            }
+          ]
+        },
+        {
+          "formName": "Additional Case Information",
+          "filledOutWith": [
+            {
+              "name": "Order of Protection",
+              "url": "https://www.illinoislegalaid.org/legal-information/order-protection",
+              "formPrepProgramType": "HotDocs"
+            },
+            { "name": "Additional Case Information Report",
+              "url": "AIOC link",
+              "formPrepProgramType": "PDF"
+            }
+          ]
+
+        },
+        {
+          "formName": "Confidential Name & Location of the School or Daycare",
+          "filledOutWith": [
+            {
+              "name": "Order of Protection",
+              "url": "https://www.illinoislegalaid.org/legal-information/order-protection",
+              "formPrepProgramType": "HotDocs"
+            }
+          ]
+        },
+        {
+          "formName": "Affidavit of Parenting Time Supervisor",
+          "filledOutWith": [
+            {
+              "name": "Order of Protection",
+              "url": "https://www.illinoislegalaid.org/legal-information/order-protection",
+              "formPrepProgramType": "HotDocs"
+            }
+          ]
+        }
+      ],
+      "informationNeeded": [
+        "Petitioner's address",
+        "Petitioner's alternate address for safety (optional)",
+        "Respondent's address",
+        "Physical description of Respondent",
+        "Respondent's employer",
+        "Details about any other Orders of Protection or other court cases involving the Petitioner or the Respondent.",
+        "Details about the abuse and when it took place.",
+        "Details about personal property that Petitioner wants back."
+      ],
+      "legalDifficulty": "Easy",
+      "estimatedTimeToComplete": "5W",
+      "jurisdiction": [
+        {
+            "administrativeArea": "State",
+            "locality": [
+              "Illinois"
+            ]
+        }
+      ],
+      "eligibilityRules": [
+        {
+          "body": [
+            "One of the following must be true:"
+          ],
+          "list": [
+            {
+              "itemListOrder": "Ascending",
+              "itemListElements": [
+                {
+                  "item": "Petitioner lives in Illinois",
+                  "position": 1
+                },
+                {
+                  "item": "Abuse happened in Illinois, or",
+                  "position": 2
+                },
+                {
+                  "item": "Petitioner is staying in Illinois to avoid abuse",
+                  "position": 3
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "body": [
+            "There must have been abuse by the Respondent. Abuse includes physical abuse, harassment, intimidation of a dependent, interference with personal liberty, and willful deprivation."
+          ]
+        },
+        {
+          "body": [
+            "The abuse must have been against a family or household member. This includes spouses, former spouses, parents, children, stepchildren, people in a common dwelling, people with a child in common, people who share a blood relationship through a child, people with a dating or engagement relationship, people with disability and their assistants, and caregivers."
+          ]
+        },
+        {
+          "body": [
+            "The person filing the petition must be:"
+          ],
+          "list": [
+            {
+              "itemListOrder": "Ascending",
+              "itemListElements": [
+                {
+                  "item": "the person being abused,",
+                  "position": 1
+                },
+                {
+                  "item": "filing on behalf of a minor or a person with a disability who can't file themselves, or",
+                  "position": 2
+                },
+                {
+                  "item": "filing on behalf of a person with a disability who has been exploited or neglected",
+                  "position": 3
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "helpfulOrganizations": [
+        {
+          "name": "Illinois Domestic Violence Helpline",
+          "description": "A hotline open 24/7 for people in Illinois who need help with domestic violence.",
+          "contact": {
+            "contactType": [
+              "phone"
+            ],
+            "telephone": "(877) 863-6338"
+          },
+          "areaServed": [
+            {
+              "administrativeArea": "County",
+              "locality": [
+                "Kane","Lake","Will"
+              ]
+            },
+            {
+              "administrativeArea": "Postal code",
+              "locality": [
+                "60505","60506"
+              ]
+            }
+
+          ]
+        }
+
+      ],
+      "howTos": [
+        {
+          "name": "Getting an order of protection",
+          "description": "An Order of Protection can help protect you or a loved one from abuse. This article explains how to get one",
+          "estimatedCost": [
+            {
+              "currency": "USD",
+              "amount": 0
+            }
+          ],
+          "prepTime": "PT1H",
+          "performTime": "P2W",
+          "totalTime": "P2WT1H",
+          "stepSections": [
+            {
+              "position": 1,
+              "steps": [
+                {
+                  "name": "Make sure you are safe",
+                  "position": 1,
+                  "howToDirections": [
+                    {
+                      "position": 1,
+                      "direction": "Domestic violence victims are most likely to be attacked when they leave the abuser and/or when they seek legal help. A safety plan can increase your safety and prepare you in advance for violence that may happen in the future.",
+                      "referenceUrls": [
+                        "https://www.illinoislegalaid.org/node/30281"
+                      ]
+                    }
+                  ],
+                  "howToTips": [
+                    {
+                      "position": 2,
+                      "tip": "You don't have control over your partner's violence, but you do have a choice about how to respond, and how best to get you and your loved ones to safety."
+                    }
+                  ]
+                },
+                {
+                  "name": "Look for free legal help",
+                  "position": 2,
+                  "howToDirections": [
+                    {
+                      "position": 1,
+                      "direction": "You are not alone. There are several Domestic Violence Agencies throughout the state that can help you through this process.",
+                      "directionWithMarkup": "You are not alone. There are several <a href=\"http://www.dhs.state.il.us/page.aspx?item=31886\">Domestic Violence Agencies</a> throughout the state that can help you through this process.",
+                      "referenceUrls": [
+                        "http://www.dhs.state.il.us/page.aspx?item=31886"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Fill out forms",
+                  "position": 3,
+                  "howToDirections": [
+                    {
+                      "position": 1,
+                      "direction": "You will need to fill out forms to file with the court. This includes a Petition, an Emergency Order of Protection, and Plenary Order of Protection, and a Summons."
+                    },
+                    {
+                      "position": 3,
+                      "direction": "Your petition tells the judge what you are asking for and why. You must write about the abuse you experienced. Include as many details that you can remember. The judge will use the information in your petition to decide whether to give you the order. Include in the description of the abuse: what the abuser did and said, the dates and time of day of the abuse, where the abuse happened, who saw or heard the abuse, if you were hurt by the abuse, if the police were called, how the abuse made you feel, and if there was anything that stopped you from coming to court sooner. Make sure to include details about what has happened most recently that made you feel like you need an order."
+                    }
+                  ],
+                  "howToTips": [
+                    {
+                      "position": 2,
+                      "tip": "You can use our Order of Protection program to help you fill out your forms.",
+                      "tipWithMarkup": "You can use our <a href=\"https://wwww.illinoislegalaid.org/node/30686/\">Order of Protection</a> program to help you fill out your forms.",
+                      "referenceUrls": [
+                        "https://wwww.illinoislegalaid.org/node/30686"
+                      ]
+                    },
+                    {
+                      "position": 4,
+                      "tip": "Yf you believe giving your home address will put you or any people you live with at a risk of abuse, you do not have to put your address on your court papers. You do have to put an address where you can receive mail. You can use a P.O. Box, work address, or the address of a family member or friend that the abuser knows."
+                    }
+                  ]
+                },
+                {
+                  "name": "File your forms with the circuit clerk",
+                  "position": 4,
+                  "howToDirections": [
+                    {
+                      "position": 1,
+                      "direction": "File the forms with the circuit clerk at the courthouse in the county where you live, where the abuser lives, or where the events happened.",
+                      "referenceUrls": [
+                        "http://illinoiscourts.gov/CircuitCourt/CircuitCourtJudges/CCC_County.asp"
+                      ]
+                    },
+                    {
+                      "position": 3,
+                      "direction": "The circuit clerk will stamp and keep the original forms. Have them stamp the extra copies of your forms. Keep a copy for your records. The clerk will tell you which judge will hear your request for an Emergency Order of Protection. The hearing will happen the same day."
+                    },
+                    {
+                      "position": 4,
+                      "direction": "The judge will hear your case for an Emergency Order without the abuser present. The judge will read your Petition for an Order of Protection. The judge may ask you questions about the abuser, about details of the abuse, and about your children. The judge will then decide if an Emergency Order is necessary. They will set a hearing date for a Plenary Order of Protection. A Plenary Order of Protection is a long-term order of protection."
+                    }
+                  ],
+                  "howToTips": [
+                    {
+                      "position": 3,
+                      "tip": "There is no fee to file your forms."
+                    }
+                  ]
+                },
+                {
+                  "name": "Get the sheriff to tell the other party about your case",
+                  "position": 5,
+                  "howToDirections": [
+                    {
+                      "position": 1,
+                      "direction": "The clerk will take the court documents to the sheriff's office, or ask you to do so."
+                    },
+                    {
+                      "position": 2,
+                      "direction": "The sheriff will give a copy of the petition and summons to the abuser. They will also give them the Emergency Order of Protection, if one was granted. The abuser must obey the order once they receive it from the sheriff. The sheriff's office will keep a copy of the order on file."
+                    }
+                  ],
+                  "howToTips": [
+                    {
+                      "position": 3,
+                      "tip": "The sheriff won't charge you to deliver a copy of your court papers to the abuser."
+                    }
+                  ]
+                },
+                {
+                  "name": "Go to the hearing",
+                  "position": 6,
+                  "howToDirections": [
+                    {
+                      "position": 1,
+                      "direction": "After you file the Order of Protection forms, you must go to a hearing. If you do not show up to the hearing, the judge may cancel the petition and you will have to start over. The judge may not be as willing to grant you a plenary order if you miss your first court date."
+                    },
+                    {
+                      "position": 2,
+                      "direction": "At your hearing, you and the abuser will be allowed to talk to the judge. You can bring witnesses or evidence to help you explain why you need a Plenary Order of Protection. Examples of evidence are medical records from an emergency room visit, or pictures showing abuse, like holes in a wall, or bruises."
+                    },
+                    {
+                      "position": 4,
+                      "direction": "If you win the hearing, the judge will enter a Plenary Order of Protection. The end date will be listed on your Order of Protection. Read the order before you leave the courthouse. If something is wrong or missing, ask the clerk to correct the order before you leave."
+                    },
+                    {
+                      "position": 5,
+                      "direction": "Make a few copies of the order, and always keep one with you. Give a copy of the order to anyone who is named in and protected by the order. You can also leave copies of the order at your workplace, home, car, neighbor, or children's school or daycare."
+                    },
+                    {
+                      "position": 6,
+                      "direction": "The court will tell the sheriff about the order, which will be posted so law enforcement agencies in Illinois know that it must be given to your abuser. If your abuser violates the order, you should call the police and make a police report. The order can only be enforced after your abuser has been notified that there is an order."
+                    }
+                  ],
+                  "howToTips": [
+                    {
+                      "position": 3,
+                      "tip": "If the abuser does not come to the hearing, the judge can still issue a plenary order or reschedule the hearing. If the judge reschedules the hearing, the judge will usually extend your emergency order. If the judge holds the hearing, the judge will extend your Order of Protection until the next court date."
+                    },
+                    {
+                      "position": 7,
+                      "tip": "If you do not have a copy of the order with you, an officer can check their computer system and see if there is an order. You should keep a copy of the order with you at all times. An abuser who disobeys an Order of Protection can be arrested and charged with a crime."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Changing or renewing an order of protection",
+          "description": "The person who asked for an Order of Protection can ask the judge to change, end, or renew it.",
+          "estimatedCost": [
+            {
+              "currency": "USD",
+              "amount": 0
+            }
+          ],
+          "prepTime": "PT30M",
+          "performTime": "P1W",
+          "totalTime": "P1WT30M",
+          "stepSections": [
+            {
+              "position": 1,
+              "steps": [
+                {
+                  "name": "Make sure you are safe",
+                  "position": 1,
+                  "howToDirections": [
+                    {
+                      "position": 1,
+                      "direction": "To change, renew, or end an Order of Protection, you will need to file some forms with the circuit clerk. This includes a Motion and a Notice of Motion. You can use our Motion program to help you fill out your forms.",
+                      "referenceUrls": [
+                        "https://www.illinoislegalaid.org/node/30971"
+                      ]
+                    }
+                  ],
+                  "howToTips": [
+                    {
+                      "position": 1,
+                      "tip": "A motion to end an order is called a Motion to Terminate. A motion to change an order is called a Motion to Modify. A motion to renew an order is called a Motion to Extend."
+                    }
+                  ]
+                },
+                {
+                  "name": "File your forms",
+                  "position": 2,
+                  "howToDirections": [
+                    {
+                      "position": 1,
+                      "direction": "Now that you have filled out your forms, file them with the appropriate circuit clerk. They will give you a hearing date.",
+                      "referenceUrls": [
+                        "http://www.illinoiscourts.gov/CircuitCourt/CircuitCourtJudges/CCC_County.asp"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Send the other party notice of the hearing",
+                  "position": 3,
+                  "howToDirections": [
+                    {
+                      "position": 1,
+                      "direction": "To give the other party notice, you must deliver stamped copies of the motion and notice of motion either personally or by certified mail, return receipt requested. If the other party has an attorney, send one copy of each form to the attorney's office."
+                    },
+                    {
+                      "position": 2,
+                      "direction": "Keep the remaining copies for your files and bring them with you when you return to court. You must also bring a Proof of Delivery form saying how you gave the other party a copy."
+                    }
+                  ]
+                },
+                {
+                  "name": "Go to your hearing date",
+                  "position": 4,
+                  "howToDirections": [
+                    {
+                      "position": 1,
+                      "direction": "Go to court on the date and time assigned to you by the clerk. Bring an extra copy of your motion and notice of motion in case the judge needs one. Check in with the clerk in your assigned courtroom and wait for your name to be called."
+                    },
+                    {
+                      "position": 2,
+                      "direction": "Usually, the judge will first hear oral arguments in support of your motion. If you filed the motion, you will get the first chance to tell the judge why you are in court and what you want to see happen in your case. Then the other side will get a turn to tell the judge if they disagree or agree and why. You may be given the opportunity to say the last word."
+                    },
+                    {
+                      "position": 3,
+                      "direction": "After hearing from both sides, the judge will issue an order granting or denying the motion. Make sure you get copies of this order from the courtroom clerk. Bring the order to the circuit clerk's office to be stamped and filed. If the other side did not appear at the hearing, send a copy of the order to them."
+                    }
+                  ],
+                  "howToTips": [
+                    {
+                      "position": 4,
+                      "tip": "Make sure to keep a copy of the order in a safe place, along with your original Order of Protection. Also give a copy to anyone you gave a copy of the original to."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "result": [
+        {
+          "body": [
+            "When a judge signs an Order of Protection, it makes it illegal for the Respondent to do or not do certain things.  A judge may require the Respondent to:"
+          ],
+          "list": [
+            {
+              "itemListOrder": "Unordered",
+              "itemListElements": [
+                {
+                  "item": "Stop abusive acts,"
+                },
+                {
+                  "item": "Stay away from the victim and other people protected by the order,"
+                },
+                {
+                  "item": "Not contact the victim via telephone calls, mail, email, written notes, or third parties,"
+                },
+                {
+                  "item": "Stay away from the victim's home, school, or work,"
+                },
+                {
+                  "item": "Attend counseling,"
+                },
+                {
+                  "item": "Pay child support,"
+                },
+                {
+                  "item": "Return or stay away from property and pets, or"
+                },
+                {
+                  "item": "Move out of a home they share with the victim."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "body": [
+            "A judge can also change a person's parental responsibilities, also known as custody and visitation, in an Order of Protection."
+          ]
+        },
+        {
+          "body": [
+            "The Order of Protection protects the person who was abused. It also protects any children or dependent adults in their care. It also protects anyone living with or employed at a home or shelter where the abused family or household member lives."
+          ]
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "body": "How long does an Order of Protection last?",
+      "acceptedAnswer": {
+        "body": [
+          "An Emergency Order of Protection can last 14 to 21 days. This is what you can get on the same day you file your petition. A Plenary Order of Protection can last up to 2 years, but it can be renewed for longer. A judge will grant this only after the abuser has received notice."
+        ]
+      }
+    },
+    {
+      "body": "What if my abuser lives with me?",
+      "acceptedAnswer": {
+        "body": [
+          "If you live with your abuser, you can ask for exclusive possession of the home. The abuser will have to leave and stay away from the home. If the abuser has a legal right to be in the home, the judge will need to decide whether it is more difficult for you or the abuser to leave. The judge may ask if you have another place to stay, your abuser has another place to stay, any children live with you, both of you work, or if your home is near your workplace or your children's school. If the judge orders exclusive possession, call the police and ask that they escort you home. Tell the police officer that you have an Order of Protection and need the respondent removed from your home. The police will meet you at your home and tell the abuser they have to leave. The court can order that you or the abuser be able to go into the house without the police to get clothing, medicine, or other items you need."
+        ]
+      }
+    },
+    {
+      "body": "What if I have pets?",
+      "acceptedAnswer": {
+        "body": [
+          "You can ask a judge to grant you any animals owned by you, the abuser, or any minor child living in either household. The judge can order the abuser to stay away from the animal and to not hurt, sell, or hide the animal. You can also ask the judge to give you any property that you have a legal right to.",
+          "If you own the property together with the abuser, the judge will need to decide whether it is more difficult for you or the abuser to be without the property.  If you do not own the property, the judge will not give it to you. You can also ask the judge to order the abuser not to sell, hide, or damage any property that you own.",
+          "Remember that for any of this to happen, you must ask for it in your Petition for an Order of Protection."
+        ]
+      }
+    },
+    {
+      "body": "Can I talk to someone I have an Order of Protection against?",
+      "acceptedAnswer": {
+        "body": [
+          "You can contact the abuser you have an Order of Protection against. The order only affects actions by the abuser. It does not affect your actions.",
+          "However, such contacts may result in unintended consequences. The judge may have concerns about your reasons for getting the order and whether you really need the court's protection.",
+          "This may affect their decision to give you a longer Order of Protection, or extend the time period of your current order."
+        ]
+      }
+    }
+  ],
+  "relatedProblems": [
+    {
+    "name": "Being stalked",
+    "lastReviewed": "",
+    "lastModified": "2020-05-24T20:42Z",
+    "url": "url": "https://www.illinoislegalaid.org/node/123"
+    }
+  ]
+  "relatedResources": [
+    {
+      "name": "Domestic abuse survivor story",
+      "lastReviewed": "",
+      "lastModified": "2020-05-24T20:42Z",
+      "url": "https://www.illinoislegalaid.org/voc/domestic-abuse-sexual-assault",
+      "additionalType": "userJourney"
+    }
+  ],
+  "url": "https://www.illinoislegalaid.org",
+  "language":"en"
+}

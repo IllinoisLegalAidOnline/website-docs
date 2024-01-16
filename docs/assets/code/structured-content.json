@@ -1,0 +1,819 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "LegalProblem",
+  "description": "A representation of a legal problem",
+  "type": "object",
+  "required": [
+    "name",
+    "description",
+    "identifier",
+    "legalCode",
+    "lifeAreaAffected",
+    "possibleSolution",
+    "url",
+    "language"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the legal problem."
+    },
+    "description": {
+      "type": "string",
+      "description": "A description of the legal problem."
+    },
+    "disambiguatingDescription": {
+      "type": "string",
+      "description": "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation."
+    },
+    "identifier": {
+      "type": "string",
+      "description": "Text, UUID, or url for the legal problem"
+    },
+    "language": {
+      "type": "string",
+      "description": "ISO code for language"
+    },
+    "stage": {
+      "type": "string",
+      "description": "The stage of the legal problem, if applicable. For example, pre-filing, post-filing/pre-trial, trial, post-trial, appeals."
+    },
+    "subType": {
+      "type": "array",
+      "description": "A more specific type of the legal problem, where applicable. For example, 'being evicted from public housing' is a sub-type of the legal problem 'being evicted'",
+      "items": {
+        "type": "string"
+      }
+    },
+    "legalCode": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/LegalCode"
+      }
+
+    },
+    "lifeAreaAffected": {
+      "type": "array",
+      "description": "The area of a person's life that is affected by the legal problem.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Housing",
+          "Income",
+          "Family",
+          "Immigration status",
+          "Driving privileges",
+          "Ability to work",
+          "Last wishes",
+          "Freedom to move",
+          "Creditworthiness",
+          "Consumer rights",
+          "Health"
+        ]
+      }
+    },
+    "possibleSolution": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/LegalSolution"
+      }
+    },
+    "primaryPrevention": {
+      "$ref": "#/definitions/LegalSolution"
+    },
+    "secondaryPrevention": {
+      "$ref": "#/definitions/LegalSolution"
+    },
+    "faq": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Question"
+      }
+    },
+    "relatedResources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RelatedResource"
+      }
+    },
+    "relatedProblems": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RelatedProblem"
+      }
+    },
+    "citations": {
+      "type": "array",
+      "items": {
+        "$refs": "#/definitions/Citation"
+      }
+    },
+    "image": {
+      "type": "string",
+      "description": "url of an image associated with the problem."
+    },
+    "url": {
+      "type": "string",
+      "description": "primary url of the legal problem's source representation."
+    }
+  },
+  "definitions": {
+    "LegalCode": {
+      "type": "object",
+      "required": [
+        "codeValue",
+        "codingSystem"
+      ],
+      "properties": {
+        "codeValue": {
+          "type": "string",
+          "description": "A short textual code that uniquely identifies the value."
+        },
+        "codingSystem": {
+          "type": "string",
+          "description": "The coding system, e.g. 'ICD-10'."
+        }
+      }
+    },
+    "LegalSolution": {
+      "type": "object",
+      "required": [
+        "name",
+        "description",
+        "identifier",
+        "url",
+        "solutionType"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name or label for the solution"
+        },
+        "alternateName": {
+          "type": "string",
+          "description": "An alternate name or label for the solution"
+        },
+        "description": {
+          "type": "string",
+          "description": "A description of the solution"
+        },
+        "disambiguatingDescription": {
+          "type": "string",
+          "description": "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation."
+        },
+        "identifier": {
+          "type": "string",
+          "description": "Text, UUID, or url for the legal solution"
+        },
+        "url": {
+          "type": "string",
+          "description": "URL of the solution."
+        },
+        "solutionType": {
+          "type": "string",
+          "enum": [
+            "Court solution",
+            "Agency solution",
+            "Execution solution",
+            "Communication solution",
+            "Inaction solution"
+          ]
+        },
+        "legalFormsNeeded": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LegalSolution/definitions/LegalForm"
+          }
+        },
+        "informationNeeded": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "legalDifficulty": {
+          "type": "string"
+        },
+        "estimatedTimeToComplete": {
+          "type": "string",
+          "description": "Formatted as a duration"
+        },
+        "jurisdiction": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CoverageArea"
+          }
+        },
+        "eligibilityRules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TextBlock"
+          }
+        },
+        "helpfulOrganizations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Organization"
+          }
+        },
+        "howTos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LegalSolution/definitions/HowTo"
+          }
+        },
+        "result": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TextBlock"
+          }
+        },
+         "citations": {
+      "type": "array",
+      "items": {
+        "$refs": "#/definitions/Citation"
+      }
+    },
+      },
+      "definitions": {
+        "LegalForm": {
+          "type": "object",
+          "required": [
+            "formName"
+          ],
+          "properties": {
+            "formName": {
+              "type": "string",
+              "description": "name of the form"
+            },
+            "filledOutWith": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LegalSolution/definitions/FormPrepProgram"
+              }
+            },
+            "formUse": {
+              "type": "string",
+              "description": "Explanation of how/when the form is used."
+            }
+          }
+        },
+        "FormPrepProgram": {
+          "type": "object",
+          "required": [
+            "name", "url"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string",
+              "description": "URL to the form prep program"
+            },
+            "formPrepProgramType": {
+              "type": "string",
+              "enum": [
+                "PDF",
+                "RTF",
+                "HotDocs",
+                "A2J Interview",
+                "Docassemble"
+              ]
+            }
+          }
+        },
+        "HowTo": {
+          "type": "object",
+          "required": [
+            "name",
+            "description",
+            "prepTime",
+            "performTime",
+            "totalTime",
+            "stepSections"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Title for the how to"
+            },
+            "description": {
+              "type": "string"
+            },
+            "estimatedCost": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MonetaryAmount"
+              },
+              "description": "Estimated costs to complete the how-to process"
+            },
+            "prepTime": {
+              "type": "string",
+              "description": "Estimate of preparation time.  Expressed as a duration"
+            },
+            "performTime": {
+              "type": "string",
+              "description": "Estimate of time to perform all steps in the How To.  Expressed as a duration"
+            },
+            "totalTime": {
+              "type": "string",
+              "description": "Total time to complete; Expressed as a duration."
+            },
+            "stepSections": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LegalSolution/definitions/HowTo/definitions/HowToSection"
+              }
+            },
+            "supply": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Things needed to complete the how-to"
+            },
+            "tool": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tools needed to complete the how-to"
+            },
+            "yield": {
+              "type": "string"
+            }
+          },
+          "definitions": {
+            "HowToSection": {
+              "type": "object",
+              "required": [
+                "position",
+                "steps"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Title for the step section"
+                },
+                "position": {
+                  "type": "number"
+                },
+                "steps": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/LegalSolution/definitions/HowTo/definitions/HowToStep"
+                  }
+                }
+              }
+            },
+            "HowToStep": {
+              "type": "object",
+              "required": [
+                "name",
+                "position"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Heading/name for the step"
+                },
+                "position": {
+                  "type": "integer",
+                  "description": "The placement order of the step"
+                },
+                "howToDirections": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/LegalSolution/definitions/HowTo/definitions/HowToDirection"
+                  }
+                },
+                "howToTips": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/LegalSolution/definitions/HowTo/definitions/HowToTip"
+                  }
+                }
+              }
+            },
+            "HowToDirection": {
+              "type": "object",
+              "required": [
+                "position",
+                "direction"
+              ],
+              "properties": {
+                "position": {
+                  "type": "integer",
+                  "description": "The placement order of the direction"
+                },
+                "direction": {
+                  "type": "string"
+                },
+                "directionWithMarkup": {
+                  "type": "string"
+                },
+                "referenceUrls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "individual urls referenced from the direction"
+                  }
+                }
+              }
+            },
+            "HowToTip": {
+              "type": "object",
+              "required": [
+                "position",
+                "tip"
+              ],
+              "properties": {
+                "position": {
+                  "type": "integer",
+                  "description": "The placement order of the direction"
+                },
+                "tip": {
+                  "type": "string"
+                },
+                "tipWithMarkup": {
+                  "type": "string"
+                },
+                "referenceUrls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "individual urls referenced from the direction"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Question": {
+      "type": "object",
+      "required": [
+        "body",
+        "acceptedAnswer"
+      ],
+      "properties": {
+        "body": {
+          "type": "string",
+          "description": "Text of the question"
+        },
+        "acceptedAnswer": {
+          "$ref": "#/definitions/Question/definitions/Answer"
+        },
+        "suggestedAnswer": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Question/definitions/Answer"
+          }
+        }
+      },
+      "definitions": {
+        "Answer": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "$ref": "#/definitions/TextBlock"
+            },
+            "answerExplanation": {
+              "$ref": "#/definitions/TextBlock"
+            }
+          }
+        }
+      }
+    },
+    "RelatedResource": {
+      "type": "object",
+      "required": [
+        "name",
+        "lastModified"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "name of the resource"
+        },
+        "lastReviewed": {
+          "type": "string",
+          "description": "ISO 8601 date; when resource was last reviewed"
+        },
+        "lastModified": {
+          "type": "string",
+          "description": "ISO 8610 date; when resource was last modified"
+        },
+        "url": {
+          "type": "string",
+          "description": "URL for the related resource"
+        },
+        "additionalType": {
+          "type": "string",
+          "description": "Type of resource",
+          "enum": [
+            "userJourney",
+            "video",
+            "flow chart",
+            "blog post",
+            "article"
+          ]
+        }
+      }
+    },
+     "RelatedProblem": {
+      "type": "object",
+      "required": [
+        "name",
+        "lastModified"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "name of the problem"
+        },
+        "lastReviewed": {
+          "type": "string",
+          "description": "ISO 8601 date; when problem was last reviewed"
+        },
+        "lastModified": {
+          "type": "string",
+          "description": "ISO 8610 date; when problem was last modified"
+        },
+        "url": {
+          "type": "string",
+          "description": "URL for the related problem"
+        },
+      }
+    },
+    "Citation": {
+      "type": "object",
+      "required": [
+        "name"],
+      "properties": {
+        "name": {
+           "type": "string",
+          "description": "name of the problem"
+        },
+        "url": {
+         "type": "string",
+          "description": "URL for the citation"
+        },
+      }  
+        
+    },
+    "CoverageArea": {
+      "type": "object",
+      "properties": {
+        "administrativeArea": {
+          "type": "string",
+          "enum": [
+            "Country",
+            "State",
+            "County",
+            "City",
+            "Postal code"
+          ]
+        },
+        "locality": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    "PostalAddress": {
+      "type": "object",
+      "properties": {
+        "addressCountry": {
+          "type": "string"
+        },
+        "addressLocality": {
+          "type": "string",
+          "description": "city"
+        },
+        "addressRegion": {
+          "type": "string",
+          "description": "state"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "streetAddress": {
+          "type": "string"
+        }
+      }
+    },
+    "TextBlock": {
+      "type": "object",
+      "required": [
+        "body"
+      ],
+      "description": "An object to structure blocks of text.  Each block should have one or more body elements and/or one or more lists optionally with a heading.",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "description": "A heading associated with the text block; in systems this should be delivered ahead of the body."
+        },
+        "body": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ],
+          "description": "One or more chunks of text within the block in plain text.  Items may be rendered individually depending on platform."
+        },
+        "bodyWithMarkup": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ],
+          "description": "One or more chunks of text within the block in HTML text.  Items may be rendered individually depending on platform."
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ItemList"
+          }
+        }
+      }
+    },
+    "ItemList": {
+      "type": "object",
+      "required": [
+        "itemListOrder",
+        "itemListElements"
+      ],
+      "description": "Structured markup for lists.",
+      "properties": {
+        "itemListOrder": {
+          "type": "string",
+          "enum": [
+            "Ascending",
+            "Descending",
+            "Unordered"
+          ],
+          "description": "Indicates whether the list should be rendered as an ascending or descending ordered list or as an unordered list."
+        },
+        "itemListElements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ItemListElement"
+          }
+        }
+      }
+    },
+    "ItemListElement": {
+      "type": "object",
+      "required": [
+        "item"
+      ],
+      "properties": {
+        "item": {
+          "type": "string",
+          "description": "List element, in plain text"
+        },
+        "itemWithMarkup": {
+          "type": "string",
+          "description": "List element, with accompanying HTML markup other than list element markup."
+        },
+        "position": {
+          "type": "number"
+        }
+      }
+    },
+    "MonetaryAmount": {
+      "type": "object",
+      "required": [
+        "currency",
+        "amount"
+      ],
+      "properties": {
+        "currency": {
+          "type": "string",
+          "description": "The currency the monetary amount is represented in."
+        },
+        "amount": {
+          "type": "number",
+          "description": "the amount"
+        }
+      }
+    },
+    "Organization": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the organization"
+        },
+        "description": {
+          "type": "string"
+        },
+        "address": {
+          "$ref": "#/definitions/PostalAddress"
+        },
+        "areaServed": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CoverageArea"
+          }
+        },
+        "email": {
+          "type": "string"
+        },
+        "telephone": {
+          "type": "string"
+        },
+        "contact": {
+          "$ref": "#/definitions/Organization/definitions/ContactPoint"
+        }
+      },
+      "definitions": {
+        "ContactPoint": {
+          "type": "object",
+          "required": [
+            "contactType"
+          ],
+          "properties": {
+            "areaServed": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CoverageArea"
+              }
+            },
+            "contactType": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "email": {
+              "type": "string"
+            },
+            "telephone": {
+              "type": "string"
+            },
+            "hoursAvailable": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Organization/definitions/HoursOfOperation"
+              }
+            },
+            "productSupported": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ],
+              "description": "Type of service or product offered through the organization."
+            }
+          }
+        },
+        "HoursOfOperation": {
+          "type": "object",
+          "required": [
+            "dayOfWeek",
+            "opens"
+          ],
+          "properties": {
+            "closes": {
+              "type": "string",
+              "description": "The closing hour of the place or service on the given day(s) of the week "
+            },
+            "dayOfWeek": {
+              "type": "string",
+              "enum": [
+                "Friday",
+                "Monday",
+                "PublicHolidays",
+                "Saturday",
+                "Sunday",
+                "Thursday",
+                "Tuesday",
+                "Wednesday"
+              ]
+            },
+            "opens": {
+              "type": "string",
+              "description": "The opening hour of the place or service on the given day(s) of the week "
+            }
+          }
+        }
+      }
+    }
+  }
+}
