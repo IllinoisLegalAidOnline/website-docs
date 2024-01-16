@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Illinois Legal Aid Online Documentation'
+copyright = '2024, Illinois Legal Aid Online'
+author = 'ILAO'
 
 release = '0.1'
 version = '0.1.0'
