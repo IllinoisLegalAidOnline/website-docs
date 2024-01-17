@@ -13,6 +13,7 @@ Contents
 .. toctree::
    :maxdepth: 1
 
+   creating_docs_in_github
    design_guide
    people
    legal_content

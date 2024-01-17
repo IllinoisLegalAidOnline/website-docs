@@ -41,7 +41,7 @@ Documentation
    glh_organization_mgmt
    glh_otis_mgmt
    glh_fast_entry
-   glh_reporting
+   otis_reports
    glh_technical
 
 

@@ -1,9 +1,6 @@
-Template for the Read the Docs tutorial
-=======================================
+Illinois Legal Aid Online Documentation
+==========================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+This version is accurate as of our Drupal 10 upgrade, January 2024.
 
-Read the tutorial here:
 
-https://docs.readthedocs.io/en/stable/tutorial/
