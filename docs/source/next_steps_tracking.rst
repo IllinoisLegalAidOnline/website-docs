@@ -1,7 +1,7 @@
 ================================
-Next Steps Message Logging
+Next Steps Tracking System
 ================================
 
-We log each message sent.
+Each subscriber is stored with a unique id. Each message sent and received is also logged.
 
 
