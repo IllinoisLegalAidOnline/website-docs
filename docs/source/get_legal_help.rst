@@ -21,12 +21,12 @@ Guiding Principles
 
 Get Legal Help was built and maintained with the following principles in mind:
 
-* Legal aid is not available for everyone in every location, for every legal problem. Get Legal Help exists to help users find available resources; that includes legal information and forms when appropriate
+* Legal aid is not available for everyone in every location, for every legal problem. Get Legal Help exists to help users find available resources; that includes legal information and forms when appropriate.
 * Get Legal Help should be transparant about what help is available for a given individual.
-* Maintaining accurate case acceptance and organizational information should be easy to maintain by outside partners and ILAO staff
-* The process of determining what help is available should be easy and provide a positive user experience
-* Spanish and Polish language users should have the same experience with the system as English speakers/readers
-* Get Legal Help should be available on the web and over text messaging
+* Maintaining accurate case acceptance and organizational information should be easy to maintain by outside partners and ILAO staff.
+* The process of determining what help is available should be easy and provide a positive user experience.
+* Spanish and Polish language users should have the same experience with the system as English speakers/readers.
+* Get Legal Help should be available on the web and over text messaging.
 * Where appropriate, the system should support an ongoing relationship with individuals so that they can retrieve their past applications and referral matches.
 * Sufficient data should be collected to continually improve the referrals provided.
 
