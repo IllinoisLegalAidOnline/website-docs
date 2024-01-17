@@ -17,13 +17,13 @@ NextStep flows are maintained alongside OTIS and in consultation with our OTIS p
 .. image:: ../assets/next-step-flow-example.png
 
 Phase 1 (2023 - 2024)
-====================
+======================
 Phase 1, funded under a Technology Initiative Grant awarded to Legal Aid Chicago, NextSteps were created and launched as a plug-in to LegalServer instances of our OTIS partners building on our initial structured content model.
 
 During the phase, the tool is only available to caseworkers at program partners. They place individuals who opt-in into the correct "last completed step" when providing limited advice or when they can't provide services. This then triggers the flow of interactive "flows" over SMS.
 
 Phase 2 (2024 - 2026)
-====================
+=======================
  Phase 2 is funded under an expansion TIG grant awarded to Legal Aid Chicago between 2024 - 2026 envisions expansion:
 
 * increasing the number of legal problems available through NextStep flows
@@ -41,4 +41,5 @@ Phase 2 (2024 - 2026)
    next_steps_signup_form
    next_steps_sms_delivery
    next_steps_tracking
+   next_steps_entity_definitions
 

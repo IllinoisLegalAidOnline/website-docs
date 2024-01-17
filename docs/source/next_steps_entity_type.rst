@@ -1,44 +1,7 @@
 ========================
-Next Steps User Entity
+NextSteps Logging
 ========================
 
-The next steps user entity is used to track users subscribed to next steps.
+The NextSteps entity is used to store subscriptions to our NextSteps flows.
 
-
-+------------------------------+----------------------------------+--------------------+
-| Property                     | Description                      |  Type              |
-+==============================+==================================+====================+
-| ID                           | Unique ID for the subscription   | Auto number        |
-+------------------------------+----------------------------------+--------------------+
-| UID                          | User ID of the subscriber; 0 if  | integer            |
-|                              | unknown                          |                    |
-+------------------------------+----------------------------------+--------------------+
-| uuid                         | Legal Server uuid, if known      | varchar            |
-+------------------------------+----------------------------------+--------------------+
-| triage_id                    | OTIS triage user id, if known    | integer            |
-+------------------------------+----------------------------------+--------------------+
-| created                      | Date entity was created          | timestamp          |
-+------------------------------+----------------------------------+--------------------+
-| changed                      | Date entity was updated          | timestamp          |
-+------------------------------+----------------------------------+--------------------+
-| source                       | Source of subscription           | varchar            |
-+------------------------------+----------------------------------+--------------------+
-| mobile_phone                 | Mobile phone number subscribed   | varchar            |
-+------------------------------+----------------------------------+--------------------+
-| email                        | Email address subscribed         | varchar            |
-+------------------------------+----------------------------------+--------------------+
-| notification_type            | SMS, mail, or web                | varchar            |
-+------------------------------+----------------------------------+--------------------+
-| is_otis_case                 | 1 or 0                           | boolean            |
-+------------------------------+----------------------------------+--------------------+
-| zipcode                      | User's zip code                  | varchar            |
-+------------------------------+----------------------------------+--------------------+
-| preferred_language           | Language the user wants messages | varchar            |
-+------------------------------+----------------------------------+--------------------+
-| flow_id                      | NID of the flow subscribed to    | integer            |
-+------------------------------+----------------------------------+--------------------+
-| initial_step                 | NID of the flow's first step     | integer            |
-+------------------------------+----------------------------------+--------------------+
-
-
-
+..note:: Under active development

@@ -1,6 +1,6 @@
-==========================
-Legal Server Signup
-==========================
+=========================================
+Subscribing individials via LegalServer
+=========================================
 
 
 The Legal Server implementation anticipates having 2 pieces:

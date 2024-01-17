@@ -1,13 +1,14 @@
-===============================
-Next Steps Flow Content Type
-===============================
 
-The Next Steps Flow content type is where ILAO staff can create a specific flow for a specific Legal How-to. This can then be used to send scheduled follow-up messages.
+=======================================
+Authoring NextStep Flows
+=======================================
+
+The Next Steps Flow content type is where ILAO staff can create a specific flow for a specific process. This is then used to send scheduled follow-up messages.
 
 
 A Next Steps Flow must be attached to a single Legal How-to. Once the Legal How-to is selected, a staff member can create messages attached to 1 or more steps associated with that Legal How-to.
 
-.. note:: Legacy "How-to" content can not be used for this. Only COPE-based Legal How-to's can be used.
+.. note:: Legacy "How-to" content can not be used for this. Only COPE-based Legal How-to's can be used. The system supports both published and unpublished Legal How-tos and Legal Steps while ILAO works through our legal information redesign process.
 
 Creating a Next Steps Flow
 ===============================
@@ -15,7 +16,7 @@ Creating a Next Steps Flow
 For each next step flow, you must:
 
 * Give the flow a title. This title should reflect the how-to; it will be displayed in widgets partners use to subscribe people to NextSteps.
-* Tie the flow to an LSC problem code. This is required to align with OTIS partners' systems
+* Tie the flow to an LSC problem code. This is required to align with OTIS partners' systems and allow them to easily filter available flows.
 * Attach the appropriate Legal How-to
 
 .. image:: ../assets/nextsteps_header.png
@@ -24,8 +25,6 @@ Create the first message
 ===========================
 
 Once the Legal How-to is attached, the Step dropdown will populate with the list of steps. Always start the flow with the first step.
-
-.. warning:: The component is triggered when the system is told the user has BEEN ADIVISED TO COMPLETE the step.
 
 To create the message:
 
@@ -37,6 +36,8 @@ To create the message:
   * Send, no reply - this tells the system to ignore any replies as we don't expect them. This is typically used only on the last step.
 
 .. image:: ../assets/next-step-component.png
+
+.. note:: This is the message a subscriber will recieve when they are ioitially placed in the step.
 
 Add replies
 ================
@@ -73,6 +74,15 @@ Additional Steps
 
 Repeat the "Create the first message" and "Add Replies" for each step in the flow. When you add the last step, set the Is last step to Yes.
 
+Maximum retries
+=================
+Each step with a send with reply option must have a maximum number of times to retry so we are not continually leaving flows open and sending messages to individuals.
+
+In the Example case:
+
+* If a user replies No to Pre-appeal conference message, the question will resend in 7 days. If the user replies No again, it will send one more time in 7 days. If the user still replies No, it will stop sending further messages.
+
+.. note:: If someone replies "Stop" to a text message, they will be unsubscribed and will not receive additional messagss.
 
 
 Example Flow
@@ -88,89 +98,8 @@ For example, in the above example, the step "Pre-appeal conference for TANF appe
 * 7 days after an individual receives the File an appeal for TANF benefits and replies Yes
 * 7 days after an individual recieves the Pre-appeal conference for TANF appeal and replies No, up to two times
 
-Maximum retries
-=================
-Each step with a send with reply option must have a maximum number of times to retry so we are not continually leaving flows open and sending messages to individuals.
-
-In the Example case:
-
-* If a user replies No to Pre-appeal conference message, the question will resend in 7 days. If the user replies No again, it will send one more time in 7 days. If the user still replies No, it will stop sending further messages.
-
-.. note:: If someone replies "Stop" to a text message, they will be unsubscribed and will not receive additional messagss.
 
 
-
-Technical Specifications
-===========================
-
-Next Flow Content Type
-------------------------------
-
-+------------------------------+----------------------------------+--------------------+
-| Field                        | Description                      |  Type              |
-+==============================+==================================+====================+
-| Title                        | Title for the flow               | Title              |
-+------------------------------+----------------------------------+--------------------+
-| Legal How-to                 | Single select for the associated | Entity reference   |
-|                              | legal how-to content type        |                    |
-+------------------------------+----------------------------------+--------------------+
-| Next Step Component          | Container for a specific next    | Paragraphs;        |
-|                              | step                             | unlimited          |
-+------------------------------+----------------------------------+--------------------+
-
-Next Step Component
------------------------
-
-The next step component contains the triggering step, initial message and handling for replies.
-
-
-+------------------------------+----------------------------------+--------------------+
-| Field                        | Description                      |  Type              |
-+==============================+==================================+====================+
-| Step                         | Single select for the associated | Entity reference   |
-|                              | steps in the how-to              |                    |
-+------------------------------+----------------------------------+--------------------+
-| Initial message              | Message to send when triggered   | Paired Markup      |
-|                              |                                  | unlimited          |
-+------------------------------+----------------------------------+--------------------+
-| Message type                 | Single select - Message and wait | Select             |
-|                              | for reply OR message             |                    |
-+------------------------------+----------------------------------+--------------------+
-| Replies                      | Container for processing replies | Paragraphs;        |
-|                              |                                  | unlimited          |
-+------------------------------+----------------------------------+--------------------+
-
-Replies
-------------
-
-Replies live within the Next Step Component and are designed to store information for processing a reply and determining next steps.
-
-
-+------------------------------+----------------------------------+--------------------+
-| Field                        | Description                      |  Type              |
-+==============================+==================================+====================+
-| When the user replies        | Single select                    | Term reference     |
-+------------------------------+----------------------------------+--------------------+
-| Send this message            | Text of follow up                | Paired markup      |
-+------------------------------+----------------------------------+--------------------+
-| Send message                 | Single select (immediately or    | List               |
-|                              | time from trigger or no reply)   |                    |
-+------------------------------+----------------------------------+--------------------+
-| Time from reply              | Number of days to send when      | Number             |
-|                              | Send message is set time         |                    |
-+------------------------------+----------------------------------+--------------------+
-| Last step                    | Indicate if this is the last     | Boolean            |
-|                              | or not                           |                    |
-+------------------------------+----------------------------------+--------------------+
-| Next follow up step          | Single select of availalbe       | Entity reference   |
-|                              | steps                            |                    |
-+------------------------------+----------------------------------+--------------------+
-| Send follow-up step in       | Number of days to send follow    | Number             |
-|                              | up step                          |                    |
-+------------------------------+----------------------------------+--------------------+
-| Maximum re-sends             | Maximum times we should send     | Number             |
-|                              | a specific initial message       |                    |
-+------------------------------+----------------------------------+--------------------+
 
 
 
