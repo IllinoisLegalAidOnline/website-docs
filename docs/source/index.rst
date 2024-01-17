@@ -1,7 +1,7 @@
 Welcome to Illinois Legal Aid Online's Documentation
 =======================================================
 
-Please visit our current `documentation <https://ilao-documentation.readthedocs.org>`. This version is in progress.
+Please visit our current `documentation <https://ilao-documentation.readthedocs.org>`_. This version is in progress.
 
 .. note::
 
