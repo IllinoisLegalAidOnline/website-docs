@@ -2,6 +2,17 @@
 NextStep Flows
 =======================
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   next_steps_interim
+   next_steps_content_type
+   next_steps_entity_type
+   next_steps_signup_form
+   next_steps_sms_delivery
+   next_steps_tracking
+
 Vision
 =============
 
@@ -16,3 +27,4 @@ Phase 2, funded under an expansion TIG grant awareded to Legal Aid Chicago betwe
 * increasing the number of legal problems available through NextStep flows
 * an expansion to include both delivery over e-mail
 * an expansion to IllinoisLegalAid.org in addition to LegalServer.
+
