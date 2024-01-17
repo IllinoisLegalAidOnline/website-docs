@@ -14,7 +14,7 @@ The NextSteps functionality does not calculate deadlines. Subscribers will need 
 
 NextStep flows are maintained alongside OTIS and in consultation with our OTIS partners. ILAO's Director of Product Innovation maintains these with input and support from the legal content team, who maintain the underlying legal information.
 
-.. image:: ../assets/next-step-flows-example.png
+.. image:: ../assets/next-step-flow-example.png
 
 Phase 1 (2023 - 2024)
 ====================
