@@ -16,7 +16,6 @@ Contents
    design_guide
    people
    legal_content
-   tmgmt
    get_legal_help
    next_step_flows
    jobs
@@ -25,6 +24,7 @@ Contents
    navigation
    site_search
    configuration_tools
+   tmgmt
    api
    sms
    data_analytics
