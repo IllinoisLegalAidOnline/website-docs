@@ -1,8 +1,8 @@
 =========================================
-Account management (for website members)
+Account dashboards (for website members)
 =========================================
 
-This section covers account management as a user.
+This section covers account management for logged in website members.
 
 Documentation
 ================
