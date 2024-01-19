@@ -11,6 +11,7 @@ Legal content authoring guide
    lc_by_format
    lc_workflows
    lc_lawtracker
+   cms_configuration
    lc_technical
 
 
