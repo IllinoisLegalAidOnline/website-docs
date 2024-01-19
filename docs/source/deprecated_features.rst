@@ -16,6 +16,13 @@ Scheduled to be deprecated
 ============================
 
 * Comments & ratings (February 2024)
+* Oudated reports (February 2024)
+
+  * Toolbox tool report
+  * Toolbox tool usage report
+  * Content page views report
+  * Comments and ratings report
+
 * Gamification features
 * Legal forms content type
 * Toolbox content type
