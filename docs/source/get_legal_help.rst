@@ -37,12 +37,13 @@ Documentation
    :maxdepth: 2
 
    glh_process_web
-   glh_process_sms
+   sms
    glh_organization_mgmt
    glh_otis_mgmt
    glh_fast_entry
    otis_reports
    glh_technical
+
 
 
 
