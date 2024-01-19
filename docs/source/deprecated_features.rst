@@ -10,10 +10,12 @@ Recently Deprecated
 * Drupal 9
 * Ckeditor 4
 * Ckeditor Lite (original track changes module; content that had tracked changes before January 16, 2024 may have some issues while reviewing in Ckeditor 5.
+* Localization tool (for showing/hiding legal content based on location)
 
 Scheduled to be deprecated
 ============================
 
+* Comments & ratings (February 2024)
 * Gamification features
 * Legal forms content type
 * Toolbox content type
