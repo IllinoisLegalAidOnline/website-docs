@@ -1,5 +1,5 @@
 ================================
-Deperecated features
+Deprecated features
 ================================
 
 This section includes features that have been recently deprecated, are scheduled to be deprecated, or are approaching end-of-life.
@@ -24,5 +24,5 @@ Approaching end-of-life (expected deprecation and removal in 2024)
 ===================================================================
 
 * Site FAQ content type
-* Structured content types 
+* Structured content types
 
