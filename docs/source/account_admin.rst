@@ -1,5 +1,11 @@
 ==========================================
 Account administration (for ILAO staff)
 ==========================================
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
-This section covers adding editing and removing users.
+   user_roles
+   user_registration
+   user_approval
+   user_reports
