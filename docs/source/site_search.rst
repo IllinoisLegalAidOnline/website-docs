@@ -1,5 +1,5 @@
 =========================
-Site Search & SEO
+Site Search
 =========================
 
 ILAO leverages Google custom site search for our global site search. With this there are a few things to be aware of:
