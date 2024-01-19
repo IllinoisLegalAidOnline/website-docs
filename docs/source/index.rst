@@ -30,6 +30,7 @@ Contents
    sms
    data_analytics
    other_features
+   deprecated_features
 
 
 
