@@ -8,3 +8,4 @@ Google Analytics and Tableau
    ga_illinois_set
    ga_full_set
    ga_legacy
+   ga_cms_integration
