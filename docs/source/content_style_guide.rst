@@ -29,29 +29,6 @@ The standard format depends on the content type.
 
 .. warning:: Many Guides do not follow this standard currently. As we work on transforming content, that should be revisited.
 
-* For DIY Legal Solutions, titles should be user-centric. Examples may include:
-
-  * I need help lowering my rent
-  * My SNAP benefits were cut
-  * Someone stole my identity
-
-* For Legal solutions/how-tos, the titles should be action oriented
-
-  * Participate in the case,
-  * File for Chapter 13 bankruptcy
-  * Create a safety plan, including someplace to go
-
-* Legal questions should be written as questions:
-
-  * What is domestic violence?
-  * How much in SNAP benefits can I get?
-
-* Legal steps should be action oriented:
-
-  * Fill out your forms,
-  * File your forms,
-  * Go to your hearing,
-  * Wait.
 
 * Easy form landing pages should be titled with the name of the packet:
 
@@ -68,8 +45,6 @@ For all content types
   * Yes: Dealing with bed bugs in Kane county
   * No: Dealing with bed bugs in Illinois
   * Yes: Illinois civil practice (IICLE)
-
-.. note:: DIY Legal Solutions and their associated legal solutions and legal how-to should replace the existing How to sub-content type.
 
 
 .. warning:: Preserving URLs when changing titles - When changing a title, uncheck the box next to "Generate automatic alias" so that the URL stays the same. This is so that our Google Analytics tracking for the page will be preserved.
@@ -99,27 +74,6 @@ Divorce basics
 * Bad: Explains the basics of divorce
 * Acceptable: Explains the basics of divorce, including requirements, timeline and fees.
 * Better: Learn about the requirements, timeline, and what happens during a divorce.
-
-DIY Legal solution: I have a cannabis arrest or conviction
-
-* Bad: Explains what to do if you have a cannabis arrest or conviction.
-* Good: Explains your options for clearing a cannabis arrest or conviction.
-* Better: Explains your options and provides step-by-step instructions for clearing a cannabis arrest or conviction.
-* Best:  Use these steps to clear a cannabis arrest or conviction.
-
-DIY Legal solution: I don't feel safe because of my partner, family member, or someone in my household
-
-* Bad: Explains what to do if you don't feel safe.
-* Good: Explains how to use an order of protection to keep yourself safe.
-* Better: Explains what domestic abuse is and the legal tools you may have to get help.
-* Also better: Understand what domestic abuse is and how the law can protect you.
-* Best: Use orders of protection to protect yourself from abuse.
-
-DIY Legal solution: I am being evicted because I did not pay the rent
-
-* Bad: Explains what to do if you are being evicted because you did not pay the rent
-* Better: From negotiating with your landlord to going to court, you have options if you are being evicted.
-
 
 End each description with a period.
 
@@ -177,7 +131,6 @@ Legal position
 ==================
 Use "Neutral" unless the content is only talking about one side in a legal proceeding. For example, if the content is telling the user how to change your name, you would set this to Plaintiff. If the content is talking about how to defend against a debt collection lawsuit, set this to Defendant (but note that if the content is talking about the other side - how to collect a judgment - it would be Plaintiff).
 
-For DIY Legal Solutions, these are almost always written with a particular side in mind and should rarely be marked neutral.
 
 Be careful to use the actual position in the case. For example, for criminal records, you are the plaintiff, because you are filing a petition to expunge. You are not the defendant (even though you were in the criminal case).
 
@@ -197,18 +150,6 @@ Jurisdiction
 ===============
 Most of our content is "All of Illinois," but if the content applies to federal law (Immigration, Bankruptcy, etc.) or only a specific locality (usually Cook County or Chicago) you can indicate that here.
 
-For structured content, there are 2 separate jurisdiction fields:
-
-* Jurisdiction is used to set the overall jurisdiction and should be set to the largest applicable area.
-* Negate jurisdiction is optional and can be used to exclude a county, city, or zip code(s) from the jurisdiction.
-* Examples:
-
-  * A solution applies to all of Illinois. It should have a jurisdiction of Illinois and negate jurisdiction removed.
-  * A legal step applies to Cook county except for the city of Chicago. It should have a jurisdiction of Cook county and a negate jurisdiction of Chicago.
-  * A legal step applies to all of Illinois except for Cook county. It should have a jurisdiction of Illinois and a negate jurisdiction of Cook county.
-
-
-.. note:: See :ref:`cms-coverage-area` for specific jurisdiction use cases (when to use create jurisdiction-specific how-tos vs jursidiction specific steps for example)
 
 ================
 Writing content
@@ -270,7 +211,7 @@ If the word/term needs a definition:
 * define it using plain language once in the content, if it is a short definition. If the word/term is used more than once in the content, make sure it is included in the glossary as we will rely on the glossary for the times it is used after it is first defined.
 * consider making it a legal question that can be linked to, if the definition needs to be more than one sentence long. For example, the definition of economic abuse is multiple sentences and includes a bulleted list and is better suited as a legal question that can be linked to in articles rather than defined multiple times in individual guides or solutions.
 
-.. note:: Glossary terms can include links to further information in the form of a legal question. For example, "Domestic violence may include economic abuse" that then links to the economic abuse legal question.
+.. note:: Glossary terms can include links to further information in the form of a legal question.
 
 .. todo:: Add reference to adding glossary terms.
 
@@ -358,8 +299,6 @@ EXAMPLE:
 
 There should only be one hierarchical level for bullet lists. A second level may be used only when absolutely necessary. (See Page Design in Content Design London's Readability Guidelines.)
 
-Bulleted and numbered lists in structured content formats
--------------------------------------------------------------
 
 
 Grammar and Usage
@@ -523,11 +462,8 @@ Citations should use Blue Book format.
 
 Citations should be used within Advanced content.
 
-Citations should be included in structured content formats.
-
 Citations are not included in basic legal content.
 
-.. note:: Regular legal content does not currently support citations. As we move to structured content, citations may be made visible to users.
 
 Examples
 ^^^^^^^^^^
