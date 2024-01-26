@@ -4,6 +4,8 @@ Tableau Workbook: GA Core data (Illinois)
 
 .. note: The key difference between this data set and the full core data set is that it is limited to Illinois and includes city as a filter.
 
+The Illinois workbook can be found on  `ILAO's Tableau cloud <https://prod-useast-b.online.tableau.com/#/site/ilaootis/workbooks/1197219?:origin=card_share_link>`_.
+
 
 Page metrics
 ==============
@@ -53,4 +55,4 @@ We've prototyped 2 maps to show page views and average engagement rate. These ar
 * City
 
 
-
+.. image:: ../assets/ga-engagement-map.png
