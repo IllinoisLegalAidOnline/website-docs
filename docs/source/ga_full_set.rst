@@ -2,6 +2,11 @@
 Google Analytics 4 primary dataset
 ====================================
 
+.. note:: Data is only available from July 1, 2024 forward and is pulled currently on a monthly basis.
+
+Data set and data cleanup
+==============================
+
 The full set data set uses the following dimensions:
 
 * country
@@ -15,7 +20,6 @@ The full set data set uses the following dimensions:
 and the following metrics:
 
 * active users
-* bounce rate
 * engagement rate
 * screen page views
 * sessions
@@ -30,6 +34,9 @@ The dataset is then run through Tableau prep builder to:
 * Create a date field of month/day/year
 * Splits source/medium into separate source and medium fields.
 * Removes hostname field
+
+
+
 
 
 
