@@ -18,7 +18,7 @@ When a piece of English legal content is updated, if the changes impact the titl
 
 .. image:: ../assets/lc-translation-outdated.png
 
-If the translation has changed, indicate the type of change made. If multiple changes were made, indicate the most significant change made. This helps the content manager prioritize translation updates.
+Indicate the type of change made. If multiple changes were made, indicate the most significant change made. This helps the content manager prioritize translation updates. If only metadata was changed, indicate that and then set the translation outdated to No if no other changes were made.
 
 If the English changes have now made another translation outdated, check "Yes" for that language. If not, select "No"
 
@@ -56,6 +56,10 @@ When the translation status is set to Completed:
 * The Mark [language] translation as outdated is emptied. Any future English edits will require reselecting Yes or No.
 * The translation status for [language] is set to "None (Up-to-date)" automatically
 * Warnings for that [language] will disappear
+
+When the translation status is set to Completed and there are no other outdated translations:
+
+* the Type of Changes on the English will reset to "None"
 
 
 Notifications
