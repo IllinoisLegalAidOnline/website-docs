@@ -4,6 +4,9 @@ Tableau Workbook: GA Core data
 
 The GA core data report can be accessed on our `tableau cloud <https://prod-useast-b.online.tableau.com/#/site/ilaootis/workbooks/1194017?:origin=card_share_link>`_.
 
+This core data set can be filtered geographically only down to a region (state) level.
+
+
 
 Page metrics
 ===============
