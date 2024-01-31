@@ -65,7 +65,7 @@ To make text as easy-to-read as possible on the web, consider the following sugg
 
 * Use left alignment for most text, and always for long blocks of text.
 
-* Provide high color contrast between text and background. Consider using an accessibility color contrast checker to guarantee high contrast. Ensure that hover states also have high contrast.
+* Provide high color contrast between text and background. Consider using an `accessibility color contrast checker <https://webaim.org/resources/contrastchecker/>`_ to guarantee high contrast. Ensure that hover states also have high contrast.
 
 * Consider limiting line lengths to no more than approximately 80 characters.
 
