@@ -9,7 +9,7 @@ The following are suggestions for best practices related to usability of website
 
 Labeling
 ========
-Strong labels and titles help a visitor determine whether a page, link, or content under a heading will have the desired information. Users typically scan titles, headings, and links first, and long bodies of text only after they have decided that doing so is likely to be worth their time. To maximize usability, use labels that provide users a good “information scent”.
+Strong labels and titles help a visitor determine whether a page, link, or content under a heading will have the desired information. Users typically scan titles, headings, and links first, and long bodies of text only after they have decided that doing so is likely to be worth their time. To maximize usability, use labels that provide users a good `information scent <https://www.nngroup.com/articles/information-scent/#:~:text=Information%20scent%20is%20a%20relative,looking%20for%20a%20facial%20cleanser.>`_.
 The best labels are familiar to users already, using language they already use in their daily lives. The best labels are visitor-oriented, not site-owner- or producer-oriented. Avoid using unfamiliar words.
 
 Headings
