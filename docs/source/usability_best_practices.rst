@@ -15,7 +15,7 @@ The best labels are familiar to users already, using language they already use i
 Headings
 ========
 
-Headings and subheadings organize the content and are important for usability and accessibility. People with limited or no vision depend on screen reading software to read aloud the text that appears on the screen. Using headings properly provides a hierarchy of content that allows users to navigate more efficiently.  
+Headings and subheadings organize the content and are important for usability and accessibility. People with limited or no vision depend on screen reading software to read aloud the text on the screen. Using headings properly provides a hierarchy of content that allows users to navigate more efficiently.  
 
 Benefits of Headings
 ====================
