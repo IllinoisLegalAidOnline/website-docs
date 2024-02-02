@@ -10,6 +10,7 @@ Design & Style Guide
    design_buttons
    design_legal_content_format_icons
    content_style_guide
+   usability_best_practices
 
 Related Documents
 ====================
