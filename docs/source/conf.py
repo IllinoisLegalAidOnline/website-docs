@@ -6,8 +6,8 @@ project = 'Illinois Legal Aid Online Documentation'
 copyright = '2024, Illinois Legal Aid Online'
 author = 'ILAO'
 
-release = 'January 2024'
-version = '10.0.0'
+release = 'February 2024'
+version = '10.0.1'
 
 # -- General configuration
 
@@ -17,7 +17,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    'sphinx.ext.todo'
+    'sphinx.ext.todo',
+    'sphinx.ext.autosectionlabel'
 ]
 
 intersphinx_mapping = {
