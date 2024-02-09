@@ -8,7 +8,7 @@ Overview
 ==========
 A NextStep flow is a single set of messages for a specific legal problem based on the process steps in a How-to. A single How-to may have one or may have multiple NextStep flows.  For example, the Being evicted how-to may support a NextStep flow specific to Cook County, one for other jurisdictions or it may have one specific to being evicted for non-payment of rent versus being evicted for lease violations.
 
-They provide essentially a time-based conversational interface for steps in our How-to content. We can link to legal content, or where available, include specific content by reference. In ending steps, we also may include a link to another process (for example, if the subscriber indicates that they were denied public benefits after appealing, we can include a link to filing a lawsuit if they want to evaluate that option)
+They provide essentially a time-based conversational interface (or Chatbot) for steps in our How-to content. We can link to legal content, or where available, include specific content by reference. In ending steps, we also may include a link to another process (for example, if the subscriber indicates that they were denied public benefits after appealing, we can include a link to filing a lawsuit if they want to evaluate that option)
 
 The NextSteps functionality does not calculate deadlines. Subscribers will need to determine for themselves if they are within the timeline to apply/appeal or take action. We may send them legal questions or steps that help them to evaluate that and then guide them to the next step.
 
@@ -24,7 +24,8 @@ During the phase, the tool is only available to caseworkers at program partners.
 
 Phase 2 (2024 - 2026)
 ------------------------
- Phase 2 is funded under an expansion TIG grant awarded to Legal Aid Chicago between 2024 - 2026 envisions expansion:
+
+Phase 2 is funded under an expansion TIG grant awarded to Legal Aid Chicago between 2024 - 2026 envisions expansion:
 
 * increasing the number of legal problems available through NextStep flows
 * an expansion to include delivery over e-mail
