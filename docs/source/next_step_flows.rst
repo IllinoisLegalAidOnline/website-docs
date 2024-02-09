@@ -41,6 +41,5 @@ Documentation
    next_steps_content_type
    next_steps_signup_form
    next_steps_sms_delivery
-   next_steps_tracking
    next_steps_entity_definitions
 

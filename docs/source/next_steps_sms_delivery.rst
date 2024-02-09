@@ -2,37 +2,43 @@
 NextSteps Flows Delivery System
 =================================
 
-Overview
-==============
+Tracking & Logging
+====================
 
-When a user is subscribed to a NextStepFlow:
+When a user is subscribed to a NextSteps flow, a record is created in the website database that stores:
 
-* A next step message entity is created with the minimum initial data
-* The initial message applicable to that step, if it exists, will be sent out to the individual using the NextStepFlows Studio Flow. That flow expects:
+* the user ID of the subscriber, if known
+* if the user was subscribed from LegalServer, the unique global identifier provided by LegalServer
+* if the user was an OTIS applicant, their triage user ID
+* the date they were subscribed
+* the source of their subscription. For OTIS partners, this is the ID in their unique iFrame.
+* mobile phone number
+* notification type, set to SMS
+* whether the subscriber is tied to an OTIS application
+* the user's zip code
+* the language subscirbed to
+* the node ID of the Next Step flow
+* the initial step ID the person is subscribed to.
 
-  * ID of the nextStepMessage
-  * Text to send as Message
-  * Message type (Send; no reply or Send and wait for reply)
-  * Mobile phone of the user
-  * From number
+Once subscribed, the website will automatically push out the initial message to the step the individual is subscribed to.
 
-* If the message accepts a reply, that reply gets sent to an endpoint on the website which is expecting a JSON packet of:
+With each message sent, the website database will be updated to create a record that tracks:
 
-  * ID
-  * Response
+* When the message was sent
+* Which message was sent
+* Who it was sent to
+* Any reply received
+* The next scheduled step, if applicable
+* the next scheduled step due date
+* updates the resent count
 
-* The response is then processed:
-  * Response gets stored as the replY_received for the nextStepMessage that matches on the returned ID
-  * Processes the reply by comparing the Response to the Next Step Replies as a string match and:
+See :ref:`NextStepTech` for the technical specification.
 
-     * Updates the nextStepMessage entity to set the next_step to the next follow up step
-     * Sets the next_step_due_date to the current date + number of days
-     * Sets the resend_count = resend_count + 2
+.. note:: This logging allows us to integrate NextSteps data with the OTIS dashboard, catch errors and time outs, and evaluate the use of NextSteps flows.
 
-   * Sends the "Send this message" component if send message = immediately.
+SMS Delivery
+=============
 
+The NextSteps Twilio flow manages SMS delivery. When a request from the website is received, it sends the message out. When a reply is received, it sends the reply back to the website to process. This usually results in sending out another message from the website.
 
-Twilio integration
-======================
-
-The website should send the initial message to
+.. image:: ../assets/next_steps_twilio.png
