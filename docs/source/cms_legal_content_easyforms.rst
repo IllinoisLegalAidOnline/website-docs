@@ -77,4 +77,12 @@ Following this, each WYSIWYG section renders:
 * Information needed is under the heading "What do I need first"
 * Documents produced is under the heading "What documents will this create?"
 
+Finally, the Start block appears. This contains the start button as well as the langauge "Mobile-friendly" or "Not optimized for mobile"
+
+.. image:: ../assets/easy-form-mobile.png
+
+
+
+
+
 Easy forms have the standard sidebar elements.
