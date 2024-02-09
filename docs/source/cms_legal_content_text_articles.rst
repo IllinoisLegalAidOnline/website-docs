@@ -15,3 +15,15 @@ An article is just a single WYSIWYG field.
 
 Viewing an article
 =====================
+In navigation:
+
+* Articles appear based on any custom ordering and page views in the primary category pages.
+* Articles appear under "Other resources for the public" or "Resources for lawyers" on the secondary category pages depending on the content level.
+
+Articles are identified on the site with an orange document label. They do not have an identifing label on the page.
+
+.. image:: ../assets/article-label.png
+
+Articles contain no special elements or boilerplate language.
+
+Articles only include the standard set of sidebar elements (but see the next section on how those are populated) except that they will show a "Big picture" block when they are part of exactly one Guide.

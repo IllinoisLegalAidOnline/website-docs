@@ -50,7 +50,18 @@ Eviction basics (Eviction basics for landlords and Understanding eviction as a t
 Viewing a Guide
 =================
 
-Coming soon
+In navigation:
+
+* Guides appear based on any custom ordering and page views in the primary category pages.
+* Guides appear under "Learn your rights" on the secondary category pages. They are prioritized first.
+
+Guides are identified on the site with a light blue book icon and Guide label.
+
+.. image:: ../assets/guide-label.png
+
+Guides contain no special elements or boilerplate language.
+
+Guides only include the standard set of sidebar elements (but see the next section on how those are populated).
 
 
 
