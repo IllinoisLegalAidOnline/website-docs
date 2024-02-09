@@ -14,8 +14,6 @@ The NextSteps functionality does not calculate deadlines. Subscribers will need 
 
 NextStep flows are maintained alongside OTIS and in consultation with our OTIS partners. ILAO's Director of Product Innovation maintains these with input and support from the legal content team, who maintain the underlying legal information.
 
-.. image:: ../assets/next-step-flow-example.png
-
 Phase 1 (2023 - 2024)
 -----------------------
 Phase 1, funded under a Technology Initiative Grant awarded to Legal Aid Chicago, NextSteps were created and launched as a plug-in to LegalServer instances of our OTIS partners building on our initial structured content model.
