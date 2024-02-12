@@ -7,7 +7,7 @@ copyright = '2024, Illinois Legal Aid Online'
 author = 'ILAO'
 
 release = 'February 2024'
-version = '10.0.1'
+version = '131.0.0'
 
 # -- General configuration
 
