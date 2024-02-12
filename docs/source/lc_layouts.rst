@@ -40,4 +40,15 @@ See the :ref:`Authoring` in the authoring guide for layout specifics for each co
 Learn More block
 ====================
 
+The learn more block is populated in one of three ways depending on the page:
+
+* If the page is a Guide, it uses the Learn more articles specific to that Guide
+* If the page is in a single Guide, it uses the Learn more articles specific to that Guide
+* If the page is in multiple Guides, it uses all the learnmroe articles in all of those Guides, with no duplication
+* If the page is not in a Guide, it uses any provided recommendations
+
+Forms block
+============
+The forms in the forms block are selected based on a one-to-one match of the Legal issues (not the navigational IA).
+
 

@@ -2,6 +2,8 @@
 Legal content reporting
 ==========================
 
+.. warning:: This section is very out of date.
+
 Available reports:
 
 * `Content main report (all content) <https://www.illinoislegalaid.org/admin/content>`_
