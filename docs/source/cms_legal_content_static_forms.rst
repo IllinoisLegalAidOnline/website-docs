@@ -4,11 +4,13 @@ Blank forms
 
 The "static form" content type is used for any form that is not an ILAO Easy Form. This includes links to forms on other websites and PDF or Word document files uploaded to our website.
 
-.. note:: We use the static form content type rather than linking directly to 3rd party forms within content so that:
+.. note::
+   We use the static form content type rather than linking directly to 3rd party forms within content so that:
 
-* We can provide website visitors more context about a form via a landing page
-* We can track the revision history to ensure that the forms we upload or link to are appropriate, approved, and tracable over time and across different staff
-* We can update links that are used in multiple articles more easily if the form link changes.
+  * We can provide website visitors more context about a form via a landing page
+  * We can track the revision history to ensure that the forms we upload or link to are appropriate, approved, and tracable over time and across different staff
+  * We can update links that are used in multiple articles more easily if the form link changes.
+
 
 Creating a blank (static) form
 ================================

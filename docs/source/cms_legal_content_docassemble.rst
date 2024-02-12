@@ -2,6 +2,8 @@
 Docassemble Embed
 ============================
 
+.. note:: Embedded docassemble interviews are used primariy for decision trees and are tagged as such in their primary content format.
+
 Master configuration
 ========================
 
@@ -13,8 +15,8 @@ The master configuration applies to all embeddeded Docassemble interviews. It in
 
 These are configuration variables. When changed on production, let Gwen know so she can ensure the developers back-port the configuration so that it is not overwritten in future deployments.
 
-Adding to legal content
-==========================
+Creating an embeded docassemble
+================================
 
 To embed a Docassemble interview, add a content block of type "Docassemble Embed"
 
@@ -34,3 +36,11 @@ You can add other content block types ahead of or after the embedded interview, 
 
 .. note:: Direct Embed is not supported at this time. It is unclear if the hide the navigation bar has any impact when using the iframe option.
 
+Viewing an embedded Docassemble interview
+===========================================
+
+Embedded docassemble interviews have the flowchart icon in light purple.
+
+.. image:: ../assets/docassemble-embed-view.png
+
+.. note:: In the image above, the text is in a separate text article block placed above the embedded interview.
