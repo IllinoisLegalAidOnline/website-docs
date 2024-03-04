@@ -7,13 +7,15 @@ The GA core data report can be accessed on our `tableau cloud <https://prod-usea
 This core data set can be filtered geographically only down to a region (state) level.
 
 
-
 Page metrics
 ===============
 
 Page metrics show the number of active users, average engagement rate, pageviews, and sessions for each page of the website. It can be filtered on:
 
 * Month/Year.
+
+.. note:: Each month's data is available with the date mm/1/yyyy.
+
 * Category. This is pulled from the Primary legal category field in legal content. For pages on our site that are not legal content, set the category to "null"
 * Subcategory. This is pulled from the Primary 2nd level taxonomy term field in legal content. This filter will automatically change to show only subcategories that are aligned with the categories in the dataset.
 * Page path. Optional - this will further limit filters and is most useful outside of legal content (for example, to filter on get legal help, enter /get-legal-help).
@@ -78,6 +80,26 @@ SME Review histogram
 This shows a distribution of days since last SME review across legal content. For example, in the image below, 100 pieces of content have been reveiewed within the last 100 days. The image can be filtered by category, format, and subcategory.
 
 .. image:: ../assets/ga-sme-histogram.png
+
+Legal Content Volunteer Impact
+==================================
+
+This shows the name of each Legal Content Volunteer pulled from Salesforce, their organization (from Salesforce), the number of articles they reviewed in the event date period and the number of visitors who viewed the article and the number of views in the date range (from Google Analytics).
+
+* Date - this is the Google Analytics date range. All views for a particular month are set to the 1st of the month.
+* Event date - this is the LCV engagement date from Salesforce
+* Category - primary legal content category for the content reviewed
+* Subcategory - secondary legal conten category for the content reviewed
+
+Hot Topics
+=============
+
+This shows the most populater level 2 categories for a particular time frame. This can be filtered by Language and Primary legal category.
+
+
+
+
+
 
 
 
