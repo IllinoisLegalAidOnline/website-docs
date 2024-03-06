@@ -8,6 +8,7 @@ Other features
    :caption: Contents:
 
    site_faqs
+   userway_widget
    testimonials_cms
    eupdate
    discussion_groups
