@@ -2,7 +2,7 @@
 Content metrics
 ================================
 
-This section covers Google analtyics and Tableau-based content metrics.
+This section covers the data that are included in our Tableau-based content metrics.
 
 Tableau integration
 ======================
@@ -15,4 +15,8 @@ Tableau integration
    ga_cms_integration
    tableau_ga_core_data
    tableau_ga_core_data_illinois
+   screaming_frog_links
+   sidebar_links
+   taxonomy_matches
+
 
