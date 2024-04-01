@@ -15,22 +15,4 @@ The required dataset includes:
 
 .. note:: The exported taxonomy tables are required to combine and label taxonomy terms in English regardless of the content language.
 
-When run through the Tableau prep builder, this results in a CSV file with the following fields:
-
-* ID (node ID)
-* Category
-* Subcategory
-* Title
-* Content type (Legal content, ADRM, Portal Main Page, etc)
-* Created (date)
-* Last Changed (last changed by the system)
-* Last Revised (last revised by staff)
-* Last expert review (last SME review)
-* Language
-* Word count (where available)
-* Link to content (full url)
-* Content level (basic or advanced)
-* Content format (applies only to legal content)
-* Page path (url minus the domain)
-
 
