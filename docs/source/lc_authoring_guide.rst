@@ -7,6 +7,7 @@ Legal content authoring guide
    :maxdepth: 2
 
    lc_common_elements
+   lc_citations
    lc_ckeditor
    lc_by_format
    lc_workflows
