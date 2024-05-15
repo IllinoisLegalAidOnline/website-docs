@@ -502,6 +502,18 @@ Do not use any of the following:
 * A2J
 * AutoDoc
 
+NextSteps Flows
+------------------
+
+For NextSteps flows,
+
+When creating text providing prompts that require a specific reply, the reply must be written in all capital letters. This ensures clarity and uniformity in responses.
+
+For example:
+
+* Good: Reply YES or NO
+* Bad: Reply Yes or no
+
 
 Images
 ============
