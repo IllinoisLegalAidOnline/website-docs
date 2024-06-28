@@ -1,3 +1,5 @@
+.. _referral_mgmt:
+
 ==================================
 Referral algorithm  management
 ==================================
