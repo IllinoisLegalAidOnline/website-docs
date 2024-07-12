@@ -25,6 +25,7 @@ Contents
    data_analytics
    other_features
    deprecated_features
+   debthelpillinois
 
 
 
