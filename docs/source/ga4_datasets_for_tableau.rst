@@ -14,6 +14,7 @@ Tableau integration
    ga_legacy
    ga_cms_integration
    ga_cms_prep
+   ga_revisions
    tableau_ga_core_data
    tableau_ga_core_data_illinois
    screaming_frog_links
