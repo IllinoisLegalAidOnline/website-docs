@@ -1,26 +1,99 @@
-================
-Debt profile
-================
-
-The debt profile is composed of the following entities:
-
-* debt_profile_user entity
-* debt_profile_debt entity
-
-Debt profile user
 ====================
-This custom entity contains the core debt profile information:
+User profile data
+====================
 
-* profile_id - unique id for the profile
-* uid - user id (0 if anonymous)
-* current_problem - from problem type taxonomy
-* current_debt_focus - from debt entity if they are currently focusing on 1 specific debt
-* credit_score - integer
-* created - timestamp
-* changed - timestamp
+Each visitor to the platform may have a profile associated with them. The profile will depend on a) whether they have an account and b) the type of problem(s) they have.
+
+Account or user profile
+========================
+
+The account or user profile is the standard Drupal user account profile. This profile contains the information necessary to log in. This includes:
+
+* username
+* UID (user id)
+* password
+* email
+* mobile number
+* created (date created)
+* changed (date of last change)
+
+.. note: Even visitors who use just a mobile number and passcode to log in will have a fixed UID associated with them
 
 
-A user may have more than one debt profile depending on what they are focusing on.
+Problem Profile
+====================
+The problem profile is the container that contains core information about a user's problem. A user may have multiple problem profiles, depending on how many problems they identify and store in the system.
+
+For example, a user may have a a problem profile for "Creditors are calling me", a problem profile for "I have a judgment against me", "I am being sued on a debt."
+
+This custom entity contains the core problem profile information:
+
++----------------------+-------------------+--------------------------------------+
+| Field name           | Type              | Description                          |
++======================+===================+======================================+
+| profileID            | Auto number       | Unique ID for the profile            |
++----------------------+-------------------+--------------------------------------+
+| uid                  | integer           | User ID for the account associated   |
+|                      |                   | with the profile                     |
++----------------------+-------------------+--------------------------------------+
+| type                 | varchar           | Type of problem; this will be the    |
+|                      |                   | entity name that contains more       |
+|                      |                   | specific data about the problem      |
++----------------------+-------------------+--------------------------------------+
+| entity_id            | integer           | The specific entity of type          |
++----------------------+-------------------+--------------------------------------+
+| created              | timestamp         | Date problem profile created         |
++----------------------+-------------------+--------------------------------------+
+| changed              | timestamp         | Date problem profile was last changed|
++----------------------+-------------------+--------------------------------------+
+
+.. note:: The problem profile contains only very high level information to identify the more specific entity that will contain the actual problem information. While we initially are building this platform for debt, we may expand to support other problem types. If the user has a debt problem, the type will be "debt" which would then invoke the debt_problem_entity which contains specific debt problem metadata. If they had a divorce problem, there would be a divorce_problem_entity.
+
+Sample data:
+
++------------+----------+--------------+-----------+-------------+-----------------+
+| profileID  | uid      | type         | entity_id | created     | changed         |
++============+==========+==============+===========+================+==============+
+| 1          | 2        | debt problem | 21        |1723147452   | 1723147452      |
++------------+----------+--------------+-----------+-------------+-----------------+
+| 6          | 2        | debt problem | 26        |1723147452   | 1723147775      |
++------------+----------+--------------+-----------+-------------+-----------------+
+| 11         | 4096     | debt problem | 31        |1723147775   | 1723147775      |
++------------+----------+--------------+-----------+-------------+-----------------+
+| 11         | 4096     | divorce      | 31        |1723147775   | 1723147775      |
+|            |          | problem      |           |             |                 |
++------------+----------+--------------+-----------+-------------+-----------------+
+
+In the above, User 2 has 2 problem profiles, both for debt problems. Those debt problems can be accessed via the debt problem entities 21 and 26. User 4096 has two problem profiles - 1 for debt and 1 for divorce (assuming a future expansion)
+
+Debt problem entity
+==========================
+
+This entity contains all of the metadata for a user's specific debt problem but not information on specific debts. Specific debt information is in debt entities. A debt problem may have multiple debts attached.
+
++----------------------+-------------------+--------------------------------------+
+| Field name           | Type              | Description                          |
++======================+===================+======================================+
+| entity_id            | auto number       | Unique entity id                     |
++----------------------+-------------------+--------------------------------------+
+| profile_id           | integer           | Profile associated with the problem  |
++----------------------+-------------------+--------------------------------------+
+| current_problem      | integer           | Term reference to the problem        |
+|                      |                   | taxonomy                             |
++----------------------+-------------------+--------------------------------------+
+| current_focus        | integer           | Entity id of the debt being focused  |
+|                      |                   | on, if applicable                    |
++----------------------+-------------------+--------------------------------------+
+| credit_score         | integer           | Credit score of the individual       |
++----------------------+-------------------+--------------------------------------+
+| created              | timestamp         | Timestamp of when the problem was    |
+|                      |                   | first created in the system          |
++----------------------+-------------------+--------------------------------------+
+| changed              | timestamp         | Timestamp of when the problem was    |
+|                      |                   | last changed in the system           |
++----------------------+-------------------+--------------------------------------+
+
+.. warning:: This is being reworked as of 8/8/24. Stop here.
 
 Debt entity
 =============
@@ -28,7 +101,7 @@ Debt entity
 Debt entities are for specific debts. Different debt types may have different data associated with them. Debt entities are then tied to specific debt profiles.
 
 * debt_id - unique id for the debt entity (auto generated)
-* profile_id - unique id for the profile assocaited with the debt
+* problem_profile_id - unique id for the profile assocaited with the debt
 * name - name of the debt (as provided by the user)
 * created - timestamp
 * changed - timestamp
@@ -39,7 +112,7 @@ Debt entities are for specific debts. Different debt types may have different da
 * creditor name - varchar
 
 
-Debt expert system data
+Expert system data
 ==========================
 This entity tracks data sent to and received back from any expert system (for example, for collecting debt information, for filtering questions, or option evaluation)
 
@@ -53,7 +126,7 @@ This entity tracks data sent to and received back from any expert system (for ex
 * changed - timestamp
 
 
-Selected debt solutions entity
+Profile solutions
 ================================
 This entity tracks the solutions for a specific debt profile
 
@@ -71,82 +144,4 @@ This entity tracks the solutions for a specific debt profile
 * changed - timestamp
 
 
-Example
-============
-
-User
- Name: John Doe
- User ID: 1
- Debt Profile:
-   Profile_ID: 6
-   UID: 1
-   Current problem: Trouble paying my bills
-   Current debt focus: [7, 9]
-   Debt entities:
-     Debt id: 7
-     Name:  My credit card from Chase
-     Amount: 5000
-     Interest Rate: 17.99%
-     Debt type: Credit card
-     Creditor name: Chase bank
-
-     Debt id: 9
-     Name: Discover card
-     Amount: 3000
-     Interest rate: 20.7%
-     Debt type: Credit card
-     Creditor name: Discover
-
-     Debt id: 11
-     Name: Surgery bills
-     Amount: 25,000
-     Interest rate:
-     Debt type: Medical debt
-     Creditor name: County hospital
-
-  Debt Expert System
-    Date: 7/1/2002
-    Initial: {Problem-type:Trouble paying bills}
-    Response: Here is the JSON packet for the provided data:
-    { "debts": [
-    {
-      "name": "My credit card from Chase",
-      "amount": 5000,
-      "interest_rate": 17.99,
-      "debt_type": "Credit card",
-      "creditor_name": "Chase bank"
-    },
-    {
-      "name": "Discover card",
-      "amount": 3000,
-      "interest_rate": 20.7,
-      "debt_type": "Credit card",
-      "creditor_name": "Discover"
-    },
-    {
-      "name": "Surgery bills",
-      "amount": 25000,
-      "interest_rate": null,
-      "debt_type": "Medical debt",
-      "creditor_name": "County hospital"
-    },]}
-
-  Debt solutions
-    solution_id = 1
-    profile_id = 1
-    nid = 45000
-    status = selected
-    current_step = 1
-
-    solution_id = 2
-    profille_id =1
-    nid = 45006
-    status = rejected
-    current_step = 0
-
-    solution_id = 3
-    profile_id = 1
-    nid = 45010
-    status = needs_reviewed
-    current_step = 0
 
