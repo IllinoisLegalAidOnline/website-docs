@@ -11,6 +11,8 @@ Overview of the workflow
 - **Individual A** visits the platform and decides to create an account. After filling out the necessary information, their account is successfully created, and they are assigned **User ID 2**.
 - Once logged in, Individual A is prompted to answer initial questions that help define their situation. They indicate they are facing a legal issue by selecting the problem type: **"I am being sued for a debt."** Additionally, they input their **zip code, 60603**.
 
+.. note:: Because many users will create their accounts mid-flow, the system will save their problem profile ID for their initial problem in the browser's local storage. When the individual creates their account, the system will automatically update the problem profile record with the user ID to tie the records back together.
+
 **2. Problem Profile Creation:**
 - The platform takes the information provided and creates a **Problem Profile** associated with **User ID 2**. This profile includes:
   - **Problem Type:** Debt
@@ -22,6 +24,8 @@ Overview of the workflow
 **3. Integration with DialogFlow:**
 - As Individual A navigates through the platform, their **debt problem** and **zip code** are transmitted to **DialogFlow**. Here, the system identifies the appropriate flow, **"Debt lawsuit"**, to manage the conversation.
 - At this stage, an **Expert System Response Record** is generated, capturing the JSON data sent from Drupal to DialogFlow. This record is vital for ensuring accurate tracking, troubleshooting, and analytics.
+
+.. note:: DialogFlow is used as an example; we may use a different middleware.
 
 **4. Processing Response Data:**
 - When DialogFlow sends a response, it is logged in the existing **Expert System Response Record**. This response contains further details about Individual A’s debt situation.
@@ -45,6 +49,8 @@ Overview of the workflow
 
 
 .. note:: Do we need to track a status for the problem profile (New, Active, Abandoned, Solved)? What would those statuses be?
+
+.. image:: ../assets/dhi-erd.png
 
 
 Account or user profile
@@ -74,7 +80,7 @@ This custom entity contains the core problem profile information:
 +----------------------+-------------------+--------------------------------------+
 | Field name           | Type              | Description                          |
 +======================+===================+======================================+
-| profileID            | Auto number       | Unique ID for the profile            |
+| profile_id           | Auto number       | Unique ID for the profile            |
 +----------------------+-------------------+--------------------------------------+
 | uid                  | integer           | User ID for the account associated   |
 |                      |                   | with the profile                     |
@@ -96,20 +102,20 @@ This custom entity contains the core problem profile information:
 
 Sample data:
 
-+------------+----------+--------------+-----------+-------------+-----------------+
-| profileID  | uid      | type         | entity_id | created     | changed         |
-+============+==========+==============+===========+================+==============+
-| 1          | 2        | debt problem | 21        |1723147452   | 1723147452      |
-+------------+----------+--------------+-----------+-------------+-----------------+
-| 6          | 2        | debt problem | 26        |1723147452   | 1723147775      |
-+------------+----------+--------------+-----------+-------------+-----------------+
-| 11         | 4096     | debt problem | 31        |1723147775   | 1723147775      |
-+------------+----------+--------------+-----------+-------------+-----------------+
-| 11         | 4096     | divorce      | 31        |1723147775   | 1723147775      |
-|            |          | problem      |           |             |                 |
-+------------+----------+--------------+-----------+-------------+-----------------+
++------------+-------+--------------+-----------+----------+------------+---------------+
+| profileID  | uid   | type         | entity_id | zip_code |created     | changed       |
++------------+-------+--------------+-----------+----------+------------+---------------+
+| 1          | 2     | debt problem | 21        |60603     |1723147452  |1723147452     |
++------------+-------+--------------+-----------+----------+------------+---------------+
+| 2          | 2     | debt problem | 26        |60603     |1723147452  |1723147452     |
++------------+-------+--------------+-----------+----------+------------+---------------+
+| 3          | 46    | debt problem | 36        |60603     |1723147452  |1723147452     |
++------------+-------+--------------+-----------+----------+------------+---------------+
+| 4          | 2     | divorce      | 41        |60603     |1723147452  |1723147452     |
+|            |       | problem      |           |          |            |               |
++------------+-------+--------------+-----------+----------+------------+---------------+
 
-In the above, User 2 has 2 problem profiles, both for debt problems. Those debt problems can be accessed via the debt problem entities 21 and 26. User 4096 has two problem profiles - 1 for debt and 1 for divorce (assuming a future expansion)
+In the above, User 2 has 2 problem profiles, both for debt problems. Those debt problems can be accessed via the debt problem entities 21 and 26. User 46 has two problem profiles - 1 for debt and 1 for divorce (assuming a future expansion)
 
 
 Expert system responses
@@ -150,25 +156,53 @@ This entity tracks data sent to and received back from any expert system (for ex
 
 
 
-Profile solutions
+Profile options
 ================================
-This entity tracks the solutions for a specific debt profile
+This entity tracks the options for a specific debt profile
 
-* solution_id - unique identifier for the entity
-* nid - node id of the selected solution
-* profile_id - profile id associated with the solution
-* solution_status - selected, available, rejected, unavailable, needs reviewed
-  * Selected = user has chosent this option
-  * Avaiable - user has gone through any filtering questions and it matched
-  * Rejected - user has gone through any filtering questions but has marked it as no
-  * Unavailable - user has gone through any filtering question and this option is not an option for this user
-  * Needs reviewed - user has not gone through any filtering question; this may be an option but requires more evaluation.
-* current_step - current step in the solution
-* created - timestamp
-* changed - timestamp
++----------------------+-------------------+--------------------------------------+
+| Field name           | Type              | Description                          |
++======================+===================+======================================+
+| option_id            | auto number       | Unique id for the data record        |
++----------------------+-------------------+--------------------------------------+
+| nid                  | integer           | Node id of the option                |
++----------------------+-------------------+--------------------------------------+
+| profile_id           | integer; required | Problem profile associated with the  |
+|                      |                   | option                               |
++----------------------+-------------------+--------------------------------------+
+| status               | varchar           | Status of the optio                  |
++----------------------+-------------------+--------------------------------------+
+| current_step         | integer           | ID of the current step in the option |
++----------------------+-------------------+--------------------------------------+
+| created              | timestamp         | Timestamp of when record was created |
++----------------------+-------------------+--------------------------------------+
+| changed              | timestamp         | Timestamp of when record was last    |
+|                      |                   | changed                              |
++----------------------+-------------------+--------------------------------------+
+
+Status
+---------
+Status options are:
+
+* Available - the system thinks the option may apply
+* Unavailable - the system thought the option might have applied but further filtering ruled it out
+* Yes - the user has identified this as their preferred option
+* No - the user has ruled it out
+* Maybe - the user is not sure but wants to hold on to the option
+* Complete  - the user has completed the specific option
+* In progress - the user is actively working on the option
+
+================================
+Problem type specific entities
+================================
+
+While the platform is focusing on consumer debt, ILAO envisions replicating this to other types of problems. The entities defined above are generic while those below are tied to specific problem groups.
+
+Consumer debt
+=================
 
 Debt problem entity
-==========================
+-----------------------
 
 This entity contains all of the metadata for a user's specific debt problem but not information on specific debts. Specific debt information is in debt entities. A debt problem may have multiple debts attached.
 
@@ -187,30 +221,46 @@ This entity contains all of the metadata for a user's specific debt problem but 
 +----------------------+-------------------+--------------------------------------+
 | credit_score         | integer           | Credit score of the individual       |
 +----------------------+-------------------+--------------------------------------+
-| created              | timestamp         | Timestamp of when the problem was    |
+| created              | timestamp         | Timestamp of when the record was     |
 |                      |                   | first created in the system          |
 +----------------------+-------------------+--------------------------------------+
-| changed              | timestamp         | Timestamp of when the problem was    |
+| changed              | timestamp         | Timestamp of when the record was     |
 |                      |                   | last changed in the system           |
 +----------------------+-------------------+--------------------------------------+
 
-
+.. note:: This entity type will likely need signficant fleshing out to add additional properties that we want to store.
 
 Debt entity
-=============
+-----------------
 
 Debt entities are for specific debts. Different debt types may have different data associated with them. Debt entities are then tied to specific debt profiles.
 
-* debt_id - unique id for the debt entity (auto generated)
-* problem_profile_id - unique id for the profile assocaited with the debt
-* name - name of the debt (as provided by the user)
-* created - timestamp
-* changed - timestamp
-* amount - float
-* current stage of the debt - varchar
-* interest rate - float
-* debt type (from debt type taxonomy)
-* creditor name - varchar
++----------------------+-------------------+--------------------------------------+
+| Field name           | Type              | Description                          |
++======================+===================+======================================+
+| debt_id              | auto number       | unique identifier for the debt       |
++----------------------+-------------------+--------------------------------------+
+| name                 | varchar           | Name of the debt, as defined by user |
++----------------------+-------------------+--------------------------------------+
+| debt_problem_id      | integer; required | id of the debt problem entity        |
++----------------------+-------------------+--------------------------------------+
+| created              | timestamp         | Timestamp of when the record was     |
+|                      |                   | first created in the system          |
++----------------------+-------------------+--------------------------------------+
+| changed              | timestamp         | Timestamp of when the record was     |
+|                      |                   | last changed in the system           |
++----------------------+-------------------+--------------------------------------+
+| amount               | float             | Amount of the debt                   |
++----------------------+-------------------+--------------------------------------+
+| stage_of_debt        | varchar           | Stage of the debt                    |
++----------------------+-------------------+--------------------------------------+
+| interest_rate        | float             | Interest rate, if known              |
++----------------------+-------------------+--------------------------------------+
+| debt_type            | integer           | Term reference to debt type taxonomy |
++----------------------+-------------------+--------------------------------------+
+| creditor_name        | varchar           | Name of the creditor, if known       |
++----------------------+-------------------+--------------------------------------+
+
 
 
 
