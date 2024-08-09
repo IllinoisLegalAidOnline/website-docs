@@ -1,6 +1,6 @@
-====================
-User profile data
-====================
+======================
+User data structures
+======================
 
 Each visitor to the platform may have a profile associated with them. The profile will depend on a) whether they have an account and b) the type of problem(s) they have.
 
