@@ -62,5 +62,81 @@ Snippets
 Options
 ==========
 
+Options are specifically formatted content types.
+
++----------------------+----------------+------------------------------------------+
+| Field                | Type           | Description                              |
++======================+================+==========================================+
+| Title                | String (short) | Title of the resource                    |
+|                      | Required       |                                          |
++----------------------+----------------+------------------------------------------+
+| Description          | String (long)  | Description for use in social media and  |
+|                      | Required       | on site listings / search                |
++----------------------+----------------+------------------------------------------+
+| Overview             | Paragraphs     | Paragraph entity of type "Option         |
+|                      | Required       | overview" (see below)                    |
++----------------------+----------------+------------------------------------------+
+| Steps                | Paragraphs     | Paragraph entity of Option step (below)  |
+|                      | Required       |                                          |
++----------------------+----------------+------------------------------------------+
+| Eligibility questions| String (short) | TBD; this may be a URL or an id          |
++----------------------+----------------+------------------------------------------+
+| Eligibility          | String (long)  | Plain text field for evaluative criteria |
++----------------------+----------------+------------------------------------------+
+| Image                | Media (image)  | Adds an image that will be used auto-    |
+|                      | Required       | matically in social media sharing        |
++----------------------+----------------+------------------------------------------+
+| Jurisdiction         | Coverage area  | Allows resource to be tagged to 1 or more|
+|                      | Required       | states, counties, cities, or zip codes   |
+|                      |                | to indicate that the location            |
++----------------------+----------------+------------------------------------------+
+| Negate jurisdiction  | Coverage area  | Allows resource to be essentially        |
+|                      | Optional       | untagged to a location                   |
++----------------------+----------------+------------------------------------------+
+| Last revised         | Date           | Allows content author to update date     |
+|                      |                | when substantive changes made            |
++----------------------+----------------+------------------------------------------+
+| Problem types        | Term reference | Tags legal resource to 0 or more problem |
+|                      |                | types.                                   |
++----------------------+----------------+------------------------------------------+
+| Debt types           | Term reference | Tags legal resource to 0 or more debt    |
+|                      |                | types                                    |
++----------------------+----------------+------------------------------------------+
+
+Overview
+------------
+
+This would be a paragraphs bundle with a cardinality of 1.
+
++----------------------+----------------+------------------------------------------+
+| Field                | Type           | Description                              |
++======================+================+==========================================+
+| Overview             | WYSIWYG        | Overview text                            |
+|                      | Required       |                                          |
++----------------------+----------------+------------------------------------------+
+| Pros Label           | Text           | Heading label for the pros section, if   |
+|                      |                | exists                                   |
++----------------------+----------------+------------------------------------------+
+| Pros                 | WYSIWYG        | Parapgraph for pros narrative            |
++----------------------+----------------+------------------------------------------+
+| Cons Label           | Text           | Heading label for the cons section, if   |
+|                      |                | exists                                   |
++----------------------+----------------+------------------------------------------+
+| Cons                 | WYSIWYG        | Parapgraph for cons narrative            |
++----------------------+----------------+------------------------------------------+
+
+Steps
+---------
+This would mirror the process step bundle on IllinoisLegalAid.org. The Steps field should have a cardinality of unlimited
+
++----------------------+----------------+------------------------------------------+
+| Field                | Type           | Description                              |
++======================+================+==========================================+
+| Step title           | Text (plain)   | Heading for the step                     |
+|                      | Required       |                                          |
++----------------------+----------------+------------------------------------------+
+| Body                 | WYSIWYG        | Body of the step                         |
++----------------------+----------------+------------------------------------------+
+
 Basic pages
 ===============
