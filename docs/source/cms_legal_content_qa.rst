@@ -12,7 +12,12 @@ To create a Q&A block
 .. image:: ../assets/qa_block.png
 
 * Add a question title. Titles should have a question mark at the end and should not be numbered. Any numbering will be added in the front-end interface, depending on the delivery channel.
-* Add the answer. Answers should only use Headings 4 and below. Heading 3 is reserved for the question title.
+* Add the answer.
+
+  * Answers should only use Headings 4 and below. Heading 3 is reserved for the question title.
+  * When writing the answer, it should be written so that it "stands alone," so that if a single question/answer is delivered to a user, the answer still makes sense without all of the other questions.
+  * Acronyms used should be explained in each question/answer every time.
+
 * The anchor link will populate automatically when the content is created.
 
 .. note:: if the title changes, currently the anchor link will also change. We have a ticket in the backlog to prevent the anchor link from changing once initially created to avoid breaking anchor tag links.
