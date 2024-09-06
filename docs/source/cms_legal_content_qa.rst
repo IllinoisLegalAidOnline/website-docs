@@ -23,6 +23,7 @@ To create a Q&A block
 .. note:: if the title changes, currently the anchor link will also change. We have a ticket in the backlog to prevent the anchor link from changing once initially created to avoid breaking anchor tag links.
 
 
+
 Viewing a Q&A block
 ======================
 
@@ -54,7 +55,13 @@ Interaction with Guides
 
 If an FAQ is included in the Learn More of a Guide, the Big Picture and Take Action blocks will appear on the FAQ page and the FAQ will appear on the Learn More for the Guide and related How-tos
 
-.. note:: We need to fix the Learn more block to not include the FAQ node when the FAQ is being viewed.
-
 .. note:: This is likely to change as we do usability testing and refine the interface for the revised content model.
+
+Recommended / Learn more
+==========================
+
+We have a pending ticket to update the Learn More block based on any recommended nodes listed on the FAQ when the user views the FAQ.
+
+Currently, because the FAQ is part of the Guide/How-to/FAQ model, the Learn more only contains a link to itself.
+
 
