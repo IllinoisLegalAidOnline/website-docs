@@ -56,8 +56,20 @@ The legal resource type:
 .. todo:: We will be incorporating AI tools to generate the body field(s) based on prompts and content derived from ILAO content and other trusted resources.
 
 
-Snippets
-==========
+Did you know snippets
+========================
+
+Did you know snippets are a custom block type. These blocks include:
+
+* Name
+* Message
+* Problem type
+* Debt type
+
+These can be then placed on any page of the site by users with the content author role.
+
+They can also be called via API and used in middleware.
+
 
 Options
 ==========
@@ -82,9 +94,6 @@ Options are specifically formatted content types.
 | Eligibility questions| String (short) | TBD; this may be a URL or an id          |
 +----------------------+----------------+------------------------------------------+
 | Eligibility          | String (long)  | Plain text field for evaluative criteria |
-+----------------------+----------------+------------------------------------------+
-| Image                | Media (image)  | Adds an image that will be used auto-    |
-|                      | Required       | matically in social media sharing        |
 +----------------------+----------------+------------------------------------------+
 | Jurisdiction         | Coverage area  | Allows resource to be tagged to 1 or more|
 |                      | Required       | states, counties, cities, or zip codes   |
