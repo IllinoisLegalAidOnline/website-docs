@@ -33,7 +33,6 @@ When a piece of legal content contains a Q&A block (and does not contain an auto
 
 The page will automatically create a table of contents at the top and include anchor tags back to the top after each question.
 
-.. note:: Usability testing is pending on the style and placement of this TOC.
 
 
 Using anchor tags in other articles
@@ -41,6 +40,7 @@ Using anchor tags in other articles
 
 Where we used to link to standalone articles that answered a specific question, we can now link to the specific answer by adding the anchor link to the end of the url. For example, if I want to link to Question 1 in an article, I would find the FAQ, which might result in a url of "/node/183771" and then paste #question1 to the end of the url.
 
+A list of anchor tags is available in the `FAQ report <https://www.illinoislegalaid.org/admin/content/faq-question-list>`_.
 
 
 Using anchor tags in redirects
@@ -60,8 +60,7 @@ If an FAQ is included in the Learn More of a Guide, the Big Picture and Take Act
 Recommended / Learn more
 ==========================
 
-We have a pending ticket to update the Learn More block based on any recommended nodes listed on the FAQ when the user views the FAQ.
+The Learn more block is tied only to the recommendation field on the legal content.
 
-Currently, because the FAQ is part of the Guide/How-to/FAQ model, the Learn more only contains a link to itself.
 
 
