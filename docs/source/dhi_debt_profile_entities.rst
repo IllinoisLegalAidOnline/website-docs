@@ -97,6 +97,16 @@ This custom entity contains the core problem profile information:
 +----------------------+-------------------+--------------------------------------+
 | changed              | timestamp         | Date problem profile was last changed|
 +----------------------+-------------------+--------------------------------------+
+| changed              | timestamp         | Date problem profile was last changed|
++----------------------+-------------------+--------------------------------------+
+| terms_accepted_time  | timestamp         | Timestamp when TOS was accepted      |
++----------------------+-------------------+--------------------------------------+
+| privacy_policy       | timestamp         | Timestamp when privacy policy was    |
+| _accepted            |                   | accepted                             |
++----------------------+-------------------+--------------------------------------+
+| in_illinois          | integer           | 0 or 1 depending on whether person   |
+|                      |                   | in Illinois                          |
++----------------------+-------------------+--------------------------------------+
 
 .. note:: The problem profile contains only very high level information to identify the more specific entity that will contain the actual problem information. While we initially are building this platform for debt, we may expand to support other problem types. If the user has a debt problem, the type will be "debt" which would then invoke the debt_problem_entity which contains specific debt problem metadata. If they had a divorce problem, there would be a divorce_problem_entity.
 
