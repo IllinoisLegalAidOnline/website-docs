@@ -140,14 +140,9 @@ This entity tracks data sent to and received back from any expert system (for ex
 | profile_id           | integer           | Problem profile the expert system    |
 |                      | required          | data is associated with              |
 +----------------------+-------------------+--------------------------------------+
-| type                 | varchar           | entity type of a specific entity     |
-|                      |                   | associated with the data stream      |
-+----------------------+-------------------+--------------------------------------+
-| entity_id            | integer           | id of the entity of TYPE             |
-+----------------------+-------------------+--------------------------------------+
 | expert_system        | varchar           | name or url of the system            |
 +----------------------+-------------------+--------------------------------------+
-| expert_system_id     | integer           | id of the expert system path used    |
+| expert_system_id     | varchar           | id of the expert system path used    |
 +----------------------+-------------------+--------------------------------------+
 | expert_system_uuid   | varchar           | unique id associated with the        |
 |                      |                   | specific instance of the expert      |
