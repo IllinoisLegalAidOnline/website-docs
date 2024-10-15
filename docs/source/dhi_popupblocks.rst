@@ -42,6 +42,7 @@ Pop up blocks are configured in Configuration -> Media -> Add simple popup block
     
     
 .. note:: Once created, there is a set of classes defined in the adjustment class. Create a developer ticket to theme the block and hide the CSS if necessary.
-   
+
+
     
 

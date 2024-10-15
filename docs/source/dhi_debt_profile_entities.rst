@@ -73,7 +73,7 @@ Problem Profile
 ====================
 The problem profile is the container that contains core information about a user's problem. A user may have multiple problem profiles, depending on how many problems they identify and store in the system.
 
-For example, a user may have a a problem profile for "Creditors are calling me", a problem profile for "I have a judgment against me", "I am being sued on a debt."
+For example, a user may have a a problem profile for "Debts" and a problem profile for "Divorce"; the user may have multiple debt problems but the metadata in the problem profile is shared across all of these.
 
 This custom entity contains the core problem profile information:
 
@@ -88,8 +88,6 @@ This custom entity contains the core problem profile information:
 | type                 | varchar           | Type of problem; this will be the    |
 |                      |                   | entity name that contains more       |
 |                      |                   | specific data about the problem      |
-+----------------------+-------------------+--------------------------------------+
-| entity_id            | integer           | The specific entity of type          |
 +----------------------+-------------------+--------------------------------------+
 | zip_code             | varchar           | Zip code of the problem              |
 +----------------------+-------------------+--------------------------------------+
@@ -163,7 +161,7 @@ This entity tracks data sent to and received back from any expert system (for ex
 
 Profile options
 ================================
-This entity tracks the options for a specific debt profile
+This entity tracks the options for a specific problem
 
 +----------------------+-------------------+--------------------------------------+
 | Field name           | Type              | Description                          |
@@ -172,8 +170,10 @@ This entity tracks the options for a specific debt profile
 +----------------------+-------------------+--------------------------------------+
 | nid                  | integer           | Node id of the option                |
 +----------------------+-------------------+--------------------------------------+
-| profile_id           | integer; required | Problem profile associated with the  |
+| problem_id           | integer; required | Problem profile associated with the  |
 |                      |                   | option                               |
++----------------------+-------------------+--------------------------------------+
+| type                 | varchar; required | Problem type 
 +----------------------+-------------------+--------------------------------------+
 | status               | varchar           | Status of the optio                  |
 +----------------------+-------------------+--------------------------------------+
