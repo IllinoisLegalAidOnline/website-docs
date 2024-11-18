@@ -31,7 +31,7 @@ Debt type has:
 
 * Name. This is the label shown to individuals
 * Description. This is a short user-friendly description to help users identify debt types.
-* Main category. This is used to group debts into classes. Current choices are Government debt, Vehicle, Housing, Student loans, Medical, Loans
+* Main category. This is used to group debts into classes. 
 * Typical priority. This is used to classify debts into High, medium, or low priority for repayment
 * Priority note. This is a text field to allow the prioritization tool to explain why a debt is classified as it is.
 * Security status. This is used to indicate whether typically the debt is secured, unsecured, or depends on context.
