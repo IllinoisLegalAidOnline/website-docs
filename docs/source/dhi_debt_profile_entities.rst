@@ -66,6 +66,13 @@ The account or user profile is the standard Drupal user account profile. This pr
 * created (date created)
 * changed (date of last change)
 
+It may also include data that is applicable across legal problems including:
+
+* number of adults in household
+* number of children in household
+* total income
+* zip code
+
 .. note: Even visitors who use just a mobile number and passcode to log in will have a fixed UID associated with them
 
 
@@ -157,8 +164,41 @@ This entity tracks data sent to and received back from any expert system (for ex
 | changed              | timestamp         | Timestamp of when record last changed|
 +----------------------+-------------------+--------------------------------------+
 
+Example JSON from initial triage (not debt prioritization)
+-----------------------------------------------------------
 
+.. code-block:: 
 
+   {
+  "id": 417400267,
+  "problem_profile_id":6,
+  "source": "https://cdn.landbot.io/landbot-3/preview.html?ts=1731011197195&config=https%3A%2F%2Fstorage.googleapis.com%2Flandbot.pro%2Fv3%2FH-2656275-4RASN8SAA0QV0NNO%2Findex.json",
+  "debt_zip": 60130,
+  "debt_type": "creditcard",
+  "debt_stage": "creditor_contacting",
+  "debt_creditor_name": "LVNV",
+  "debt_creditor_type": "unknown",
+  "debt_last_payment_date": "2024/08/07"
+   }
+
+Example JSON from initial triage (debt prioritization)
+-----------------------------------------------------------
+When debt prioritization is included, it returns the term IDs for the types of debts in the debt_prioritization array.
+
+.. code-block::
+
+   {
+  "id": 417400267,
+  "URL": "https://cdn.landbot.io/landbot-3/preview.html?ts=1731020055069&config=https%3A%2F%2Fstorage.googleapis.com%2Flandbot.pro%2Fv3%2FH-2646298-YIU9M453YSZ8TGVE%2Findex.json",
+  "debt_prioritization": [
+    "130006",
+    "130016",
+    "129996",
+    "130101"
+  ]
+  }
+  
+  
 Profile options
 ================================
 This entity tracks the options for a specific problem
@@ -210,6 +250,8 @@ Debt problem entity
 -----------------------
 
 This entity contains all of the metadata for a user's specific debt problem but not information on specific debts. Specific debt information is in debt entities. A debt problem may have multiple debts attached.
+
+.. note:: We currently envision a 1-1 relationship between debt problem and debts but the system is structured to accommodate the potential 1-many relationship in the future.
 
 +----------------------+-------------------+--------------------------------------+
 | Field name           | Type              | Description                          |
@@ -265,6 +307,34 @@ Debt entities are for specific debts. Different debt types may have different da
 +----------------------+-------------------+--------------------------------------+
 | creditor_name        | varchar           | Name of the creditor, if known       |
 +----------------------+-------------------+--------------------------------------+
+
+Debt entities in prioritization
+=================================
+
+Debt prioritization does not factor in specific debt details but orders debt types based on general properties. As such, much of the problem and debt data is missing.
+
+
+When a user completes prioritization, for each debt type included in the prioritization matrix:
+
+
+* A debt_problem entity is created for each debt type in the prioritization matrix with:
+
+  * profile_id added
+  * created and changed timestamps set
+  
+* A debt entity is created:
+
+  * debt_id is automatically generated
+  * debt_problem_id is set to the debt_problem entity just created
+  * created and timestamp are set
+  * debt_type is set to the taxonomy ter
+  * all other fields are ignored
+  
+* The debt_problem entity is updated to set the current_focus = to the debt entity ID
+
+
+
+  
 
 
 
