@@ -201,7 +201,8 @@ When debt prioritization is included, it returns the term IDs for the types of d
   
 Profile options
 ================================
-This entity tracks the options for a specific problem
+
+This entity tracks the options for a specific problem.
 
 +----------------------+-------------------+--------------------------------------+
 | Field name           | Type              | Description                          |
@@ -213,11 +214,12 @@ This entity tracks the options for a specific problem
 | problem_id           | integer; required | Problem profile associated with the  |
 |                      |                   | option                               |
 +----------------------+-------------------+--------------------------------------+
-| type                 | varchar; required | Problem type 
+| type                 | varchar; required | Problem type                         |
 +----------------------+-------------------+--------------------------------------+
-| status               | varchar           | Status of the optio                  |
+| status               | varchar           | Status of the option                 |
 +----------------------+-------------------+--------------------------------------+
-| current_step         | integer           | ID of the current step in the option |
+| current_step         | integer           | paragraph ID of the Step Block the   |
+|                      |                   | user is currently working on         |
 +----------------------+-------------------+--------------------------------------+
 | created              | timestamp         | Timestamp of when record was created |
 +----------------------+-------------------+--------------------------------------+
@@ -299,7 +301,7 @@ Debt entities are for specific debts. Different debt types may have different da
 +----------------------+-------------------+--------------------------------------+
 | amount               | float             | Amount of the debt                   |
 +----------------------+-------------------+--------------------------------------+
-| stage_of_debt        | varchar           | Stage of the debt                    |
+| stage_of_debt        | varchar           | Problem_type taxonomy term id        |
 +----------------------+-------------------+--------------------------------------+
 | interest_rate        | float             | Interest rate, if known              |
 +----------------------+-------------------+--------------------------------------+
