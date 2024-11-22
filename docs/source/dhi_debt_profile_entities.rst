@@ -199,7 +199,7 @@ When debt prioritization is included, it returns the term IDs for the types of d
   }
   
   
-User solution data
+User solutions
 ================================
 
 This entity tracks the options for a specific problem.
