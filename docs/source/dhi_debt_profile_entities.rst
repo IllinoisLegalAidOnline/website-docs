@@ -199,7 +199,7 @@ When debt prioritization is included, it returns the term IDs for the types of d
   }
   
   
-Profile options
+User solution data
 ================================
 
 This entity tracks the options for a specific problem.
@@ -207,19 +207,18 @@ This entity tracks the options for a specific problem.
 +----------------------+-------------------+--------------------------------------+
 | Field name           | Type              | Description                          |
 +======================+===================+======================================+
-| option_id            | auto number       | Unique id for the data record        |
+| entity_id            | auto number       | Unique id for the data record        |
 +----------------------+-------------------+--------------------------------------+
 | nid                  | integer           | Node id of the option                |
++----------------------+-------------------+--------------------------------------+
+| node_type            | varchar           | Type of the node                     |
 +----------------------+-------------------+--------------------------------------+
 | problem_id           | integer; required | Problem profile associated with the  |
 |                      |                   | option                               |
 +----------------------+-------------------+--------------------------------------+
 | type                 | varchar; required | Problem type                         |
 +----------------------+-------------------+--------------------------------------+
-| status               | varchar           | Status of the option                 |
-+----------------------+-------------------+--------------------------------------+
-| current_step         | integer           | paragraph ID of the Step Block the   |
-|                      |                   | user is currently working on         |
+| status               | varchar           | Status of the solution               |
 +----------------------+-------------------+--------------------------------------+
 | created              | timestamp         | Timestamp of when record was created |
 +----------------------+-------------------+--------------------------------------+
@@ -238,6 +237,35 @@ Status options are:
 * Maybe - the user is not sure but wants to hold on to the option
 * Complete  - the user has completed the specific option
 * In progress - the user is actively working on the option
+
+User option progress
+========================
+
+This entity tracks the specific step activity for an option referenced in the user solution data entity.
+
++----------------------+-------------------+--------------------------------------+
+| Field name           | Type              | Description                          |
++======================+===================+======================================+
+| entity_id            | number            | Unique id for the data record        |
++----------------------+-------------------+--------------------------------------+
+| option_id            | integer; required | Entity ID of the option from user    |
+|                      |                   | solution data                        |
++----------------------+-------------------+--------------------------------------+
+| step_id              | integer; required | paragraph ID of the step block       | 
++----------------------+-------------------+--------------------------------------+
+| status               | varchar           | Status of the solution               |
++----------------------+-------------------+--------------------------------------+
+| created              | timestamp         | Timestamp of when record was created |
++----------------------+-------------------+--------------------------------------+
+| changed              | timestamp         | Timestamp of when record was last    |
+|                      |                   | changed                              |
++----------------------+-------------------+--------------------------------------+
+
+Statuses here are:
+
+* Not started
+* In progress
+* Completed
 
 ================================
 Problem type specific entities
