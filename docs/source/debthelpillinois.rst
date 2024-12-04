@@ -16,4 +16,5 @@ Contents
    dhi_debt_profile_entities
    dhi_analytics
    dhi_popupblocks
+   dhi_helpful_functions
 
