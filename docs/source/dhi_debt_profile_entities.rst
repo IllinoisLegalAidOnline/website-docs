@@ -4,59 +4,11 @@ User data structures
 
 Each visitor to the platform may have a profile associated with them. The profile will depend on a) whether they have an account and b) the type of problem(s) they have.
 
-Overview of the workflow
-===========================
-
-**1. Account Creation and Initial Setup:**
-- **Individual A** visits the platform and decides to create an account. After filling out the necessary information, their account is successfully created, and they are assigned **User ID 2**.
-- Once logged in, Individual A is prompted to answer initial questions that help define their situation. They indicate they are facing a legal issue by selecting the problem type: **"I am being sued for a debt."** Additionally, they input their **zip code, 60603**.
-
-.. note:: Because many users will create their accounts mid-flow, the system will save their problem profile ID for their initial problem in the browser's local storage. When the individual creates their account, the system will automatically update the problem profile record with the user ID to tie the records back together.
-
-**2. Problem Profile Creation:**
-- The platform takes the information provided and creates a **Problem Profile** associated with **User ID 2**. This profile includes:
-  - **Problem Type:** Debt
-  - **Zip Code:** 60603
-- Recognizing the nature of the issue, the system also generates a **Debt Problem Entity Record**. This record is directly tied to the problem profile and stores crucial information:
-  - **Problem Taxonomy Term:** 16, labeled **"I am being sued on a debt"**.
-- The **Problem Profile** is updated to include a reference to the newly created **Debt Problem Entity**.
-
-**3. Integration with DialogFlow:**
-- As Individual A navigates through the platform, their **debt problem** and **zip code** are transmitted to **DialogFlow**. Here, the system identifies the appropriate flow, **"Debt lawsuit"**, to manage the conversation.
-- At this stage, an **Expert System Response Record** is generated, capturing the JSON data sent from Drupal to DialogFlow. This record is vital for ensuring accurate tracking, troubleshooting, and analytics.
-
-.. note:: DialogFlow is used as an example; we may use a different middleware.
-
-**4. Processing Response Data:**
-- When DialogFlow sends a response, it is logged in the existing **Expert System Response Record**. This response contains further details about Individual A’s debt situation.
-- The platform’s **Processor Module** is activated to parse the response data. The module updates the debt problem entity by:
-  - Creating additional **Debt Entities** if specific debts are identified, each tied back to the **Debt Problem Entity**.
-  - Updating the **Debt Problem Entity** with new details, such as the current debt focus, credit score, and other debt-specific information.
-  - Identifying potential solutions for Individual A. For each solution identified, a **Profile Option Entity** is created and linked to the **Debt Problem Entity**. Each solution is initially marked as **"Available"**.
-
-**5. Interaction with Expert Systems:**
-- As Individual A continues to interact with the platform, they may be presented with additional questions from the expert system.
-- Each new interaction generates another **Expert System Response Record** to log the exchange and the response.
-- If any potential solutions are deemed unsuitable by the expert system, the associated **Profile Option Entity** is updated to reflect a status of **"Unavailable"**.
-
-**6. Review and Selection of Options:**
-- When Individual A reviews the available options, they can mark each one with a status of **Yes, No, or Maybe** based on their preferences.
-- The system records these choices and updates the **Profile Option Entity** with the current step and a timestamp reflecting their progress.
-
-**7. Completion of Options:**
-- As Individual A works through the steps of a selected option, the system continually updates the **Profile Option Entity** to reflect the current step and the time of the last change.
-- Once all steps of an option are completed, the **Profile Option Entity** status is updated to **"Complete,"** signaling that Individual A has finished that particular path.
-
-
-.. note:: Do we need to track a status for the problem profile (New, Active, Abandoned, Solved)? What would those statuses be?
-
-.. image:: ../assets/dhi-erd.png
-
 
 Account or user profile
 ========================
 
-The account or user profile is the standard Drupal user account profile. This profile contains the information necessary to log in. This includes:
+The account profile is the standard Drupal user account profile. This profile contains the information necessary to log in. This includes:
 
 * username
 * UID (user id)
@@ -65,13 +17,6 @@ The account or user profile is the standard Drupal user account profile. This pr
 * mobile number
 * created (date created)
 * changed (date of last change)
-
-It may also include data that is applicable across legal problems including:
-
-* number of adults in household
-* number of children in household
-* total income
-* zip code
 
 .. note: Even visitors who use just a mobile number and passcode to log in will have a fixed UID associated with them
 
@@ -112,25 +57,17 @@ This custom entity contains the core problem profile information:
 | in_illinois          | integer           | 0 or 1 depending on whether person   |
 |                      |                   | in Illinois                          |
 +----------------------+-------------------+--------------------------------------+
+| city                 | varchar           | City where the legal problem is      |
+|                      |                   | located                              |
++----------------------+-------------------+--------------------------------------+
+| county               | varchar           | County of the problem                |
++----------------------+-------------------+--------------------------------------+
+| zip_suffix           | varchar           | Suffix for a postal code             |
++----------------------+-------------------+--------------------------------------+
+
 
 .. note:: The problem profile contains only very high level information to identify the more specific entity that will contain the actual problem information. While we initially are building this platform for debt, we may expand to support other problem types. If the user has a debt problem, the type will be "debt" which would then invoke the debt_problem_entity which contains specific debt problem metadata. If they had a divorce problem, there would be a divorce_problem_entity.
 
-Sample data:
-
-+------------+-------+--------------+-----------+----------+------------+---------------+
-| profileID  | uid   | type         | entity_id | zip_code |created     | changed       |
-+------------+-------+--------------+-----------+----------+------------+---------------+
-| 1          | 2     | debt problem | 21        |60603     |1723147452  |1723147452     |
-+------------+-------+--------------+-----------+----------+------------+---------------+
-| 2          | 2     | debt problem | 26        |60603     |1723147452  |1723147452     |
-+------------+-------+--------------+-----------+----------+------------+---------------+
-| 3          | 46    | debt problem | 36        |60603     |1723147452  |1723147452     |
-+------------+-------+--------------+-----------+----------+------------+---------------+
-| 4          | 2     | divorce      | 41        |60603     |1723147452  |1723147452     |
-|            |       | problem      |           |          |            |               |
-+------------+-------+--------------+-----------+----------+------------+---------------+
-
-In the above, User 2 has 2 problem profiles, both for debt problems. Those debt problems can be accessed via the debt problem entities 21 and 26. User 46 has two problem profiles - 1 for debt and 1 for divorce (assuming a future expansion)
 
 
 Expert system responses
@@ -169,17 +106,22 @@ Example JSON from initial triage (not debt prioritization)
 
 .. code-block:: 
 
-   {
+   {{
   "id": 417400267,
-  "problem_profile_id":6,
-  "source": "https://cdn.landbot.io/landbot-3/preview.html?ts=1731011197195&config=https%3A%2F%2Fstorage.googleapis.com%2Flandbot.pro%2Fv3%2FH-2656275-4RASN8SAA0QV0NNO%2Findex.json",
-  "debt_zip": 60130,
-  "debt_type": "creditcard",
-  "debt_stage": "creditor_contacting",
-  "debt_creditor_name": "LVNV",
-  "debt_creditor_type": "unknown",
-  "debt_last_payment_date": "2024/08/07"
-   }
+  "problem_profile_id": null,
+  "source": "https://cdn.landbot.io/landbot-3/preview.html?ts=1733866006523&config=https%3A%2F%2Fstorage.googleapis.com%2Flandbot.pro%2Fv3%2FH-2656275-4RASN8SAA0QV0NNO%2Findex.json",
+  "profile_address": "5 E Chestnut St, Coal City, IL 60416, USA",
+  "profile_city": "Coal City",
+  "profile_county": "Grundy",
+  "profile_zip_code": 60416,
+  "profile_zip_suffix": null,
+  "debt_type": "130051",
+  "debt_problem_type": "130116",
+  "debt_creditor_name": "Midland Credit Management, Inc.",
+  "debt_creditor_type": "collection_agency",
+  "debt_is_debt_collector": "True",
+  "debt_last_payment_date": "2018/12/11"
+  }
 
 Example JSON from initial triage (debt prioritization)
 -----------------------------------------------------------
@@ -187,16 +129,18 @@ When debt prioritization is included, it returns the term IDs for the types of d
 
 .. code-block::
 
-   {
+  {
   "id": 417400267,
-  "URL": "https://cdn.landbot.io/landbot-3/preview.html?ts=1731020055069&config=https%3A%2F%2Fstorage.googleapis.com%2Flandbot.pro%2Fv3%2FH-2646298-YIU9M453YSZ8TGVE%2Findex.json",
+  "problem_profile_id": 16,
+  "source": "https://cdn.landbot.io/landbot-3/preview.html?ts=1731020055069&config=https%3A%2F%2Fstorage.googleapis.com%2Flandbot.pro%2Fv3%2FH-2646298-YIU9M453YSZ8TGVE%2Findex.json",
   "debt_prioritization": [
     "130006",
     "130016",
     "129996",
     "130101"
   ]
-  }
+ }
+
   
   
 User solutions
@@ -329,13 +273,17 @@ Debt entities are for specific debts. Different debt types may have different da
 +----------------------+-------------------+--------------------------------------+
 | amount               | float             | Amount of the debt                   |
 +----------------------+-------------------+--------------------------------------+
-| stage_of_debt        | varchar           | Problem_type taxonomy term id        |
+| last_payment_date    | varchar / date    | Date of last payment                 |
 +----------------------+-------------------+--------------------------------------+
 | interest_rate        | float             | Interest rate, if known              |
 +----------------------+-------------------+--------------------------------------+
 | debt_type            | integer           | Term reference to debt type taxonomy |
 +----------------------+-------------------+--------------------------------------+
 | creditor_name        | varchar           | Name of the creditor, if known       |
++----------------------+-------------------+--------------------------------------+
+| creditor_type        | varchar           | Type of creditor                     |
++----------------------+-------------------+--------------------------------------+
+| is_debt_collector    | integer/boolean   | 1 or 0; is creditor a debt collector |
 +----------------------+-------------------+--------------------------------------+
 
 Debt entities in prioritization
