@@ -6,8 +6,8 @@ project = 'Illinois Legal Aid Online Documentation'
 copyright = '2024, Illinois Legal Aid Online'
 author = 'ILAO'
 
-release = 'February 2024'
-version = '131.0.0'
+release = 'December 2024'
+version = '150.0.0'
 
 # -- General configuration
 
