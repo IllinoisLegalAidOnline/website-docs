@@ -7,6 +7,7 @@ Custom blocks
    :caption: Contents:
 
 
+   blocks_banner_blocks
    blocks_current
    blocks_sectional
    blocks_configuration
