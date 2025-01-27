@@ -25,7 +25,7 @@ Place the block on the page
 
 Place the block by going to Structure => Block Layout
 
-** Be sure to uncheck "Display title"**
+**Be sure to uncheck "Display title"**
 
 Visibility
 ------------
@@ -48,6 +48,8 @@ Region & Class
 
 Styles
 =====================
+
+For the styles, you will need to use the Source view in the WYSIWYG to paste the code in first.
 
 Grey background with wide margins
 ------------------------------------
