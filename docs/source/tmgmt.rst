@@ -10,6 +10,7 @@ There are multiple places where translations can be managed, depending on the us
    :caption: Contents:
 
 
+   translation_motionpoint
    translation_mgmt_lc
    translation_content
    translation_ui

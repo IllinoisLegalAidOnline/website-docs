@@ -96,9 +96,9 @@ This code has a red background with minimal padding, resulting in a narrower blo
 
 .. code-block:: html
 
-   <div style="background-color:#E90046;box-shadow:0 0.125rem 0.5rem rgba(106,107,113,0.2);padding:5px;width:100%;">
+   <div style="background-color:#AD0034;box-shadow:0 0.125rem 0.5rem rgba(106,107,113,0.2);padding:5px;width:100%;">
     <p style="color:white;padding-bottom:0;">
-        Alert: The law has changed and this form is no longer good. We will have a new version on February 1
+        Alert: The law has changed and this form is no longer good. We will have a new version on February 1. <a href="#" style="color:FFFF00#f;text-decoration:underline">Learn more</a>
     </p>
     </div>
 
@@ -115,7 +115,7 @@ This code has our neutral/positive dark green background with minimal padding, r
 
     <div style="background-color:#007D56;box-shadow:0 0.125rem 0.5rem rgba(106,107,113,0.2);padding:5px;width:100%;">
     <p style="color:white;padding-bottom:0;">
-        We see you. Learn more about ILAO's commitment to keep you informed.
+        We see you. Learn more about <a href="#" style="color:#FFD700;text-decoration:underline">ILAO's commitment to keep you informed</a>.
     </p>
     </div>
 
