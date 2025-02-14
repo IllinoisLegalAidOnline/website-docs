@@ -80,10 +80,127 @@ The currently supported content formats are:
 * Consequences, for articles related to "What if I lose?"
 * Referral, for articles that serve as referrals to legal organizations outside of OTIS
 
-Metadata conditions
-----------------------
 
-An article will match a user's specific debt journey when their problem profile OR debt entity:
+Options
+==========
+
+Options are specifically formatted content types.
+
++----------------------+----------------+------------------------------------------+
+| Field                | Type           | Description                              |
++======================+================+==========================================+
+| Title                | String (short) | Title of the resource                    |
+|                      | Required       |                                          |
++----------------------+----------------+------------------------------------------+
+| Description          | String (long)  | Description for use in social media and  |
+|                      | Required       | on site listings / search                |
++----------------------+----------------+------------------------------------------+
+| Overview             | Paragraphs     | Paragraph entity of type "Option         |
+|                      | Required       | overview" (see below)                    |
++----------------------+----------------+------------------------------------------+
+| Steps                | Paragraphs     | Paragraph entity of Option step (below)  |
+|                      | Required       |                                          |
++----------------------+----------------+------------------------------------------+
+| Prompt               | Taxonomy term  | Optional prompt library item             |
++----------------------+----------------+------------------------------------------+
+| Content generation   | Plain text     | Prompt used to generate AI content       |
+| prompt               |                |                                          |
++----------------------+----------------+------------------------------------------+
+| Eligibility questions| String (short) | TBD; this may be a URL or an id          |
++----------------------+----------------+------------------------------------------+
+| Required ALL         | Term reference | Term reference to the profile problem    |
+| Metadata             |                | metadata; see metadata below             |
++----------------------+----------------+------------------------------------------+
+| Required ANY         | Term reference | Term reference to the profile problem    |
+| Metadata             |                | metadata; see metadata below             |
++----------------------+----------------+------------------------------------------+
+| Match settings       | Plain text;    | Readable summary of the required ALL and |
+|                      | read only      | ANY metadata; see metadata below         |
++----------------------+----------------+------------------------------------------+
+| Jurisdiction         | Coverage area  | Allows resource to be tagged to 1 or more|
+|                      | Required       | states, counties, cities, or zip codes   |
+|                      |                | to indicate that the location            |
++----------------------+----------------+------------------------------------------+
+| Negate jurisdiction  | Coverage area  | Allows resource to be essentially        |
+|                      | Optional       | untagged to a location                   |
++----------------------+----------------+------------------------------------------+
+| Last revised         | Date           | Allows content author to update date     |
+|                      |                | when substantive changes made            |
++----------------------+----------------+------------------------------------------+
+| Problem types        | Term reference | Tags legal resource to 0 or more problem |
+|                      |                | types.                                   |
++----------------------+----------------+------------------------------------------+
+| Debt types           | Term reference | Tags legal resource to 0 or more debt    |
+|                      |                | types                                    |
++----------------------+----------------+------------------------------------------+
+
+.. note:: Need to remove eligibility field as it is replaced with the required all/any fields.
+
+Overview
+------------
+
+This would be a paragraphs bundle with a cardinality of 1.
+
++----------------------+----------------+------------------------------------------+
+| Field                | Type           | Description                              |
++======================+================+==========================================+
+| Overview             | WYSIWYG        | Overview text                            |
+|                      | Required       |                                          |
++----------------------+----------------+------------------------------------------+
+| Pros Label           | Text           | Heading label for the pros section, if   |
+|                      |                | exists; defaults to "Pros"               |
++----------------------+----------------+------------------------------------------+
+| Pros                 | WYSIWYG        | Parapgraph for pros narrative            |
++----------------------+----------------+------------------------------------------+
+| Cons Label           | Text           | Heading label for the cons section, if   |
+|                      |                | exists; defaults to "Cons"               |
++----------------------+----------------+------------------------------------------+
+| Cons                 | WYSIWYG        | Parapgraph for cons narrative            |
++----------------------+----------------+------------------------------------------+
+
+Steps
+---------
+This would mirror the process step bundle on IllinoisLegalAid.org. The Steps field should have a cardinality of unlimited
+
++----------------------+----------------+------------------------------------------+
+| Field                | Type           | Description                              |
++======================+================+==========================================+
+| Step title           | Text (plain)   | Heading for the step                     |
+|                      | Required       |                                          |
++----------------------+----------------+------------------------------------------+
+| Body                 | WYSIWYG        | Body of the step                         |
++----------------------+----------------+------------------------------------------+
+
+Basic pages
+===============
+
+Basic pages are used for the About section, user guide, and other similar static pages.
+
+.. note:: Need to add a description field. May need to add a media/text story.
+
+FAQs
+=======
+
+FAQs are simple pages that are are designed for a single question / answer as part of the website FAQs
+
++----------------------+----------------+------------------------------------------+
+| Field                | Type           | Description                              |
++======================+================+==========================================+
+| Title                | Text (plain)   | Question for the FAQ                     |
+|                      | Required       |                                          |
++----------------------+----------------+------------------------------------------+
+| Body                 | WYSIWYG        | Answer text / body                       |
++----------------------+----------------+------------------------------------------+
+| FAQ weight           | Integer        | Used to order FAQs on a page; higher     |
+|                      |                | values will appear first                 |
++----------------------+----------------+------------------------------------------+
+
+Metadata conditions
+=======================
+Metadata conditions are used in legal resources and legal options.
+
+
+An item will match a user's specific debt journey when their problem profile OR debt entity:
 
 * Matches on EVERY term in the Required ALL metadata, when at least one is selected; when left blank, it will never match.
 * Matches on AT LEAST on of any Required ANY metadata, when at least one is selected; when left blank, it will never match
@@ -91,7 +208,7 @@ An article will match a user's specific debt journey when their problem profile 
 * Matches on any selected problem type
 
 Examples
-^^^^^^^^^^^^
+------------
 
 **Article A has required metadata of is_debt_collector, is_wrong_venue; has required any metadata of is_600_of_fpg, is_300_of_fpg, debt type(s) of credit card, medical debt and problem type of "I'm being sued on a debt"**
 
@@ -170,8 +287,11 @@ The article WOULD:
   * Never be returned when the user does not match on at least one of the selected Any metadata. 
 
 
+Block Types
+===============
+
 Did you know snippets
-========================
+-------------------------
 
 Did you know snippets are a custom block type. These blocks include:
 
@@ -183,87 +303,3 @@ Did you know snippets are a custom block type. These blocks include:
 These can be then placed on any page of the site by users with the content author role.
 
 They can also be called via API and used in middleware.
-
-
-Options
-==========
-
-Options are specifically formatted content types.
-
-+----------------------+----------------+------------------------------------------+
-| Field                | Type           | Description                              |
-+======================+================+==========================================+
-| Title                | String (short) | Title of the resource                    |
-|                      | Required       |                                          |
-+----------------------+----------------+------------------------------------------+
-| Description          | String (long)  | Description for use in social media and  |
-|                      | Required       | on site listings / search                |
-+----------------------+----------------+------------------------------------------+
-| Overview             | Paragraphs     | Paragraph entity of type "Option         |
-|                      | Required       | overview" (see below)                    |
-+----------------------+----------------+------------------------------------------+
-| Steps                | Paragraphs     | Paragraph entity of Option step (below)  |
-|                      | Required       |                                          |
-+----------------------+----------------+------------------------------------------+
-| Eligibility questions| String (short) | TBD; this may be a URL or an id          |
-+----------------------+----------------+------------------------------------------+
-| Eligibility          | String (long)  | Plain text field for evaluative criteria |
-+----------------------+----------------+------------------------------------------+
-| Jurisdiction         | Coverage area  | Allows resource to be tagged to 1 or more|
-|                      | Required       | states, counties, cities, or zip codes   |
-|                      |                | to indicate that the location            |
-+----------------------+----------------+------------------------------------------+
-| Negate jurisdiction  | Coverage area  | Allows resource to be essentially        |
-|                      | Optional       | untagged to a location                   |
-+----------------------+----------------+------------------------------------------+
-| Last revised         | Date           | Allows content author to update date     |
-|                      |                | when substantive changes made            |
-+----------------------+----------------+------------------------------------------+
-| Problem types        | Term reference | Tags legal resource to 0 or more problem |
-|                      |                | types.                                   |
-+----------------------+----------------+------------------------------------------+
-| Debt types           | Term reference | Tags legal resource to 0 or more debt    |
-|                      |                | types                                    |
-+----------------------+----------------+------------------------------------------+
-
-Overview
-------------
-
-This would be a paragraphs bundle with a cardinality of 1.
-
-+----------------------+----------------+------------------------------------------+
-| Field                | Type           | Description                              |
-+======================+================+==========================================+
-| Overview             | WYSIWYG        | Overview text                            |
-|                      | Required       |                                          |
-+----------------------+----------------+------------------------------------------+
-| Pros Label           | Text           | Heading label for the pros section, if   |
-|                      |                | exists                                   |
-+----------------------+----------------+------------------------------------------+
-| Pros                 | WYSIWYG        | Parapgraph for pros narrative            |
-+----------------------+----------------+------------------------------------------+
-| Cons Label           | Text           | Heading label for the cons section, if   |
-|                      |                | exists                                   |
-+----------------------+----------------+------------------------------------------+
-| Cons                 | WYSIWYG        | Parapgraph for cons narrative            |
-+----------------------+----------------+------------------------------------------+
-
-Steps
----------
-This would mirror the process step bundle on IllinoisLegalAid.org. The Steps field should have a cardinality of unlimited
-
-+----------------------+----------------+------------------------------------------+
-| Field                | Type           | Description                              |
-+======================+================+==========================================+
-| Step title           | Text (plain)   | Heading for the step                     |
-|                      | Required       |                                          |
-+----------------------+----------------+------------------------------------------+
-| Body                 | WYSIWYG        | Body of the step                         |
-+----------------------+----------------+------------------------------------------+
-
-Basic pages
-===============
-
-FAQs
-=======
-
