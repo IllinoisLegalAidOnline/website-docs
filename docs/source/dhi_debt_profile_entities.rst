@@ -64,7 +64,17 @@ This custom entity contains the core problem profile information:
 +----------------------+-------------------+--------------------------------------+
 | zip_suffix           | varchar           | Suffix for a postal code             |
 +----------------------+-------------------+--------------------------------------+
+| user_associated_with | int               | User ID of the person tied to the    |
+| _profile             |                   | profile                              |
++----------------------+-------------------+--------------------------------------+
+| problem_type         | varchar           | String of problem type               |
++----------------------+-------------------+--------------------------------------+
+| status               | int               | Drupal system published/not published|
+|                      |                   | status                               |
++----------------------+-------------------+--------------------------------------+
 
+
+Problem type identifies the broad probleme entity involved (like debt problem)
 
 .. note:: The problem profile contains only very high level information to identify the more specific entity that will contain the actual problem information. While we initially are building this platform for debt, we may expand to support other problem types. If the user has a debt problem, the type will be "debt" which would then invoke the debt_problem_entity which contains specific debt problem metadata. If they had a divorce problem, there would be a divorce_problem_entity.
 
@@ -90,16 +100,17 @@ This entity tracks data sent to and received back from any expert system (for ex
 |                      |                   | specific instance of the expert      |
 |                      |                   | system                               |
 +----------------------+-------------------+--------------------------------------+
-| input                | JSON/text         | JSON representation of data sent to  |
-|                      |                   | expert system                        |
-+----------------------+-------------------+--------------------------------------+
-| response             | JSON/text         | JSON representation of data received |
+| response_value       | JSON/text         | JSON representation of data received |
 |                      |                   | from the expert system               |
 +----------------------+-------------------+--------------------------------------+
 | created              | timestamp         | Timestamp of when record created     |
 +----------------------+-------------------+--------------------------------------+
 | changed              | timestamp         | Timestamp of when record last changed|
 +----------------------+-------------------+--------------------------------------+
+| uid                  | integer           | User ID of the person associated     |
+|                      |                   | with the response, if known          |
++----------------------+-------------------+--------------------------------------+
+
 
 Example JSON from initial triage (not debt prioritization)
 -----------------------------------------------------------
@@ -169,6 +180,13 @@ This entity tracks the options for a specific problem.
 | changed              | timestamp         | Timestamp of when record was last    |
 |                      |                   | changed                              |
 +----------------------+-------------------+--------------------------------------+
+| uid                  | integer           | User ID of the person associated with|
+|                      |                   | the solution                         |
++----------------------+-------------------+--------------------------------------+
+| description          | longtext          |                                      |
++----------------------+-------------------+--------------------------------------+
+
+
 
 Status
 ---------
@@ -204,6 +222,12 @@ This entity tracks the specific step activity for an option referenced in the us
 | changed              | timestamp         | Timestamp of when record was last    |
 |                      |                   | changed                              |
 +----------------------+-------------------+--------------------------------------+
+| uid                  | integer           | User ID of the person associated with|
+|                      |                   | the solution                         |
++----------------------+-------------------+--------------------------------------+
+| description          | longtext          |                                      |
++----------------------+-------------------+--------------------------------------+
+
 
 Statuses here are:
 
@@ -248,6 +272,14 @@ This entity contains all of the metadata for a user's specific debt problem but 
 | changed              | timestamp         | Timestamp of when the record was     |
 |                      |                   | last changed in the system           |
 +----------------------+-------------------+--------------------------------------+
+| uid                  | integer           | User id of the person; 0 if anonymous|
++----------------------+-------------------+--------------------------------------+
+| status               | integer           | 0 for unpublished / archived         |
+|                      |                   | 1 for new / active                   |
++----------------------+-------------------+--------------------------------------+
+
+
+
 
 .. note:: This entity type will likely need signficant fleshing out to add additional properties that we want to store.
 
@@ -261,7 +293,7 @@ Debt entities are for specific debts. Different debt types may have different da
 +======================+===================+======================================+
 | debt_id              | auto number       | unique identifier for the debt       |
 +----------------------+-------------------+--------------------------------------+
-| name                 | varchar           | Name of the debt, as defined by user |
+| label                | varchar           | Name of the debt, as defined by user |
 +----------------------+-------------------+--------------------------------------+
 | debt_problem_id      | integer; required | id of the debt problem entity        |
 +----------------------+-------------------+--------------------------------------+
@@ -285,6 +317,10 @@ Debt entities are for specific debts. Different debt types may have different da
 +----------------------+-------------------+--------------------------------------+
 | is_debt_collector    | integer/boolean   | 1 or 0; is creditor a debt collector |
 +----------------------+-------------------+--------------------------------------+
+| status               | integer           | published / not published            |
++----------------------+-------------------+--------------------------------------+
+| uid                  | integer           | user ID associated with the debt     |
++----------------------+-------------------+--------------------------------------+         
 
 Debt entities in prioritization
 =================================
@@ -305,7 +341,7 @@ When a user completes prioritization, for each debt type included in the priorit
   * debt_id is automatically generated
   * debt_problem_id is set to the debt_problem entity just created
   * created and timestamp are set
-  * debt_type is set to the taxonomy ter
+  * debt_type is set to the taxonomy term prioritized
   * all other fields are ignored
   
 * The debt_problem entity is updated to set the current_focus = to the debt entity ID
