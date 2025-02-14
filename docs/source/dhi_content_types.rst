@@ -162,7 +162,14 @@ The article WOULD:
 
 * Be returned when the user has every defined profile metadata and matches on debt type and problem type
 
-* Never be returned when the user is missing any defined profile metadata because it would always fail on the ALL required metadata as none is selected.
+* Never be returned when the user is missing any defined profile metadata because it would always fail on the ANY required metadata as none is selected.
+
+.. note:: If we had an ignore empty ALL checkbox, this article would then:
+
+* Be returned when the user has any of the defined profile metadata that matches the Required ANY field and matches on debt type and problem type
+
+* Never be returned when the user does not match on at least one of the selected Any metadata. 
+
 
 Did you know snippets
 ========================
