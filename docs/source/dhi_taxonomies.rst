@@ -71,7 +71,7 @@ The creditor taxonomy is used to maintain an internal listing of known common cr
 * Aliases (common misspellings or other variants that may be used to support fuzzy searching)
 
 
-Court information
+Courts
 ====================
 
 The court information taxonomy is used to store information about the Illinois court system. The taxonomy contains:
@@ -86,5 +86,52 @@ The court information taxonomy is used to store information about the Illinois c
 * Jurisdiction (based on our jurisdiction paragraphs bundle); this then connects to the region taxonomy so that we can tie specific user profiles to their local court automatically
 * District - number of the district the court is in
 * Circuit - the ordinal number of the circuit the court is in, if applicable.
+
+Problem Profile Metadata
+============================
+
+Problem profile metadata are terms that are attached to debts and profile data to evaluate the appropriatness of an article or option. These are variables that are returned from Landbot.
+
+Each taxonomy term has:
+
+* A name
+* An optional description
+* A variable name that corresponds to the Landbot variable name
+* The variable type (Boolean, String or Number); defaults to Boolean
+* Evaluation function is a text field to input a specific function to evaluate the variable as true or false.
+
+.. note:: We have not created any functionality that supports the evaluation function piece yet.
+
+
+Prompt Library
+=================
+
+The prompt library is designed to store AI prompts that can be used to generate content. 
+
+Each term has:
+
+* A name
+* A description that contains the actual prompt. Tokens are supported.
+
+Example prompts may be:
+
+* "Write an article of less than 300 words that explains [node:title]" where the [node:title] token is replaced with the content title"
+* "Write an article of less than 300 words that explains [node:title] when it involves debt of [node:field_debt_types]" where the [node:title] token is replaced with the content title and the [node:field_debt_types] is replaced with the selected debt typetaxonomy terms attached to the article.
+
+Region
+==========
+
+This is an import of the IllinoisLegalAid.org region taxonomy that includes state, county, city, and zip code data.
+
+Glossary
+===========
+
+The glossary taxonomy contains glossary terms.
+
+Each term has:
+
+* A name
+* A description, which serves as the definition
+
 
 
