@@ -277,11 +277,10 @@ This entity contains all of the metadata for a user's specific debt problem but 
 | status               | integer           | 0 for unpublished / archived         |
 |                      |                   | 1 for new / active                   |
 +----------------------+-------------------+--------------------------------------+
+| archived             | timestamp         | Timestamp of when a debt problem     |
+|                      |                   | was archived                         |
++----------------------+-------------------+--------------------------------------+
 
-
-
-
-.. note:: This entity type will likely need signficant fleshing out to add additional properties that we want to store.
 
 Debt entity
 -----------------
