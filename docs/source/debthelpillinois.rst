@@ -17,4 +17,5 @@ Contents
    dhi_analytics
    dhi_popupblocks
    dhi_helpful_functions
+   dhi_workflow
 
