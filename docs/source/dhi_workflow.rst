@@ -12,4 +12,5 @@ Contents
    dhi_diagnosis
    dhi_summary_nextsteps
    dhi_summary_prioritzation
+   dhi_summary_return
 

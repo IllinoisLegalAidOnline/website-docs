@@ -202,17 +202,19 @@ Metadata conditions are used in legal resources and legal options.
 
 An item will match a user's specific debt journey when their problem profile OR debt entity:
 
-* Matches on EVERY term in the Required ALL metadata, when at least one is selected; when left blank, it will never match.
-* Matches on AT LEAST on of any Required ANY metadata, when at least one is selected; when left blank, it will never match
+* Matches on EVERY term in the Required ALL metadata, when at least one is selected; when left blank, it will never match unless the Ignore empty all metadata box is checked
+* Matches on AT LEAST on of any Required ANY metadata, when at least one is selected; when left blank, it will never match unless the Ignore empty any metadata box is checked
 * Matches on any selected debt type
 * Matches on any selected problem type
 
 Examples
 ------------
 
-**Article A has required metadata of is_debt_collector, is_wrong_venue; has required any metadata of is_600_of_fpg, is_300_of_fpg, debt type(s) of credit card, medical debt and problem type of "I'm being sued on a debt"**
+Article A
+^^^^^^^^^^^^^
+Article A has required metadata of is_debt_collector, is_wrong_venue; has required any metadata of is_600_of_fpg, is_300_of_fpg, debt type(s) of credit card, medical debt and problem type of "I'm being sued on a debt"
 
-User A's profile has:
+User 1's profile has:
 
 * is_debt_collector = Y
 * is_wrong_venue = Y
@@ -223,7 +225,7 @@ User A's profile has:
 
 The article WOULD BE returned for this user; it matches on both required ALL and at least one of the required ANY and on the debt type and problem type.
 
-User A's profile has:
+User 2's profile has:
 
 * is_debt_collector = Y
 * is_wrong_venue = N
@@ -234,7 +236,7 @@ User A's profile has:
 
 The article WOULD NOT BE returned for this user because it failed the Required All metadata.
 
-User A's profile has:
+User 3's profile has:
 
 * is_debt_collector = Y
 * is_wrong_venue = Y
@@ -245,46 +247,54 @@ User A's profile has:
 
 The article WOULD NOT BE returned for this user because it failed the Required ANY metadata.
 
-**Article B has no required metadata and no required ANY metadata debt type(s) of credit card, medical debt and problem type of "I'm being sued on a debt"**
+Article B
+^^^^^^^^^^^
+Article B has required ALL metadata of is_wrong_venue, a debt type of Credit card debt, and a problem type of I'm being sued on a debt. It has nothing marked for any metadata.
 
+User 1's profile:
 
-The article WOULD:
+* is_debt_collector = Y
+* is_wrong_venue = Y
+* is_600_of_fpg = N
+* is 300_of_fpg = Y
+* debt type = credit card debt
+* problem type = "I'm being sued on a debt
 
-* Be returned when the user has no defined profile metadata and matches on debt type and problem type
+This article would be returned if the Ignore empty Any metadata was checked because only the "is_wrong_venue" and debt type and problem type would be required.
 
-* Never be returned when the user has any defined profile metadata
+User 2's profile:
 
-**Article C has all options selected for the required metadata and no required ANY metadata debt type(s) of credit card, medical debt and problem type of "I'm being sued on a debt"**
+* debt type = credit card debt
+* problem type = "I'm being sued on a debt
+* has no other metadata
 
+This article would never be returned because is_wrong_venue is not defined.
 
-The article WOULD:
+Article C
+^^^^^^^^^^^^^
+Article B has a debt type of Credit card debt, and a problem type of I'm being sued on a debt. It has nothing marked for the ANY metadata and nothing marked for the ALL metadata.
 
-* Be returned when the user has no defined profile metadata and matches on debt type and problem type
+User 1's profile:
 
-* Never be returned when the user has any defined profile metadata because it would always fail on the ANY required metadata
+* is_debt_collector = Y
+* is_wrong_venue = Y
+* is_600_of_fpg = N
+* is 300_of_fpg = Y
+* debt type = credit card debt
+* problem type = "I'm being sued on a debt
 
-**Article D has all options selected for the required metadata and all required ANY metadata debt type(s) of credit card, medical debt and problem type of "I'm being sued on a debt"**
+This article would be returned if the Ignore empty Any metadata and Ignore empty ALL metadata was checked because only debt type and problem type would be required.
 
+It would not be returned if the ignore boxes were not checked.
 
-The article WOULD:
+User 2's profile:
 
-* Be returned when the user has every defined profile metadata and matches on debt type and problem type
+* debt type = credit card debt
+* problem type = "I'm being sued on a debt
+* has no other metadata
 
-* Never be returned when the user is missing any defined profile metadata because it would always fail on the ALL required metadata
+This article would always be returned because it matches on debt type, problem type, and there is no metadata collected.
 
-**Article E has no options selected for the required metadata and all required ANY metadata debt type(s) of credit card, medical debt and problem type of "I'm being sued on a debt"**
-
-
-The article WOULD:
-
-* Be returned when the user has every defined profile metadata and matches on debt type and problem type
-
-* Never be returned when the user is missing any defined profile metadata because it would always fail on the ANY required metadata as none is selected.
-
-.. note:: If we had an ignore empty ALL checkbox, this article would then:
-
-   * Be returned when the user has any of the defined profile metadata that matches the Required ANY field and matches on debt type and problem type
-  * Never be returned when the user does not match on at least one of the selected Any metadata. 
 
 
 Block Types
