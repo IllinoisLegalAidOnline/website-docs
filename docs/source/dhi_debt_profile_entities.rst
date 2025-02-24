@@ -72,6 +72,9 @@ This custom entity contains the core problem profile information:
 | status               | int               | Drupal system published/not published|
 |                      |                   | status                               |
 +----------------------+-------------------+--------------------------------------+
+| profile_metadata     | term reference    | Term references to the user profile  |
+|                      |                   | metadata taxonomy; unlimited         |        
++----------------------+-------------------+--------------------------------------+
 
 
 Problem type identifies the broad probleme entity involved (like debt problem)
@@ -280,6 +283,9 @@ This entity contains all of the metadata for a user's specific debt problem but 
 | archived             | timestamp         | Timestamp of when a debt problem     |
 |                      |                   | was archived                         |
 +----------------------+-------------------+--------------------------------------+
+| summary_nid          | integer           | node ID of the matching summary      |
+|                      |                   | template                             |
++----------------------+-------------------+--------------------------------------+
 
 
 Debt entity
@@ -319,7 +325,10 @@ Debt entities are for specific debts. Different debt types may have different da
 | status               | integer           | published / not published            |
 +----------------------+-------------------+--------------------------------------+
 | uid                  | integer           | user ID associated with the debt     |
-+----------------------+-------------------+--------------------------------------+         
++----------------------+-------------------+--------------------------------------+ 
+| debt_metadata        | term reference    | Term references to the user profile  |
+|                      |                   | metadata taxonomy; unlimited         |        
++----------------------+-------------------+--------------------------------------+
 
 Debt entities in prioritization
 =================================
