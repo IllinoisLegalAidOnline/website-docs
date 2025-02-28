@@ -30,8 +30,7 @@ Content in the Span class:
      <span>The text you want ignored</span> -->
     <!-- mp_trans_disable_end --> “
 
-.. todo:: We need to fix the button to apply the class automatically. It works but it leaves the original text. For example, if I want to wrap "This text" in the class, in source, when I press the code button, it results in This text <span class="Spanish">This text</span>; it would be helpful too if the Ckeditor showed a distinction.
-
+.. todo:: We will add a style for this to the CKeditor and cause it to display more distinctively in the CKeditor.
 
 In blocks, views and other components
 ========================================
