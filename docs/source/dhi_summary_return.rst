@@ -31,5 +31,27 @@ From each active option, the visitor will see:
 * a label repesenting the debt type
 * a continue button that takes the user to the option page
 
+Working on the active option
+-----------------------------
+
+When the user views an active option, they see a tailored view that:
+
+* Hides the pros and cons
+* Shows each step in full
+* Has an indicator to show whether the step has been completed
+* The ability to update the step's status
+* An option to Mark the option as complete
+
+.. todo: Add ticket for mark as done
+
+
 Visitors with debts they haven't started on
 ==============================================
+
+
+Visitors with completed debts
+==================================
+
+
+Visitors with saved resources
+===============================
