@@ -72,7 +72,9 @@ If the user has debt types that have a typical priority of "high," they will app
 
 For each category of debt priority, there is a carousel and overflow page if there are more debt entities than the display can hold.
 
-.. note::
+.. note:: If a user selects a debt to work on, the Landbot tool will be updated to prevent them from starting a new prioritization.
+
+.. todo::
    * Priority note is not dispaying on card; it simpty says learn more on the higher and low priority debts
    * Need a special category for identity theft
    * Concern that filtering view on user rather than problem profile may be problematic
