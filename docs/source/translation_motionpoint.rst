@@ -22,6 +22,8 @@ To tell Motionpoint to ignore text and render as is:
 
 .. image:: ../assets/spanish-markup.png
 
+When rendered on the front end, the <span class="Spanish"> tags will be replaced with the correct Motionpoint DT tags.
+
 .. code:: html
 
    <!-- mp_trans_disable_start -->
