@@ -10,18 +10,17 @@ In content, we sometimes have strings that we do not want to have Motionpoint ch
 
 To tag content
 =================
-To tell Motionpoint to ignore text, go into the source view and wrap the text in a span class of Spanish. 
+To tell Motionpoint to ignore text and render as is:
 
-.. code:: html
+* Highlight the text you want Motionpoint to ignore
+* In the styles dropdown, select Spanish
 
-   <span class="Spanish">The text you want ignored</span>
-   
-Content in the Span class:
+  * The text will display in the WYSIWYG with a light blue background
+  * The text will not display on the front-end of the English site
+  * The text will appear **as is** on the Spanish site.
+  * Will be replaced with the appropriate Motionpoint Directive Tags (DT). See below for the resulting HTML that will be shown in the "View source" in the browser on the front-end.
 
-* Will not show on the front end of IllinoisLegalAid.org
-* Will appear in the WYSIYWYG field
-* Will appear as is on the Spanish website
-* Will be replaced with the appropriate Motionpoint Directive Tags (DT). See below for the resulting HTML that will be shown in the "View source" in the browser on the front-end.
+.. image:: ../assets/spanish-markup.png
 
 .. code:: html
 
@@ -30,7 +29,6 @@ Content in the Span class:
      <span>The text you want ignored</span> -->
     <!-- mp_trans_disable_end --> “
 
-.. todo:: We will add a style for this to the CKeditor and cause it to display more distinctively in the CKeditor.
 
 In blocks, views and other components
 ========================================
