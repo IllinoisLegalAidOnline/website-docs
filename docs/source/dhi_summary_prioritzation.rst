@@ -34,11 +34,11 @@ The summmary and next steps page displays at the debt-prioritization url. This p
 
 Identity theft
 -----------------
-If the user has a debt type of identity theft, an alert about tackling identity theft first displays
+If the user has a problem type of identity theft and debt type of "prioritized", an alert about tackling identity theft first displays
 
 In litigation
 ----------------
-
+If the user has a problem type of "active lawsuit" and debt type of "prioritized", an alert about dealingi with an active lawsuit displays immediately after identity theft.
 
 Highest priority debts
 -------------------------
@@ -74,10 +74,7 @@ For each category of debt priority, there is a carousel and overflow page if the
 
 .. note:: If a user selects a debt to work on, the Landbot tool will be updated to prevent them from starting a new prioritization.
 
-.. todo::
-   * Priority note is not dispaying on card; it simpty says learn more on the higher and low priority debts
-   * Need a special category for identity theft
-   * Concern that filtering view on user rather than problem profile may be problematic
 
-
+   
+   
 

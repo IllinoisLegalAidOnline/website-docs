@@ -27,8 +27,5 @@ Once the diagnosis is complete:
     * One debt entity is created for each type of debt returned
     * The debt type is stored to the Prioritized debt type taxonomy term id
   
-  
-.. note:: debt name does not appear to be stored as of 2/21; what are we doing with metadata? 
-  
-
+ 
 Once completed, the user is then directed to their summary and next steps, or to a prioritization summary, depending on how the responded to the diagnosis tool.

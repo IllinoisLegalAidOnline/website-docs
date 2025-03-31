@@ -68,9 +68,11 @@ Legal resources are available when:
   * Matches on any metadata
   * Is not tagged to any general information terms
   
-An icon, the title, description, and problem type are displayed in each card. A heart to favorite the resource is also visible.
+An icon, the title, description, and problem type are displayed in each card. A heart to favorite the resource is also visible. Resources are ordered:
+
+.. note:: Resources are ordered using an algorithm that ranks most narrowly tailored to least tailored. Resrouces pinned as sticky at top of lists will appear first.
 
 .. note:: If the user is not logged in, pressing the heart will launch the sign up modal.
 
-.. note:: How are these ordered? 
+
 
