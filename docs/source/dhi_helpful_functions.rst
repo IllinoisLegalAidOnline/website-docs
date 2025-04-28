@@ -133,4 +133,8 @@ Returns an object that contains:
    
 .. note:: If no clerk phone number is available, the court phone number is used instead. If there is no match, the IL court help website and phone number are returned.
 
-   
+Get Debt Entity
+===================
+
+Url: https://debthelpillinois-3927.twil.io/get-debt-entity?debt_id=1&api_key=[apikey]
+

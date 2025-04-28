@@ -171,8 +171,8 @@ This entity tracks the options for a specific problem.
 +----------------------+-------------------+--------------------------------------+
 | node_type            | varchar           | Type of the node                     |
 +----------------------+-------------------+--------------------------------------+
-| problem_id           | integer; required | Problem profile associated with the  |
-|                      |                   | option                               |
+| problem_id           | integer; required | Debt problem profile associated with |
+|                      |                   | the option                           |
 +----------------------+-------------------+--------------------------------------+
 | type                 | varchar; required | Problem type                         |
 +----------------------+-------------------+--------------------------------------+
