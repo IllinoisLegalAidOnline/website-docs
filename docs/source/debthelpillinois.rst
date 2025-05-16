@@ -14,6 +14,7 @@ Contents
    dhi_content_types
    dhi_user_accounts
    dhi_debt_profile_entities
+   dhi_tokens
    dhi_analytics
    dhi_popupblocks
    dhi_helpful_functions
