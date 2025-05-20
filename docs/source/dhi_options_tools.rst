@@ -81,5 +81,40 @@ When the user has completed the tool:
    You've completed this step.
    <h3>2. Determine your negotiation strategy<h3>
    <p>Having claims you can raise can help you negotiate a better settlement than if you don't have claims. You did not identify any potential claims.</p>
+   
+   
+How the Landbot data is processed
+===================================
+
+Sample response:
+
+.. code-block:: json
+
+   { "debt_entity_id": 56,
+   "profile_id": 100,
+   "debt_problem_id": 64,
+   "nid": "123",
+   "tool_node_id":6,
+   "debt_wrong_venue":"true",
+   "tool_counterclaims":["debt_wrong_venue",”debt_sol”] 
+   }
+
+When a user completes a Landbot tool, an API call is made to an endpoint. At the end of the endpoint:
+
+* If the user is accessing the tool from a step in an option:
+
+  * Updates that option's progress to indicate the tool was completed
+  * Updates the debt and problem profile entity based on any returned data
+  * Replaces the tool_ field that matches the tool on the entity determined by the tool
+  * Reloads the page so that tokens re-evaluate
+  
+* If the user is accessing the tool from a standalone node:
+
+  * Updates all options' progress associated with the debt to indicate the tool was completed
+  * Updates the debt and problem profile entity based on any returned data
+  * Replaces the tool_ field that matches the tool on the entity determined by the tool
+
+  
+
 
 
