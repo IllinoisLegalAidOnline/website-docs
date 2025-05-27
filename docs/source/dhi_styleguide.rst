@@ -15,6 +15,11 @@ Titles
 Description
 =============
 
+Good descriptions are short blurbs that describe accurately the content of the page. They are like a pitch that convince the user that the page is exactly what they’re looking for. They should provide additional “information scent” for the user to decide if this is the help they are looking for. While the content and meta description can be the same, they do not have to be. The meta description is especially important because it, along with the title, may be all the user sees to decide if this is the page they want to go to.
+
+Ideal length is between 100 and 200 characters.
+
+
 
 Headings
 =========
