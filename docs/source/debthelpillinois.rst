@@ -9,6 +9,7 @@ Contents
 .. toctree::
    :maxdepth: 1
 
+   dhi_styleguide
    dhi_core
    dhi_taxonomies
    dhi_content_types
