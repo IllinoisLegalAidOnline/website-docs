@@ -46,12 +46,6 @@ Introduce bullets/numbers with a sentence or fragment followed by a colon.
 * If it starts with a fragment, the items in the list should be fragments, and should complete the sentence.
 * If it starts with a complete sentence, the items can either be fragments or sentences.
 
-Always:
-
-* Capitalize the first word following the bullet point/number.
-* Put a comma at the end of each item, even if there are commas within the item itself.
-* Use "and" or "or" as appropriate at the end of the second-to-last item. Put a period at the end of the last item.
-
 
 * use bullets when
 
@@ -169,6 +163,9 @@ Symbols or emojis can be used sparingly:
 
 * At the beginning of a step in an option
 * At the start of a paragraph to highlight important information
+
+Symbols or emojis should not conflict with other icons or interface elements.
+
 
 
 Grammar and Usage
