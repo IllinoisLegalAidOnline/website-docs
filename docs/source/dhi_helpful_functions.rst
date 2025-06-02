@@ -138,3 +138,72 @@ Get Debt Entity
 
 Url: https://debthelpillinois-3927.twil.io/get-debt-entity?debt_id=1&api_key=[apikey]
 
+Requires:
+
+* API key
+* debt it
+
+
+Returns an object that includes:
+
+* name of the debt (name)
+* amount of the debt
+* creditor name
+* creditor type
+* the term IDs as an array from the field debt metadata.
+* interest rate of the debt
+* is_debt_collector on/off
+* credit_score
+* current_problem - taxonomy term ID for the problem type
+* debt type, as a label
+* city, from the profile
+* county, from the profile
+* the term IDs as an array from the field profile metadata
+* zip code, from the profile
+* debt_problem_id = id of the debt problem tied to the debt
+* problem_profile_id = profile id associated with the debt
+* debt_county = county associated with the debt
+* debt_cook_judicial_distrirct = judicial district identified as First, Second, etc from the debt address
+* profile_cook_judicial_distrirct = judicial district identified as First, Second, etc from the profile address
+
+For each term ID in the field debt metadata and field profile metadata:
+
+* a key that matches the variable name from that Term ID,
+* a value of True
+
+
+.. code-block::
+
+    {
+  "name": "tee",
+  "amount": "",
+  "creditor_name": "LVNV Funding LLC",
+  "creditor_type": "debt_buyer",
+  "field_debt_metadata": [
+    "132271",
+    "132261",
+    "134126"
+  ],
+  "interest_rate": "",
+  "is_debt_collector": "On",
+  "last_payment_date": "",
+  "status": "Enabled",
+  "credit_score": "",
+  "current_problem": "130116",
+  "debt_type": "Credit card debt",
+  "city": "",
+  "county": "",
+  "field_profile_metadata": [
+    "132311"
+  ],
+  "zip_code": "",
+  "debt_problem_id": "1021",
+  "problem_profile_id": "766",
+  "debt_county": "Cook",
+  "debt_cook_judicial_district": "1st",
+  "profile_cook_judicial_district": "",
+  "debt_is_cc_closed": "True",
+  "debt_is_debt_buyer": "True",
+  "debt_is_debt_collector": "True",
+  "profile_military": "True"
+   }
