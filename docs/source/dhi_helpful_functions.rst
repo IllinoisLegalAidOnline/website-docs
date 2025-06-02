@@ -79,6 +79,9 @@ Returns an object that contains:
 * county
 * zip_code
 * zip_code_suffix (where available)
+* latitude
+* longitude
+* district, when the address is in Cook County.
 
 .. code-block::
 
@@ -95,12 +98,8 @@ Get Court Info
 URL: https://debthelpillinois-3927.twil.io/get-court-info
 Parameters: 
 
-Requires name, which must be what the court name starts with. Valid examples include:
-
-* Adams
-* Adams County
-* Adams County Courthouse
-* Cook County: Second
+* name = required, county name
+* district, optional; if name is cook, will return the correct district when present. Will return Daley Center if not provided. **Should be formatted as First, Second, Third, etc.**
 
 Returns an object that contains:
 
