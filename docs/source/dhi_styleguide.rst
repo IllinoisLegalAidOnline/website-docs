@@ -97,30 +97,14 @@ If the word/term needs a definition:
 
 * define it using plain language once in the content, if it is a short definition. If the word/term is used more than once in the content, make sure it is included in the glossary as we will rely on the glossary for the times it is used after it is first defined.
 * consider making it a legal question that can be linked to, if the definition needs to be more than one sentence long. For example, the definition of economic abuse is multiple sentences and includes a bulleted list and is better suited as a legal question that can be linked to in articles rather than defined multiple times in individual guides or solutions.
+* once content is published, check to see if Glossify is defining a term with a non-applicable definition and alter the language to use a different term if possible.
 
 
 Point of view
 =================
-Use 3rd person when giving general information, or when using 2nd person would be confusing or would result in awkward phrasing. Use 2nd person when you are giving the user instructions. Often, an article will start in 3rd person (because it's general information) and then shift into 2nd person when the info becomes more specific and you start giving instructions.
+Use second person ("you") for almost all content, especially when providing information, guidance, or options that users can act on. This helps create a clear, helpful, and direct experience. However, it's acceptable to use third person ("they," "parents," "the applicant") for non-tailored, General Information (non-tailored) Articles when using "you" would be awkward or misleading.
 
-Good example
 
-.. code-block:: html
-
-   When parents live in different states or a child and their parents move from one state
-    to another, there are laws about which state’s courts can decide issues about the
-    custody of the child. [3rd person because it is general info and using 2nd person
-    would be awkward] [a few sentences later...] If jurisdiction is an issue in your
-    case, you should talk to a lawyer. [2nd person because it tells the user to do
-    something]
-
-Bad example
-
-.. code-block:: html
-
-   When you are a parent and you live in a different state as the other parent or your
-   child and you and the other parent move from one state to another, there are laws
-   about which state’s courts can decide issues about the custody of you child....
 
 Formatting
 ===============
