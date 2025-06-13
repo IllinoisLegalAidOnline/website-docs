@@ -16,6 +16,7 @@ Contents
    next_step_flows
    jobs
    events
+   ltf_resources
    about_ilao
    navigation
    site_search
