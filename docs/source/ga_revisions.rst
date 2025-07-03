@@ -24,9 +24,10 @@ Step 1 is to get the actual SME revisions. This query returns the node ID and da
 .. code-block:: sql
 
    SELECT distinct entity_id as nid,
-   field_last_substantive_update_value as sme_review
+   DATE_FORMAT(field_last_substantive_update_value, '%m/%d/%Y %H:%i')
+   as sme_review
    FROM `node_revision__field_last_substantive_update`
-   where langcode = 'en' and bundle = 'legal_content'
+   where langcode = 'en' and bundle = 'legal_content';
 
 
 Create SME revisions where none exist
@@ -49,7 +50,7 @@ Staff revisions are limited to those where the last reviewed by staff date has b
 
 .. code-block:: sql
 
-   SELECT distinct entity_id as node_id, field_last_revised_value as staff_reviewed
+   SELECT distinct entity_id as node_id, DATE_FORMAT(field_last_revised_value, '%m/%d/%Y %H:%i') as staff_reviewed
    FROM `node_revision__field_last_revised`
    where langcode = 'en' and bundle = 'legal_content';
 
