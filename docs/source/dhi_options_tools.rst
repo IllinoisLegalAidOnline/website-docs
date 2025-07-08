@@ -11,7 +11,7 @@ Each tool includes:
   
 * A field name to store profile metadata term references for the tool. Each possible term that the tool can return should be added to the Problem Profile Metadata taxonomy
 * The entity the field should be attached to (debt, debt problem, or problem profile)
-* Three long text fields that are used to determine what displays when the [tool:nid:response] token is used in a step in an option. The three fields are:
+* Three long text fields that are used to determine what displays when the [tools:nid:response] token is used in a step in an option. The three fields are:
 
   * Text when the tool has been completed and there is data. This will appear when the user has completed the tool and there is relevant metadata stored. For example, if someone has completed the collection proof tool and is collection proof, the is_collection_proof metadata will exist.
   * Text when the tool has been completed and there is no data. This will appear when the user has completed the tool but there is no relevant metadata stored. For example, if someone has completed the collection proof tool and is not collection proof, the is_collection_proof metadata will not exist.
@@ -41,9 +41,9 @@ In the option
 -----------------
 
 * Step 1 is set up as "Determine if you have any claims. We can help guide you. [tool:6:embed]"
-* Step 2 is set up as "Having claims you can raise can help you negotiate a better settlement than if you don't have claims. [tool:6:response]"
+* Step 2 is set up as "Having claims you can raise can help you negotiate a better settlement than if you don't have claims. [tools:6:response]"
 
-.. note:: The **[tool:nid:embed]** creates the embed code, passing in required debt entity, profile entity, and debt problem entity ID automatically. The **[tool:nid:response]** is used to evaluate and update narrative based on the user's response.
+.. note:: The **[tools:nid:embed]** creates the embed code, passing in required debt entity, profile entity, and debt problem entity ID automatically. The **[tools:nid:response]** is used to evaluate and update narrative based on the user's response.
 
 
 What the user sees
