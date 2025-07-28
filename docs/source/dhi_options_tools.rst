@@ -23,24 +23,32 @@ Each tool includes:
 Example
 ===========================
 
-For a tool "Claim detector" with a node ID of 6 that is embedded in the first step of "Settle the case"
+For a tool "See if you are collection proof" with a node ID of 6 that is embedded in the first step of "Settle the case"
 
 On the Tool side
 --------------------
 
+.. image:: ../assets/tool-backend.png
+
 In the CMS, the tool is set up as:
 
-* Landbot URL = "someurl.com"
-* Field is tool_claims
-* Field is attached to debt entity
-* Text when the tool has been completed and there is data: "You have identified these potential claims: [current_debt:claims:list]"
-* Text when the tool has been completed and there is no data: "You did not identify any potential claims."
-* Text when the tool has not been completed: "Please complete the previous step before continuing."
+* Landbot URL = "landbot.io"
+* Field is Problem profile: Tools collection proof (which references the tools_collection_proof field attached to the problem_profile)
+* Text when the tool has been completed and there is data: "[current_profile:metadata:profile_collection_proof]"
+* Text when the tool has been completed and there is no data: "You have indicated that you are not collection-proof."
+* Text when the tool has not been completed: "Please complete the tool first, then your results will display here."
+
+When evaluated, the [current_profile:metadata:profile_collection_proof] token will:
+* return "Based on what you told us, you are likely "collection proof." This means that even if a debt collector sues you and wins, they probably can’t take your income or property because it’s protected by law." if true
+* return empty if false
+
+.. image:: ../assets/cptool_taxonomy.png
+
 
 In the option
 -----------------
 
-* Step 1 is set up as "Determine if you have any claims. We can help guide you. [tool:6:embed]"
+* Step 1 is set up as "Determine if you are collection proof. We can help guide you. [tool:6:embed]"
 * Step 2 is set up as "Having claims you can raise can help you negotiate a better settlement than if you don't have claims. [tools:6:response]"
 
 .. note:: The **[tools:nid:embed]** creates the embed code, passing in required debt entity, profile entity, and debt problem entity ID automatically. The **[tools:nid:response]** is used to evaluate and update narrative based on the user's response.
@@ -51,6 +59,8 @@ What the user sees
 
 When the user has not completed the tool:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The user will see the embedded landbot if they have not yet completed the tool.
 
 .. code-block:: html
 
@@ -96,7 +106,7 @@ Sample response:
    "nid": "123",
    "tool_node_id":6,
    "debt_wrong_venue":"true",
-   "tool_counterclaims":["debt_wrong_venue",”debt_sol”] 
+   "tool_counterclaims":["debt_wrong_venue","debt_sol"] 
    }
 
 When a user completes a Landbot tool, an API call is made to an endpoint. At the end of the endpoint:
