@@ -34,7 +34,7 @@ The LTF content type:
   * On which initiative page a resource appears (child terms under Artificial Intelligence Initiative for example show on the AI Initiative page)
   * Which additional resources appear on the resource's page
   
-* Optionally, one or more organizations that recommend ("Liked by") the resource.
+* Optionally, one or more organizations that recommend ("Mentioned by") the resource.
 
 .. image:: ../assets/ltf_add_form.png
 
@@ -72,6 +72,7 @@ For each associated resource, there is a card that includes:
 * Description
 * Category label.
 
+
 Resource pages
 ----------------
 
@@ -86,7 +87,8 @@ Each resource page includes:
 
 * A block of related resources defined as those that share the same category
 * The associated webform block (if applicable)
-* A Liked by block that shows which organizations liked a resource (if applicable)
+* A Mentioned by block that shows which organizations liked a resource (if applicable)
+* A block about the initiative linking to the Add a suggestion form (for POHS and CJI)
 
 
 Landing page
@@ -101,14 +103,41 @@ For initiatives that are accepting suggestions, there is a custom webform that:
 
 * Collects the resource information
 * Is accessible by any LTF grantee
-* Sends an email upon submission to the LTF point of contact to review and add or update an existing resource.
+* When submitted:
+
+  * The system checks for a match on title, website, phone number or email address of the resource
+  * If a match is found, the webform is identified as a duplicate and:
+  
+    * An e-mail is sent to LTF that a potentially duplicate submission was received with a link to the add resource form if LTF wants to add the resource manually. **The content is not created automatically**
+    
+  * If a match is not found:
+  
+    * A new LTF resource is created, mapping the following fields from the webform:
+    
+      * Title
+      * Contact name
+      * Phone number
+      * Email
+      * Website
+      * Resource type
+      * Categories
+      * Mentioned by is updated to include the organization submitting the form
+      
+    * The content is not published by default
+    * An email is sent to LTF with:
+    
+      * A link to edit the newly created content
+      * Instructions to  publish if it is appropriate to publish
+      
+.. note:: The webform does not collect a description or allow file uploads. Those can be added manually when editing the created content.
+
+            
 
 
 Airtable Integration
 =============================
 
-Coming soon! For the AI initiative, resources are managed in an Airtable and imported and updated via API.
-
+For the Artificial Intelligence initiatives, resources are maintained in Airtable and are created and updated nightly over Airtable's API.
 
 
 
