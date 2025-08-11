@@ -4,7 +4,7 @@
 General search configuration
 ==============================
 
-Our site search is managed through `Google's Programmable Search Engine <https://programmablesearchengine.google.com/controlpanel/all>`_. Gwen and Mike have access to the search engines; please see them if you need something done.
+Our site search is managed through `Google's API console <https://console.cloud.google.com/gen-app-builder/engines>`_. Gwen and Mike have access to the search engines; please see them if you need something done.
 
 
 Search Englines
@@ -12,21 +12,9 @@ Search Englines
 
 ILAO has 3 search engines:
 
-* ILAO-EN is used on our English language pages
-* ILAO-PL is used on our Polish language pages
+* ILAO Site search 2025 is used on our English language pages
 * ILAO-ES is used on our Spanish language pages
 
-Search Features
-================
-All search engines are set to:
-
-* Safe search enabled
-* Search the entire web is disabled
-* Ads disabled
-
-Included and excluded URLS
-=============================
-ILAO defines what pages are included on each search engine
 
 English
 ----------
@@ -34,41 +22,22 @@ English
 Includes all pages from www.illinoislegalaid.org except for:
 
 * anything in the /sites/default folder. This typically includes file content and images.
-* share_email page
-* search and search subpages.
-* organization profiles, except for LSHC pages
+* anything in the /proxy path. This excludes IICLE content but not the IICLE landing page
+* anything in the form-library or form-search paths. These are primarily navigation pages that should not be returned
+* Basic pages that are being used to expose guided navigation for translation
+
+The English search results are delivered over an API call. This give us some limited control over the display.
 
 Spanish
 ----------
 
-Includes all pages from www.illinoislegalaid.org/es except for:
+Includes all pages from es.illinoislegalaid.org. Pages that ILAO has not exposed for translation are already excluded.
 
-* anything in the /sites/default folder. This typically includes file content and images.
-* share_email page
-* search and search subpages.
-
-Polish
----------
-
-Includes all pages from www.illinoislegalaid.org/pl except for:
-
-* anything in the /sites/default folder. This typically includes file content and images.
-* share_email page
-* search and search subpages.
-* pages not normally included in our Google search results. This includes:
+The Spanish search is currently delivered via a widget.
 
 
-Look and Feel
-===============
 
-All engines use the same Look and Feel settings:
 
-* Specific language (English, Spanish, or Polish)
-* Two page layout
-* Default theme
-* We customize a series of elements.
-
-.. image:: ../assets/gps-look-feel.png
 
 
 
