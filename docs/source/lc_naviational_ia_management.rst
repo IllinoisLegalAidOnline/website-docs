@@ -41,6 +41,8 @@ See also :ref:`manual_reordering`
 Deleting terms in the taxonomy
 ================================
 
-Only administrators can delete terms. Please reach out to Gwen or Mike to have a term deleted from the system. We need to verify that the term ID is not in use anywhere else on the website.
+Legal content managers should unpublish terms that are no longer needed.
+
+Only administrators can delete terms. Please reach out to Gwen or Mike to have a term deleted from the system once sure it is no longer needed. We need to verify that the term ID is not in use anywhere else on the website.
 
 
