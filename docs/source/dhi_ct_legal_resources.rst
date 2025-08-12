@@ -17,6 +17,9 @@ The legal resource type:
 | Title                | String (short) | Title of the resource                    |
 |                      | Required       |                                          |
 +----------------------+----------------+------------------------------------------+
+| Disambiguation       | String (short) | Used to keep similarly titled content    |
+| Description          |                | organized and findable in the CMS        |
++----------------------+----------------+------------------------------------------+
 | Description          | String (long)  | Description for use in social media and  |
 |                      | Required       | on site listings / search                |
 +----------------------+----------------+------------------------------------------+
@@ -24,8 +27,13 @@ The legal resource type:
 +----------------------+----------------+------------------------------------------+
 | Prompt               | Taxonomy term  | Optional prompt library item             |
 +----------------------+----------------+------------------------------------------+
+| Length: word count   | Number         | Provides guidance to AI in generating    |
+|                      |                | the content                              |
++----------------------+----------------+------------------------------------------+
 | Content generation   | Plain text     | Prompt used to generate AI content       |
 | prompt               |                |                                          |
++----------------------+----------------+------------------------------------------+
+| Generated text       | Plain text     | AI generated content for drafting        |
 +----------------------+----------------+------------------------------------------+
 | Body                 | WYSIWYG        | Freeform text editor field; has unlimited|
 |                      | Requires 1     | cardinality to support breaking segments |
@@ -40,15 +48,6 @@ The legal resource type:
 | General information  | Term reference | Tags legal resource to 0 or more         |
 | categories           |                | general information categories           |
 +----------------------+----------------+------------------------------------------+
-| Required ALL         | Term reference | Term reference to the profile problem    |
-| Metadata             |                | metadata; see metadata below             |
-+----------------------+----------------+------------------------------------------+
-| Required ANY         | Term reference | Term reference to the profile problem    |
-| Metadata             |                | metadata; see metadata below             |
-+----------------------+----------------+------------------------------------------+
-| Match settings       | Plain text;    | Readable summary of the required ALL and |
-|                      | read only      | ANY metadata; see metadata below         |
-+----------------------+----------------+------------------------------------------+
 | Image                | Media (image)  | Adds an image that will be used auto-    |
 |                      | Required       | matically in social media sharing        |
 +----------------------+----------------+------------------------------------------+
@@ -58,6 +57,15 @@ The legal resource type:
 +----------------------+----------------+------------------------------------------+
 | Negate jurisdiction  | Coverage area  | Allows resource to be essentially        |
 |                      | Optional       | untagged to a location                   |
++----------------------+----------------+------------------------------------------+
+| Required ALL         | Term reference | Term reference to the profile problem    |
+| Metadata             |                | metadata; see metadata below             |
++----------------------+----------------+------------------------------------------+
+| Required ANY         | Term reference | Term reference to the profile problem    |
+| Metadata             |                | metadata; see metadata below             |
++----------------------+----------------+------------------------------------------+
+| Match settings       | Plain text;    | Readable summary of the required ALL and |
+|                      | read only      | ANY metadata; see metadata below         |
 +----------------------+----------------+------------------------------------------+
 | External source      | WYSIWYG        | Allows us to record where information    |
 | material             |                | came from                                |
@@ -70,6 +78,10 @@ The legal resource type:
 +----------------------+----------------+------------------------------------------+
 | Relevancy score      | Read only      | Assigns a relevancy score for ordering   |
 |                      |                | legal resources on the debt summmary     |
++----------------------+----------------+------------------------------------------+
+
+These fields appear only when the content format is set to tool:
+
 +----------------------+----------------+------------------------------------------+
 | Landbot url          | Short text     | For tools only, the landbot url to embed |
 +----------------------+----------------+------------------------------------------+
@@ -97,8 +109,8 @@ The currently supported content formats are:
 * Referral, for articles that serve as referrals to legal organizations outside of OTIS
 
 
-Additional fields for tools
-------------------------------
+Tool fields
+==============
 Tools are built in landbot and return metadata that is attached to a specific field. Each tool has additional fields
 
 * Landbot url - The url to embed
