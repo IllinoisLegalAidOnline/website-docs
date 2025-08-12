@@ -1,3 +1,5 @@
+.. _manual_reordering:
+
 ============================
 Legal content reordering
 ============================
@@ -6,8 +8,6 @@ By default, subcategory terms are ordered by weight and cards within subcategori
 
 Ordering terms generally
 ============================
-
-Terms can be ordered generally via `Taxonomy Manager <https://www.illinoislegalaid.org/admin/structure/taxonomy_manager/voc>`_. Because some terms appear in more than one area, it is necessary to manually order by using the Weight field for each term. Terms with lower weights are ordered above higher weights (so a term with -5 will appear higher than a term of 0 which will show higher than a term of 5).
 
 .. note:: Caching may cause changes to not be readily visible to anonymous users. Those may take 24 hours to appear. Reach out to Gwen if you need the changes to be visible sooner.
 
@@ -27,12 +27,10 @@ OR through the Taxonomy Manager
 .. note:: On mobile, only the top subcategory is expanded by default.
 
 
-
 On subcategory pages
 =========================
 
 The ordering on subcategory pages will depend on whether content is tagged to a 3rd level category in that section or not.
-
 
 
 For pages without 3rd level category terms

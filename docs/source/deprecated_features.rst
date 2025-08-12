@@ -4,7 +4,7 @@ Deprecated features
 
 This section includes features that have been recently deprecated, are scheduled to be deprecated, or are approaching end-of-life.
 
-Recently Deprecated
+Deprecated
 =====================
 
 * Drupal 9
@@ -13,18 +13,15 @@ Recently Deprecated
 * Localization tool (for showing/hiding legal content based on location)
 * Toolboxes and related features
 * Comments & ratings (February 2024)
+* Gamification (2024)
+
 
 Scheduled to be deprecated
 ============================
 
-* Gamification features
-* Legal forms content type
-
-
-Approaching end-of-life (expected deprecation and removal in 2024)
-===================================================================
-
+* Automated Law tracker (lc_lawtracker)
 * Site FAQ content type
 * Structured content types
-
+* Translation management custom features
+* CMS notification management 
 

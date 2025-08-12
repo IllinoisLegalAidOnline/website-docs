@@ -11,11 +11,11 @@ Legal content authoring guide
    lc_ckeditor
    lc_by_format
    lc_workflows
-   lc_lawtracker
-   cms_configuration
    lc_manual_ordering
+   lc_naviational_ia_management
    lc_pageviews
    lc_technical
+
 
 
 
