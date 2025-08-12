@@ -9,14 +9,13 @@ Problem type
 
 The problem type taxonomy includes the types of debt problems the site is expecting to solve. The taxonomy is used:
 
-* to provide the front-end filtering question for the type of problem the individual is seeking help for (or thinks they are seeking help for)
+* for use in user debt problem profiles as they identify their debt problems
 * to associate content with specific debt problems
 
 Problem type has:
 
 * Name. This is the label shown to individuals
 * Description. This is a short user-friendly description to help users identify the type of problem they are experiencing or stage of the debt.
-* Debt type. This is a reference to the debt type taxonomy to tie specific debt types to specific problem types. For example, "Trouble paying bills" may cover more debt types than "A judgment has been entered against me"
 
 
 Debt type
@@ -31,12 +30,35 @@ Debt type has:
 
 * Name. This is the label shown to individuals
 * Description. This is a short user-friendly description to help users identify debt types.
+* Plural term. This is used on the debt prioritization page.
 * Main category. This is used to group debts into classes. 
+* Security status. This is used to indicate whether typically the debt is secured, unsecured, or depends on context.
 * Typical priority. This is used to classify debts into High, medium, or low priority for repayment
 * Priority note. This is a text field to allow the prioritization tool to explain why a debt is classified as it is.
-* Security status. This is used to indicate whether typically the debt is secured, unsecured, or depends on context.
+* Priority summary. This is an expanded explanation of the priority note.
+* Content area complete. This is used to control design elements where the debt type is not fully supported yet on the prioritization page
+* Incomplete message. This is text that is used on prioritization cards when the content area is not complete.
+* Redirect path. This is used to create a link to learn more when a debt problem is not complete
+* Website for redirect is either DHI or ILAO.
 
-.. todo:: Determine what type of icon to include with debt type (image or font awesome class)
+
+Problem Profile Metadata
+============================
+
+Problem profile metadata are terms that are attached to debts and profile data to evaluate the appropriatness of an article or option. These are variables that are returned from Landbot. This includes the initial triage landbot, tools, and eligibility questions.
+
+
+Each taxonomy term has:
+
+* A name
+* An optional description
+* A variable name that corresponds to the Landbot variable name. Variables prefixed with debt are tied to the user's debt problem. Variables prexied with profile are tied to the user's problem profile.
+* The variable type (Boolean, String or Number); defaults to Boolean
+* Evaluation function is a text field to input a specific function to evaluate the variable as true or false.
+* Text to use when the condition is true. This is used in tokens when the metadata appears in a user's debt or problem profile.
+* Text to use when the condition is false. This is used in tokens when the metadata does not appear in a user's debt or problem profile.
+
+.. note:: We have not created any functionality that supports the evaluation function piece yet.
 
 General information categories
 =================================
@@ -49,6 +71,16 @@ General information categories have:
 
 * Name. This is the label shown to individuals
 * Description. This is a short user-friendly description to help users identify what types of information may be included in the category.
+
+Glossary
+===========
+
+The glossary taxonomy contains glossary terms.
+
+Each term has:
+
+* A name
+* A description, which serves as the definition
 
 Region
 ========
@@ -70,7 +102,6 @@ The creditor taxonomy is used to maintain an internal listing of known common cr
 * Type (collection agency, debt buyer, law firm, original creditor)
 * Aliases (common misspellings or other variants that may be used to support fuzzy searching)
 
-
 Courts
 ====================
 
@@ -81,27 +112,9 @@ The court information taxonomy is used to store information about the Illinois c
 * Phone number of the court
 * Website url
 * URL of the directory page from the IL court website, which provides better metadata on the Court
-* Typical opening time (in hh:mm a.m)
-* Typical closing time (in hh:mm p.m)
 * Jurisdiction (based on our jurisdiction paragraphs bundle); this then connects to the region taxonomy so that we can tie specific user profiles to their local court automatically
 * District - number of the district the court is in
 * Circuit - the ordinal number of the circuit the court is in, if applicable.
-
-Problem Profile Metadata
-============================
-
-Problem profile metadata are terms that are attached to debts and profile data to evaluate the appropriatness of an article or option. These are variables that are returned from Landbot.
-
-Each taxonomy term has:
-
-* A name
-* An optional description
-* A variable name that corresponds to the Landbot variable name
-* The variable type (Boolean, String or Number); defaults to Boolean
-* Evaluation function is a text field to input a specific function to evaluate the variable as true or false.
-
-.. note:: We have not created any functionality that supports the evaluation function piece yet.
-
 
 Prompt Library
 =================
@@ -123,15 +136,9 @@ Region
 
 This is an import of the IllinoisLegalAid.org region taxonomy that includes state, county, city, and zip code data.
 
-Glossary
-===========
 
-The glossary taxonomy contains glossary terms.
 
-Each term has:
 
-* A name
-* A description, which serves as the definition
 
 
 
