@@ -10,7 +10,10 @@ This core data set can be filtered geographically only down to a region (state) 
    :maxdepth: 1
 
    tab_content_lc_views
+   tab_content_sme_reviews
+   tab_content_staff_revisions
    tab_content_lcv
+   
 
    
 
