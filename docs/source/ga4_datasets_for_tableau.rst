@@ -9,14 +9,13 @@ Tableau integration
 .. toctree::
    :maxdepth: 1
 
+   tableau_ga_core_data
    ga_illinois_set
    ga_full_set
    ga_legacy
    ga_cms_integration
    ga_cms_prep
    ga_revisions
-   tableau_ga_core_data
-   tableau_ga_core_data_illinois
    screaming_frog_links
    sidebar_links
    taxonomy_matches
