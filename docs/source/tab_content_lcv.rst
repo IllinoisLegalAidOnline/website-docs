@@ -2,7 +2,7 @@
 Tableau - LCV program
 =======================
 
-The LCV program report can be found in the "LCV program" tab in the Content Metrics workbook.
+The LCV program report can be found in the `LCV program <https://prod-useast-b.online.tableau.com/#/site/ilaootis/views/contentMetrics/LCVProgram?:iid=2>`_ tab in the Content Metrics workbook.
 
 Prerequisites
 ==============
