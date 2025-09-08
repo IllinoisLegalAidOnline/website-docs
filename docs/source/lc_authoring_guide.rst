@@ -8,6 +8,7 @@ Legal content authoring guide
 
    lc_common_elements
    lc_citations
+   lc_glossary
    lc_ckeditor
    lc_by_format
    lc_workflows
