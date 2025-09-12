@@ -27,30 +27,48 @@ OR through the Taxonomy Manager
 .. note:: On mobile, only the top subcategory is expanded by default.
 
 
-On subcategory pages
-=========================
+Top Level Categories
+===================
 
-The ordering on subcategory pages will depend on whether content is tagged to a 3rd level category in that section or not.
+On top-level category pages like "Family & Safety", the results are ordered by:
+
+* Top content within each subcategory
+* Page views descending
+* Last substantive revision descending
+
+As an example, on Family & Safety, if we we tagged "Random article" and "Random article 2" as the top two articles and the top 4 articles in terms of page views were Getting a divorce, Divorce, Responding to a divorce, and What if I can't find my spouse, viewers would see:
+
+* Random article
+* Random article 2
+* Getting a divorce
+* Divorce
+
+Subcategory pages
+====================
+
+The layout of subcategory pages depends on how the subcategory is configured. 
+
+No Remodeled Content
+-------------------------
+
+A subcategory has no remodeled content when there is no piece of content with a primary level 3 category attached to it. As soon as even one node is tagged with a primary level 3 category, the entire category changes to "Has remodeled content."
+
+All content that has a navigational IA taxonomy term at the 2nd level will appear in that subcategory page **so long as it has not been remodeled.**
+
+The primary level 2 category is used for breadcrumbs, not for navigation.
 
 
-For pages without 3rd level category terms
---------------------------------------------
+Has Remodeled Content
+--------------------------
 
-This is the majority of topics while we work through implementing the new content model. For these pages, the ordering will match how they are ordered on the top category page. 
+When a subcategory has remodeled content:
 
-There is no ability to order differently on the top level and subcategory pages when the subcategory pages do not have 3rd level tags.
+* All content that does not have a defined Primary level 3 category appears at the top without a heading.
+* Content is then displayed grouped by the Primary level 3 category
 
-For pages with 3rd level category terms
-----------------------------------------
+.. note:: While content can be tagged to multiple level 3 categories in the navigational IA field, that will not have any impact on subcategory pages that have been remodeled. For example, Getting child support basics is tagged with a primary level 3 category within the Child support subcategory. It will only appear within that level 3 category on the Child support subcategory page. If it is also tagged to a level 3 category whose parent term has not been remodeled, it will not appear on that page.
 
-For those pages that have 1 or more articles tagged to a 3rd level category term:
 
-* Articles with no 3rd level category term appear at the top
-* Articles with a 3rd level category term are grouped together in the order the 3rd level category terms appear in the navigational IA taxonomy
 
-Articles within a 3rd level category can be ordered independently of the level 2 category display on the top category pages by:
 
-* Using taxonomy manager to navigate to the 3rd level taxonomy term
-* Adding in the relevant top content
 
-.. note:: The top content items must be tagged to the 3rd level taxonomy term in order to appear there. Having an article appear in more than one 3rd level taxonomy is not supported. 
