@@ -14,7 +14,7 @@ Each language can have it's own top content, reflective of different priorities 
 .. note:: Please work with the Legal Content Director on how to prioritize what content to show first. We do not yet have standards developed.
 
 
-Default Ordering
+Top Level Categories
 ===================
 
 On top-level category pages like "Family & Safety", the results are ordered by:
@@ -30,9 +30,32 @@ As an example, on Family & Safety, if we we tagged "Random article" and "Random 
 * Getting a divorce
 * Divorce
 
-On subcategory pages, it follows the same approach, except each section is broken out. For example, on the Divorce subcategory page, in the Forms section, it would show:
+Subcategory pages
+====================
 
-* Divorce (because it was market as top content and is a form)
-* any other divorce forms ordered by page views
+The layout of subcategory pages depends on how the subcategory is configured. 
+
+No Remodeled Content
+-------------------------
+
+A subcategory has no remodeled content when there is no piece of content with a primary level 3 category attached to it. As soon as even one node is tagged with a primary level 3 category, the entire category changes to "Has remodeled content."
+
+All content that has a navigational IA taxonomy term at the 2nd level will appear in that subcategory page **so long as it has not been remodeled.**
+
+The primary level 2 category is used for breadcrumbs, not for navigation.
+
+
+Has Remodeled Content
+--------------------------
+
+When a subcategory has remodeled content:
+
+* All content that does not have a defined Primary level 3 category appears at the top without a heading.
+* Content is then displayed grouped by the Primary level 3 category
+
+.. note:: While content can be tagged to multiple level 3 categories in the navigational IA field, that will not have any impact on subcategory pages that have been remodeled. For example, Getting child support basics is tagged with a primary level 3 category within the Child support subcategory. It will only appear within that level 3 category on the Child support subcategory page. If it is also tagged to a level 3 category whose parent term has not been remodeled, it will not appear on that page.
+
+
+
 
 
