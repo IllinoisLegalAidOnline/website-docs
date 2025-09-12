@@ -30,7 +30,6 @@ For each next step flow, you must:
 
 .. image:: ../assets/nextsteps_header.png
 
-
 Create the first message for a step
 =======================================
 
@@ -38,7 +37,7 @@ Once the Legal How-to is attached, the Step dropdown will populate with the list
 
 .. image:: ../assets/nextsteps_firststep.png
 
-.. note:: The initial message is what a subscriber will recieve when they are initially placed in the step.
+.. note:: The initial message is what a subscriber will receive when they are initially placed in the step.
 
 Creating the initial message
 -------------------------------
@@ -47,9 +46,12 @@ Ideally, messages should be less than 160 characters but can not be more than 16
    * The first step before getting an order of protection is to make sure you are safe? Are you safe? Reply Yes or No.
    * Have you filled out an application for cash assistance (TANF)? Reply No if you have not filled out an application. Reply YES if you have filled it out on paper or Reply ONLINE if you applied online.
 
+.. warning:: Avoid using words inside quotation marks in your messages (e.g., "Yes", "No"). Some carriers flag quoted words as spam, which may prevent delivery. Instead, use plain words without quotes.
+
 The initial message should always use the "Send and wait for reply" option to allow the system to process any received text message. The message should include options of Yes, No, and optionally a unique keyword when Yes and No are not sufficient to route the reply. See the Add replies below.
 
 .. note:: The body (plain text) will automatically populate once the content is saved. This is a system field that will take any HTML included in the body and convert it to text-message friendly format.
+
 
 Select the message type
 --------------------------
