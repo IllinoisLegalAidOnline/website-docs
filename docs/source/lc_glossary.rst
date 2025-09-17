@@ -14,7 +14,11 @@ This module adds links and tooltips to content and:
 To exclude text from being linked to:
 
 * Switch to the source view in the WYSIWYG
-* Wrap the text in <span class="glossify-exclude">TERM</span> tags
+* Wrap the text in the tags below:
+
+.. code:: html
+   
+   <span class="glossify-exclude">TERM</span>
 
 To add or edit glossary terms, edit the `Glossary taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/glossary/overview>`_.
 
