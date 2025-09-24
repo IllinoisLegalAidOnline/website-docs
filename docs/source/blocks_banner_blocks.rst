@@ -12,12 +12,14 @@ Create a new block
 
 To create a heading banner:
 
-* Go to Structure => Block layout => Custom block library
-* Add custom block
+* Go to Content => Blocks -> Add New block
 * Select basic
 * Enter a block description; this is what appears in the block library as the name of the block.
 * Enter the body. Use the styles below to provide the correct styling.
 * **DO NOT** add an image.
+
+**To immediately place: press Save and Configure** and see the next section.
+
 
 
 Place the block on the page
