@@ -1,5 +1,5 @@
 ============================
-Siebar links in metrics
+Sidebar links in metrics
 ============================
 
 Sidebar links are pulled from the website and include links that appear in:
