@@ -44,7 +44,7 @@ The learn more block is populated in one of three ways depending on the page:
 
 * If the page is a Guide, it uses the Learn more articles specific to that Guide
 * If the page is in a single Guide, it uses the Learn more articles specific to that Guide
-* If the page is in multiple Guides, it uses all the learnmroe articles in all of those Guides, with no duplication
+* If the page is in multiple Guides, it uses all the Learn more articles in all of those Guides, with no duplication
 * If the page is not in a Guide, it uses any provided recommendations
 
 Forms block
