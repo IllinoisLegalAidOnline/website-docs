@@ -5,7 +5,7 @@ Legal bundles or Guides
 The Guide is a defined legal content type that must include:
 
 * An overview
-* At least one or more related articles ("Learn more")
+* At least one or more related article or FAQs ("Learn more")
 * At least one or more related how-tos ("Take action")
 
 .. image:: ../assets/cms-bundle.png
@@ -20,8 +20,13 @@ The overview should provide the basic information someone experiencing the legal
 The Learn More section should include links to:
 
 * Text articles
+* FAQs
 * Videos
 * Other content that is not Easy forms or How-to content
+
+.. note:: When Learn more contains a single FAQ, that FAQ's questions will appear on the Guide page. When a Learn More contains multiple FAQs, no individual questions will display.
+
+.. warning:: The recommendations block is ignored on any Guide page.
 
 The Take Action section should include links to:
 
@@ -32,20 +37,7 @@ The Take Action section should include links to:
 
 .. note:: It is preferable to not include forms in the Take Action as the forms block will automatcially populate with the forms but occasionally, the form may be the only take action option.
 
-Titles
-----------
 
-We have gotten away from the style guide on Guide titles. Guide titles should be one of the following:
-
-Understanding [x]
-[x] basics
-
-For example:
-
-Understanding divorce
-Unemployment benefits basics
-Understanding orders of protection
-Eviction basics (Eviction basics for landlords and Understanding eviction as a tenant are also good Guide titles).
 
 Viewing a Guide
 =================
@@ -53,9 +45,7 @@ Viewing a Guide
 In navigation:
 
 * Guides appear based on any custom ordering and page views in the primary category pages.
-* Guides appear under "Learn your rights" on the secondary category pages. They are prioritized first.
-
-Guides are identified on the site with a light blue book icon and Guide label.
+* Guides are identified on the site with a light blue book icon and Guide label.
 
 .. image:: ../assets/guide-label.png
 
