@@ -20,5 +20,6 @@ Contents
    dhi_popupblocks
    dhi_helpful_functions
    dhi_workflow
+   dhi_reusable_steps
 
 
