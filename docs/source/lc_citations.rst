@@ -33,6 +33,5 @@ When legal content has one or more citations listed, the "Supporting law" block 
 .. image:: ../assets/lc-citation-user.png
 
 
-.. note:: Citations will not appear on Spanish or Polish unless the citation has been translated into Spanish or Polish.
 
 

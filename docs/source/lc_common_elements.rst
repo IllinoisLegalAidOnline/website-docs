@@ -62,8 +62,6 @@ Additional Metadata
 Dates
 ==========
 
-On English content
-----------------------
 
 **Last revised by staff** : defaults to the created date/time. When editing content, this should be updated whenever staff user makes a substantive change to the content.
 
@@ -72,29 +70,6 @@ On English content
 
 **last full review by a subject matter expert date/time** When creating content, this will default to the current date/time. The last reviewed date when a subject matter expert has done a substantive review of the content to ensure legal accuracy, even if no changes are made.
 
-On Spanish and Polish content
----------------------------------
-
-Last revised by staff and last full review by a subject matter expert are not available on Spanish/Polish. The website will use the English dates. Instead there are two additional date fields:
-
-* Last translation reviewed by staff can be used to track when a staff member reviews an external translation.
-* Last translation revisio by staff can be used to track when a staff member makes an actual translation change to the content.
-
-Translation Fields
-==========================
-
-On English content
----------------------
-When creating English content, there are no visible translation fields. When editing English content and there is at least one translation:
-
-* There will be a required change type/translation type field. This will help the contet team to prioritize translations.
-
-* There is a required "Mark [language] translation as outdated"
-* There is a notification checkbox that will send an email to the associated translation manager.
-
-.. image:: ../assets/lc_translation_outdated.png
-
-See also the Translation Management section.
 
 Content Management Fields
 ===========================

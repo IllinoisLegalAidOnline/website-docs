@@ -25,7 +25,7 @@ Get Legal Help was built and maintained with the following principles in mind:
 * Legal aid organizations want to say no less often and guiding potential applicants to legal information is a good option when the applicant's case doesn't fit priorities.
 * Maintaining accurate case acceptance and organizational information should be easy to maintain by outside partners and ILAO staff.
 * The process of determining what help is available should be transparent, easy, and provide a positive user experience.
-* Spanish and Polish language users should have the same experience with the system as English speakers/readers.
+* Spanish language users should have the same experience with the system as English speakers/readers.
 * Get Legal Help should be available on the web and over text messaging.
 * Where appropriate, the system should support an ongoing relationship with individuals so that they can retrieve their past applications and referral matches.
 * Sufficient data should be collected to continually improve the referrals provided.
