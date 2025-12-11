@@ -17,3 +17,4 @@ Get Legal Help Technical Specifications
    otis_ai_integration
    otis_content_integration
    sms_superbot
+   otis_data_structures
