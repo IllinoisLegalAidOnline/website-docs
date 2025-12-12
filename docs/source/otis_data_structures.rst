@@ -393,6 +393,159 @@ Qualifiers live in Guided Navigation in LegalServer. They are referenced via the
 | process ID         |                      |                                           |
 +--------------------+----------------------+-------------------------------------------+
 
+Case Acceptance Entities
+==========================
+
+Case acceptance rules are managed through Drupal's webforms module. Submitted webforms represent a specific service's case acceptance. See :ref:`otis-case-webform` for more information.
+
++--------------------+----------------------+-------------------------------------------+
+| Field              | Type                 | Description                               |
++====================+======================+===========================================+
+| ID                 | Auto-generated       |  Webform ID                               |
+|                    | number               |                                           |
++--------------------+----------------------+-------------------------------------------+
+| Title              | Short text           | Title formatted as Case Acceptance - Topic|
++--------------------+----------------------+-------------------------------------------+
+| Status             | Open/Closed          | Indicates whether a webform should accept |
+|                    |                      | new submissions.                          |
++--------------------+----------------------+-------------------------------------------+
+| Service            | Entity reference     | Reference to the service the submission   |
+|                    | Required             | is attached to.                           |
++--------------------+----------------------+-------------------------------------------+
+| Legal issue        | Term reference       | Reference to parent legal issue; all child|
+|                    | to legal issues      | terms will use this form to determine     |
+|                    | taxonomy             | case acceptance for the service           |
++--------------------+----------------------+-------------------------------------------+
+| Outcomes           | Checkboxes;          | Each checkbox corresponds to a specific   |
+|                    | Multiple selection   | outcome from a completed Guided Navigation|
+|                    |                      | process.                                  |
++--------------------+----------------------+-------------------------------------------+
+
+Case acceptance submissions by programs are then used to match outcomes from Guided Navigation to specific services when completed by applicants.
+
+Guided Navigation
+======================
+
+Ask Mike
+
+OTIS Triage User
+==================
+
+The OTIS triage user (aka the OAS triage entity) stores information from a specific intake via OTIS. 
+
+.. note:: ILAO does not keep all relevant data in the OTIS triage user entity. Some information is just passed through to the organization.
+
++--------------------+----------------------+-------------------------------------------+
+| Field              | Type                 | Description                               |
++====================+======================+===========================================+
+| ID                 | Auto-generated       |  Triage ID                                |
+|                    | number               |                                           |
++--------------------+----------------------+-------------------------------------------+
+| User_ID            | Number               | If the user has an ILAO account, their id;|
+|                    |                      | otherwise, 0                              |
++--------------------+----------------------+-------------------------------------------+
+| Status             | Open/Closed          | Indicates whether a webform should accept |
+|                    |                      | new submissions.                          |
++--------------------+----------------------+-------------------------------------------+
+| Created            | Timestamp            | Timestamp of when the record was created  |
++--------------------+----------------------+-------------------------------------------+
+| Changed            | Timestamp            | Timestamp of the last time the record was |
+|                    |                      | changed                                   |
++--------------------+----------------------+-------------------------------------------+
+| Intake_created     | Timestamp            | Timestamp of when intake was started if   |
+|                    |                      | offered                                   |
++--------------------+----------------------+-------------------------------------------+
+| Intake_changed     | Timestamp            | Timestamp of the last time intake was     |
+|                    |                      | changed if started                        |
++--------------------+----------------------+-------------------------------------------+
+| Zip code           | Short text           | Zip code as entered by the applicant      |
++--------------------+----------------------+-------------------------------------------+
+| Household size     | Number               | Total household size                      |
++--------------------+----------------------+-------------------------------------------+
+| Household adults   | Number               | Number of adults in household             |
++--------------------+----------------------+-------------------------------------------+
+| Household children | Number               | Number of children in household           |
++--------------------+----------------------+-------------------------------------------+
+| Overincome         | Yes/No               | Indicates if a person was over-income     |
++--------------------+----------------------+-------------------------------------------+
+| Last screen viewed | Small text           | Tracks which intake form page the user    |
+|                    |                      | last viewed. Allows us to track dropoff   |
++--------------------+----------------------+-------------------------------------------+
+| County             | Small text           | County name                               |
++--------------------+----------------------+-------------------------------------------+
+| State              | Small text           | State name of user's location             |
++--------------------+----------------------+-------------------------------------------+
+| Total income       | Number               | Total income as collected                 |
++--------------------+----------------------+-------------------------------------------+
+| Triage status      | Short text           | One of a set of predefined triage statuses|
+|                    |                      | Includes referrals, self-help, program    |
+|                    |                      | triage completed, legal issue             |
++--------------------+----------------------+-------------------------------------------+
+| Intake status      | Short text           | One of a set of predefined intake statuses|
+|                    |                      | Includes started, diverted, eTransferred, |
+|                    |                      | Bypass, Offered, Overincome               |
++--------------------+----------------------+-------------------------------------------+
+| Intake organization| Entity reference     | Intake settings ID used to match user     |
++--------------------+----------------------+-------------------------------------------+
+| LSC code           | Short text           | Not currently used                        |
++--------------------+----------------------+-------------------------------------------+
+| LSC subcode        | Short text           | Not currently used                        |
++--------------------+----------------------+-------------------------------------------+
+| Referral source    | Short text           | Tracks how user entered system (SMS,      |
+|                    |                      | Fast entry, etc)                          |
++--------------------+----------------------+-------------------------------------------+
+| Gender             | Short text           | Applicant's gender                        |
++--------------------+----------------------+-------------------------------------------+
+| Race               | Short text           | Applicant's race                          |
++--------------------+----------------------+-------------------------------------------+
+| Ethnicity          | Short text           | Applicant's ethnicity                     |
++--------------------+----------------------+-------------------------------------------+
+| Marital status     | Short text           | Applicant's marital status                |
++--------------------+----------------------+-------------------------------------------+
+| Age                | Short text           | Applicant's age                           |
++--------------------+----------------------+-------------------------------------------+
+| Primary language   | Short text           | Applicant's language                      |
++--------------------+----------------------+-------------------------------------------+
+| Country of origin  | Short text           | Applicant's country of origin if provided |
++--------------------+----------------------+-------------------------------------------+
+| Adverse party      | Adverse party entity | First, middle, last name, type, address   |
+|                    | Unlimited            | city, state, zip, business name           |
++--------------------+----------------------+-------------------------------------------+
+| Callbacks selected | Text                 | List of selected callback times           |
++--------------------+----------------------+-------------------------------------------+
+| Email              | Email                | User's email adddress                     |
++--------------------+----------------------+-------------------------------------------+
+| Rejection date     | Date                 | Date application rejected by legal aid    |
++--------------------+----------------------+-------------------------------------------+
+| Populations        | Term reference to    | User-identified special populations       |
+|                    | populations taxonomy |                                           |
++--------------------+----------------------+-------------------------------------------+
+| Guided navigation  | JSON                 | JSON results sent from Legal Server Guided|
+| Profile            |                      | Navigation process                        |
++--------------------+----------------------+-------------------------------------------+
+| Mobile phone       | Telephone            | Mobile number of applicant; required to   |
+|                    |                      | receive text messages                     |
++--------------------+----------------------+-------------------------------------------+
+| SMS Opt In         | Yes/No               | Whether the user has opted in to SMS from |
+|                    |                      | ILAO                                      |
++--------------------+----------------------+-------------------------------------------+
+| Triage search      | Text                 | Any free-form text the user searched on   |
++--------------------+----------------------+-------------------------------------------+
+| Legal issue        | Term reference to    | Lowest level legal issue identified by    |
+|                    | legal issues taxonomy| user                                      |
++--------------------+----------------------+-------------------------------------------+
+| Legal Server UUID  | UUID                 | UUID returned by Legal server during      |
+|                    |                      | eTransfer                                 |
++--------------------+----------------------+-------------------------------------------+
+
+
+.. note:: ILAO collects but does not store date of birth, individual income types and amounts, or uploaded documents.
+
+
+
+
+
+
 
 
 
