@@ -2,6 +2,8 @@
 Get Legal Help Data Structures
 ================================
 
+.. image:: ../assets/otis-entities.png
+
 Organization
 ================
 
