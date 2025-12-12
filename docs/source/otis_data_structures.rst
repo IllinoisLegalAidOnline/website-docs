@@ -426,7 +426,7 @@ Case acceptance submissions by programs are then used to match outcomes from Gui
 Guided Navigation
 ======================
 
-Ask Mike
+Guided Navigation is a feature within LegalServer. ILAO uses it on the statewide instance to create case acceptance triage rules. See :ref:`otis-guided-navigation-label`.
 
 OTIS Triage User
 ==================
