@@ -4,6 +4,8 @@
 Content style guide
 ======================
 
+.. warning:: This may be outdated; please confirm with ILAO's Legal Content Director that this still applies.
+
 Titles
 ============
 Capitalization
