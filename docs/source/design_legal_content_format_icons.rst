@@ -46,7 +46,7 @@ How To
 
 .. image:: ../assets/design-howto.png
 
-Hex color:  #D28B7FF
+Hex color:  #D2B7FF
 
 How to includes legal content containing process steps, toolbox tools.
 
