@@ -2,7 +2,8 @@
 Reusable content library
 ================================
 
-.. note:: Debt Help Illinois uses a reusable content library to allow for reusing steps in options. It is currently being piloted independently of the live content model.
+.. note:: We are in the process of adding a step block field to the Option content type to allow us to build these out after testing. We will then update the front-end view to use this field when populated and over time deprecate the original steps field. We are also working on integrating the Step library with our Airtable integration.
+
 
 The reusable content library allows us to take paragraphs items that normally are limited to the specific node they are included in and re-use them in other nodes (**"Library steps"**).
 
