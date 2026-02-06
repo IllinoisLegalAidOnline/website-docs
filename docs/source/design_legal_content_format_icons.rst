@@ -64,7 +64,7 @@ Easy Form
 
 .. image:: ../assets/design-easyform.png
 
-Hex color: #A2ed87
+Hex color: #A2edB7
 
 .. image:: ../assets/design-easyformlabel.png
 
