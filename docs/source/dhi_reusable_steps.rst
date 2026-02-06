@@ -45,10 +45,13 @@ If the step does not yet exist
 * Add the step title and body
 * Press Save. This will create both the Step and promote it to the library
 
+.. note:: Library items can also be then tagged to specific debt and problem types, to support additional filtering.
+
 .. image:: ../assets/paragraphs-library-add-step.png
 
 If the step already exists
 -----------------------------
+
 * Find the step in an existing Option
 * Press Promote to library. This will convert it to a library item. 
 
@@ -57,7 +60,12 @@ If the step already exists
 Building content that uses library items
 ============================================
 
-When creating an option that uses library steps, the steps layout will have a plus button. Pressing that give the option of selecting an existing library step or creating a new standard step.
+When creating an option, the steps layout will have a plus button. Pressing that give the option of selecting an existing library step or creating a new standard step.
+
+* **Library steps** are shared. Any changes made to a library step are made everywhere it is used.
+* **Standalone steps** are local to the option.
+* A library step can be added to an option, duplicated, and then deleted to create a local instance of that step. Changes made to the local instance are only refected in that instance
+* Standalone steps can be promoted to the libray. Once promoted, any changes are refleced in every instance of that step on the site.
 
 .. image:: ../assets/paragraphs-building-steps.png
 
