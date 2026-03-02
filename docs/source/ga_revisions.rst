@@ -4,13 +4,23 @@ Legal content revisions
 
 For the revisions dashboard, we need to pull historical revision data. This must be pulled directly from a MySQL database instance.
 
-.. note:: Pulling the database requires an Acquia user account with CLI access and a Lando instance with phpMyAdmin installed. To get the database, from the command line:
+.. note:: Pulling the database requires an Acquia user account database access:
 
-   * Ensure that the acli is up-to-date by running acli update
-   * Run acli drush @ilaodrupal8.prod sql-dump > ~/ilaoprodJuly24 changing the file name date based on the current date
-   * Launch lando in the phpmyadmin directory with Lando Start
-   * Open phpMyAdmin and drop any existing Acquia database
-   * From the commandline, run lando mysql acquia < ~/filename
+* Log into Acquia
+* Visit Develop -> ILAODrupal8 -> Production -> Databases
+* Download ilao database
+
+Using a local website running on MAMPPro
+    * Open database in PHPMyadmin
+	* Create a database; set type to "utf8mb4_general_ci"
+	* This is where the database will live
+	* Unzip the downloaded database file
+	* Import the database using the command line (sample script below)
+	
+.. code-block:: json
+
+   /Applications/MAMP/Library/bin/mysql80/bin/mysql -u root -p -h localhost -P 8889 acquia < /Users/gwendaniels/Downloads/prod.sql
+	    
 
 Getting SME revisions
 ========================
