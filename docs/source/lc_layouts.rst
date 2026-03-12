@@ -26,6 +26,30 @@ These are the minimal components on a piece of legal content. See the various fo
 * Forms block
 * Learn more block
 
+Learn More block
+^^^^^^^^^^^^^^^^^^
+
+The learn more block is populated in one of three ways depending on the page:
+
+* If the page is a Guide, it uses the Learn more articles specific to that Guide
+* If the content is in the Learn more or take action of a single Guide, it uses the Learn more articles specific to that Guide
+* If the content is in the Learn more or take action of a single Guide, it uses all the Learn more articles in all of those Guides, with no duplication
+* If the content is not in a Guide, it uses any provided recommendations in the recommendations field.
+
+.. note:: The last case is the only case in which the recommendations field is used.
+
+Forms block
+^^^^^^^^^^^^^
+The forms in the forms block are based on the associated forms block in Guides:
+
+* If the content is a Guide, it shows the associated forms for that Guide
+* If the content is in the Learn more or take action of a single Guide, it shows the associated forms from that Guide
+* If the content is in the Learn more or take action of a single Guide, it uses all the associated forms from all Guides, with no duplication
+* If the content is not in a Guide, there is no forms block.
+
+.. note:: This single Guide and multiple Guide is pending deployment.
+
+
 Above footer region
 ----------------------
 
@@ -37,18 +61,13 @@ Specific content formats
 
 See the :ref:`Authoring` in the authoring guide for layout specifics for each content format.
 
-Learn More block
-====================
 
-The learn more block is populated in one of three ways depending on the page:
 
-* If the page is a Guide, it uses the Learn more articles specific to that Guide
-* If the page is in a single Guide, it uses the Learn more articles specific to that Guide
-* If the page is in multiple Guides, it uses all the Learn more articles in all of those Guides, with no duplication
-* If the page is not in a Guide, it uses any provided recommendations
 
-Forms block
-============
-The forms in the forms block are selected based on a one-to-one match of the Legal issues (not the navigational IA).
+
+
+
+
+
 
 
