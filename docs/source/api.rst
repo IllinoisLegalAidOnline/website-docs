@@ -18,3 +18,4 @@ API functionality requires an OAuth bearer token.  Please contact Gwen Daniels a
    cms_structured_content_api
    iloi_integration
    rss_feeds
+   authentication_api
