@@ -13,8 +13,8 @@ Legal content managers can add taxonomy terms through the `taxonomy interface <h
 For each term added:
 
 * Add the name. This is what appears as the label for the term
-* Add a description. Ideally, this is under 400 characters. This is used for the meta description on the page for SEO and may be displayed to users on top level, 2nd level, and 3rd level landing pages.
-* Add any alternative keywords. These may be used to train AI models. These were previously used for Spanish and site search 
+* Add a description. Ideally, this is under 400 characters. This is displayed to users on top level, 2nd level, and 3rd level landing pages.
+* Add a metadescription. This is plain text only and is used for SEO, search engine snippets, and sharing to social media. This is the description field included in the content's metatag description field.
 * Skip the icon field.
 * Add an image.
 * Optionally, identify the top content to appear on the page. This allows for ordering (see the ordering documentation)
