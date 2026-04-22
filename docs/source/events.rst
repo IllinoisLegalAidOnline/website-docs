@@ -63,8 +63,6 @@ To create an event, a user must:
   * A contact email for credit requests
   * An MCLE deadline
 
-.. todo:: review validation for MCLE
-
 .. image:: ../assets/cms-calendar-mcle2.png
 
 * Optionally, upload 1 or more files that will be attached to the event. Once uploaded, you can add a description that will replace the file name when shown to the user. Multiple files can be added, one at a time.
@@ -73,8 +71,6 @@ To create an event, a user must:
 * Indicate whether registration is required. If registration is required, add the link to register
 
 .. image:: ../assets/cms-calendar-registration2.png
-
-.. todo:: Register or buy tickets should be removed.
 
 * **For staff users only** there is an option to select or upload an image. This is helpful for sharing on social media.
 
