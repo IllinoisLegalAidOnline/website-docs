@@ -10,7 +10,7 @@ The ILAO logo was updated in 2025.
 Blue Hex value: #0079d0
 Gray Hex value: #787878
 
-.. image:: ../assets/ILAO_Logo_Primary Gray Blue_2025.png
+.. image:: ../docs/assets/Newlogo.png
 
 Primary color
 ===============
