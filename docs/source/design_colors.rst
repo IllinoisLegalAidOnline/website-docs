@@ -5,8 +5,12 @@ Colors
 Logo colors
 ==============
 
-Blue Hex value: #40CCFC
-Gray Hex value: #647B7D
+The ILAO logo was updated in 2025.
+
+Blue Hex value: #0079d0
+Gray Hex value: #787878
+
+
 
 Primary color
 ===============
