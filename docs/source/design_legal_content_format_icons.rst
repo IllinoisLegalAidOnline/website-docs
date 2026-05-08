@@ -69,11 +69,6 @@ Blank forms
 
 Hex color: #FFB0E9
 
-
-.. image:: ../assets/design-formdownload-label.png
-
-.. image:: ../assets/design-formlink-label.png
-
 Link
 ======
 
@@ -98,33 +93,11 @@ Hex color: #E2acf4
 
 .. note::  Lawyer manuals are limited to ADRM content. Text articles that are "lawyer manuals" are not considered lawyer manuals for iconography purposes. Those are text articles.
 
-Decision Tree & Flowcharts
-============================
 
-.. image:: ../assets/design-decision-tree.png
-
-Hex color: #Adbaff
-
-.. note:: Decision tree format is limited to legal content that contains the decision tree paragraphs bundle or have a content format of flowchart.
-
-DIY Legal Solution / Teach Me
-===============================
-
-.. image:: ../assets/design-teachme.png
-
-Hex color: #96e6ff
-
-Legal Question
-=================
-
-.. image:: ../assets/legal-question-icon.png
-
-Hex color: #ebdc34
-
-Blog
+FAQs
 ========
 
-.. image:: ../assets/design-blog.png
+.. image:: ../assets/design-faqs.png
 
 Hex color: #FFAB90
 
