@@ -8,7 +8,6 @@ These are used as icons on:
 
 * legal content pages
 * category and subcategory listing pages
-* the blog listing page
 * the form library category and subcategory pages
 * the practice resources category and subcategory pages
 
@@ -20,8 +19,9 @@ These are used as text labels:
   * Guides
   * How-to's
   * Easy Forms
+  * FAQs
   * Blank forms
-  * Flowcharts
+  * Videos
 
 
 Guide
@@ -30,8 +30,6 @@ Guide
 .. image:: ../assets/design-guide.png
 
 Hex color: #A9c3f0
-
-.. image:: ../assets/design-guide-label.png
 
 Text article
 =============
@@ -50,8 +48,6 @@ Hex color:  #D2B7FF
 
 How to includes legal content containing process steps, toolbox tools.
 
-.. image:: ../assets/design-howto-label.png
-
 Video
 ========
 
@@ -65,9 +61,6 @@ Easy Form
 .. image:: ../assets/design-easyform.png
 
 Hex color: #A2edB7
-
-.. image:: ../assets/design-easyformlabel.png
-
 
 Blank forms
 ============
