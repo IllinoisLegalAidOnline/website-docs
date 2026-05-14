@@ -7,7 +7,7 @@ We have 2 primary "standard" layouts - one for content that is included in a Gui
 Guide layout
 ================
 
-This layout applies to the Guide itself and any Learn more, Take action, and Associated forms associated with the Guide.
+This layout applies to the Guide itself and any Learn more, Take Action, and Associated forms associated with the Guide.
 
 Main content area
 --------------------
@@ -26,10 +26,10 @@ These are the minimal components on a piece of legal content. See the various fo
 * Get legal help application block
 * Sponsored by block(s), when the content is tagged to a sponsored library section
 * Learn more block
-* Take action block
+* Take Action block
 * Forms block
 
-.. note:: Updates to the Forms block and Take action blocks to match the description below are in development. Forms is in Sprint 176 and Take action will be in Sprint 177.
+.. note:: Updates to the Forms block and Take Action blocks to match the description below are in development. Forms is in Sprint 176 and Take Action will be in Sprint 177.
 
 Learn More block
 ^^^^^^^^^^^^^^^^^^
@@ -37,8 +37,8 @@ Learn More block
 The learn more block is populated in one of three ways depending on the page:
 
 * If the page is a Guide, it uses the Learn more articles specific to that Guide
-* If the content is in the Learn more or take action of a single Guide, it uses the Learn more articles specific to that Guide
-* If the content is in the Learn more or take action of a single Guide, it uses all the Learn more articles in all of those Guides, with no duplication
+* If the content is in the Learn more or Take Action of a single Guide, it uses the Learn more articles specific to that Guide
+* If the content is in the Learn more or Take Action of a single Guide, it uses all the Learn more articles in all of those Guides, with no duplication
 
 
 Forms block
@@ -46,8 +46,8 @@ Forms block
 The forms in the forms block are based on the associated forms block in Guides:
 
 * If the content is a Guide, it shows the associated forms for that Guide
-* If the content is in the Learn more or take action of a single Guide, it shows the associated forms from that Guide
-* If the content is in the Learn more or take action of multiple Guides, it uses all the associated forms from all Guides, with no duplication
+* If the content is in the Learn more or Take Action of a single Guide, it shows the associated forms from that Guide
+* If the content is in the Learn more or Take Action of multiple Guides, it uses all the associated forms from all Guides, with no duplication
 
 
 Take Action block
@@ -55,9 +55,9 @@ Take Action block
 
 The Take Action blocks shows content from the Take Action field in Guides:
 
-* If the content is a Guide, it shows the Take action for that Guide
-* If the content is in the Learn more or take action of a single Guide, it shows the Take Action from that Guide
-* If the content is in the Learn more or take action of more than one Guide, it uses all the associated forms from all Guides, with no duplication
+* If the content is a Guide, it shows the Take Action for that Guide
+* If the content is in the Learn more or Take Action of a single Guide, it shows the Take Action from that Guide
+* If the content is in the Learn more or Take Action of more than one Guide, it uses all the associated forms from all Guides, with no duplication
 
 Above footer region
 ----------------------
