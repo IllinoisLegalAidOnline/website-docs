@@ -40,7 +40,6 @@ Synonyms
 
 Because Google Vertex AI doesn't offer the same level of semantic understanding and stemming that Google site search does (and Google custom site search was deprecated), we have built the ability to create synonyms within the website.
 
-.. warning:: As of March 30, the synonyms are added to the search instance but not enabled. To enable, please ask Gwen or Mike. Gwen has a ticket in the backlog to address this issue.
 
 Adding a synonym
 ------------------
