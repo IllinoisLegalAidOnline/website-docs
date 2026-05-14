@@ -27,13 +27,14 @@ Anyone can view an events.
 Adding an event
 =====================
 
+Events added by an individual can only be edited by that individual or ILAO.
+
 To create an event, a user must:
 
 * Add a title (name of the event)
 * Add the event's start and ending date/time
 * Optionally, add a sponsoring organization. This is a text field.
 
-.. note:: In earlier versions of the website, events were tied to organizations with inherited permissions and a separate set of fields had to be used for independent events. Starting in 2020, events are associated with individuals and not tied directly to any organization-based permissions.
 
 .. image::  ../assets/cms-calendar-top.png
 
@@ -67,8 +68,8 @@ To create an event, a user must:
 
 * Optionally, upload 1 or more files that will be attached to the event. Once uploaded, you can add a description that will replace the file name when shown to the user. Multiple files can be added, one at a time.
 
-* Indicate if the user is registering or buying a ticket. This is no longer used on the front end and will be removed in the future.
-* Indicate whether registration is required. If registration is required, add the link to register
+* Indicate if the user is registering or buying a ticket. 
+* If registration or tickets are required, add the link to register.
 
 .. image:: ../assets/cms-calendar-registration2.png
 
@@ -76,6 +77,5 @@ To create an event, a user must:
 
 * Select one or more legal issue topic related to the event. Events can be tagged to top level terms.
 
-.. todo:: Evaluate front-end when lower-level terms selected.
 
 
