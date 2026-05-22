@@ -4,7 +4,6 @@ Contact Us
 
 The `Contact Us page <https://www.illinoislegalaid.org/contact-us>`_ allows visitors to reach ILAO staff with questions, feedback, and general inquiries.
 
-ILAO is an online nonprofit that provides clear, easy-to-understand legal information and forms for civil legal issues in Illinois. ILAO does not provide direct legal representation.
 
 Before contacting ILAO
 =======================
@@ -18,7 +17,7 @@ The page directs visitors with specific needs to other resources before submitti
 Contact form
 =============
 
-The contact form is a Drupal webform with the following fields:
+The contact form is a Drupal form that integrates with Zendesk with the following fields:
 
 * Name
 * Email
@@ -42,6 +41,4 @@ The dropdown includes:
 Submission routing
 ===================
 
-Submissions are routed by category to the appropriate ILAO staff member or team inbox.
-
-.. todo:: Document specific routing destinations per contact category.
+Submissions are sent to ILAO's Zendesk account for processing.
