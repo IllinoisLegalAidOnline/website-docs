@@ -29,14 +29,14 @@ Guide
 
 .. image:: ../assets/design-guide.png
 
-Hex color: #A9c3f0
+Hex color: #A9C3F0
 
 Text article
 =============
 
 .. image:: ../assets/design-textarticle.png
 
-Hex color:  #FFd097
+Hex color:  #FFD097
 
 
 How To
@@ -53,14 +53,14 @@ Video
 
 .. image:: ../assets/design-video.png
 
-Hex color:  #E4e07f
+Hex color:  #E4E07F
 
 Easy Form
 ============
 
 .. image:: ../assets/design-easyform.png
 
-Hex color: #A2edB7
+Hex color: #A2EDB7
 
 Blank forms
 ============
@@ -82,14 +82,14 @@ Download
 
 .. image:: ../assets/design-download.png
 
-Hex color: #F29f9f
+Hex color: #F29F9F
 
 Lawyer Manual
 ===============
 
 .. image:: ../assets/design-manual.png
 
-Hex color: #E2acf4
+Hex color: #E2ACF4
 
 .. note::  Lawyer manuals are limited to ADRM content. Text articles that are "lawyer manuals" are not considered lawyer manuals for iconography purposes. Those are text articles.
 
@@ -113,7 +113,7 @@ Toolbox
 
 .. image:: ../assets/design-toolbox-icon.png
 
-Hex color :#96e6dd
+Hex color :#96E6DD
 
 
 
