@@ -19,5 +19,6 @@ Tableau integration
    screaming_frog_links
    sidebar_links
    taxonomy_matches
+   paths
 
 
