@@ -1,0 +1,27 @@
+Based on the platform flow you've described, here are some notifications that could add real value:
+
+**Option engagement**
+
+The active option reminder covers inactivity, but there's a gap at the other end of the journey. A **completion congratulation** when a user finishes all steps in an option would give a sense of closure and could prompt them to revisit the triage tool if they have other debt problems. Similarly, a **"you have unfinished steps"** nudge — distinct from the active option reminder — could target users who have started steps within an option but stalled partway through, rather than just users who haven't logged in.
+
+**"Maybe" follow-up**
+
+Users who mark an option as "maybe" have shown interest but not committed. A timed nudge after a week or two asking them to revisit and make a decision could help move them forward. This is a softer touch than the active option reminder — more "still thinking about it?" than "don't lose your progress."
+
+**Triage completion without action**
+
+If a user completes the triage tool but doesn't mark any option as "yes" or "maybe," that's a drop-off worth addressing. A short notification encouraging them to go back and look at their options — or reassuring them that they can take their time — could re-engage users who felt overwhelmed.
+
+**Feedback request**
+
+After a user marks an option as complete, a notification asking how it went ("Did this work out for you?") would be valuable both for the user (feeling supported through the end of the process) and for ILAO (understanding which options are actually effective).
+
+**Content updates**
+
+If the legal content or resources tied to an option a user has marked "yes" or is actively working through gets updated — especially if laws or procedures change — a notification flagging that there's new information relevant to their situation could be important. Debt law changes frequently enough that this could matter.
+
+**Time-sensitive debt situations**
+
+If the triage tool captures information about the type of debt or whether it's in collections or judgment, statute of limitations reminders or court-related deadline nudges could be genuinely high-impact — those are the cases where missing a deadline has serious consequences.
+
+The ones I'd prioritize first are the completion congratulation, the "maybe" follow-up, and the feedback request — they're the most straightforward to build on the existing infrastructure and fill obvious gaps in the current user journey.

@@ -77,7 +77,26 @@ Deleting a synonym set
 ------------------------
 To remove an entire synonym term, delete the term. That will remove it from the Google configuration.
   
-  
+Forced Re-crawls
+==================
+ 
+Google Vertex will update based on Google's crawling patterns. If there is a need to push changes sooner, staff can submit those changes thorugh the `site re-crawl<https://www.illinoislegalaid.org/admin/site-search-crawl>_ tool.
+
+.. note:: The tool clears each night. If you are adding a URL and there are already URLs listed, add yours after. 
+
+To add one or more URLs:
+
+* First, select the language. Spanish uses a different search datastore than English.
+* Add the URLs you want Google Vertex to recrawl. Any previously submitted URLs that have not been processed will appear.
+* Submit the form.
+* Wait. The queue runs once a night due to Google API limits. Recrawls may take 24-48 hours to be effective.
+
+You can clear the queue entirely by leaving the URL field empty. This will remove anything that has been previously queued.
+
+.. image:: ../assets/search-recrawl.png
+
+
+
 
 
 
