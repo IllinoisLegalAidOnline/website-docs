@@ -82,7 +82,12 @@ Forced Re-crawls
  
 Google Vertex will update based on Google's crawling patterns. If there is a need to push changes sooner, staff can submit those changes thorugh the `site re-crawl <https://www.illinoislegalaid.org/admin/site-search-crawl>`_ tool.
 
-.. note:: The tool clears each night. If you are adding a URL and there are already URLs listed, add yours after. 
+This tool can be used to:
+* Remove pages that have been redirected with a status code of 301. Once recrawled, Google Vertex will remove the page(s) from the website.
+* Crawl new pages that are not showing up
+* Re-crawl pages with significant changes.
+
+.. note:: The tool clears each night. If you are adding a URL and there are already URLs listed, add yours after. You must do urls for both Spanish and English separately. 
 
 To add one or more URLs:
 
