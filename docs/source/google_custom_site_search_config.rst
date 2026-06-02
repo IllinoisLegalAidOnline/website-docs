@@ -80,7 +80,7 @@ To remove an entire synonym term, delete the term. That will remove it from the 
 Forced Re-crawls
 ==================
  
-Google Vertex will update based on Google's crawling patterns. If there is a need to push changes sooner, staff can submit those changes thorugh the `site re-crawl<https://www.illinoislegalaid.org/admin/site-search-crawl>_ tool.
+Google Vertex will update based on Google's crawling patterns. If there is a need to push changes sooner, staff can submit those changes thorugh the `site re-crawl <https://www.illinoislegalaid.org/admin/site-search-crawl>`_ tool.
 
 .. note:: The tool clears each night. If you are adding a URL and there are already URLs listed, add yours after. 
 
