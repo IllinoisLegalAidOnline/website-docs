@@ -1,27 +1,11 @@
 =========================
-Staff, Board & YPB pages
+Our Team pages
 =========================
 
 Staff
 ========
-The Staff page lists each staff member. Each staff member is added using a separate portal layout side-by-side component.
 
-.. image:: ../assets/staff-portal-components.png
-
-Staff are ordered with the Executive Director listed first, then alphabetical. In the summer, a media + text block is added to list all of our interns and fellows at the bottom.
-
-
-Each portal layout side-by-sider and should adhere to this style:
-
-* Image; if no image has been provided, use the people placeholder image. If an image is provided and is large, it should be resized to 300 pixels wide.
-* Name in the heading field
-* Next line is their job title, italicized
-* Biography in the body field
-
-.. image:: ../assets/staff-component.png
-
-
-If one needs to insert a new board member, they may need to edit the portal layout side-by-side under the new board member to change the image location to preserve the alternating left/right layout.
+Each team within ILAO has its own portal side-by-side layout. With the exception of the administrative team, only first names and title are displayed.
 
 
 Board
@@ -42,7 +26,27 @@ Each portal layout side-by-sider and should adhere to this style:
 
 If one needs to insert a new board member, they may need to edit the portal layout side-by-side under the new board member to change the image location to preserve the alternating left/right layout.
 
+
+.. image:: ../assets/staff-component.png
+
 YPB
 ========
 
 The Young Professionals Board page lists the name and role of each member in a single text block. This can be edited by anyone on the staff.
+
+Our Partners
+================
+
+This is just a basic page with a media and text block that contains information on:
+
+* Legal self-help centers
+* Community engagement partners
+* Website stakeholder committee
+* OTIS partners
+
+
+Volunteer opportunities at ILAO
+==================================
+
+This is just a block on the our-people page that links to two distinct pages - one for law student interns and fellows and one for our legal content volunteer program. 
+
