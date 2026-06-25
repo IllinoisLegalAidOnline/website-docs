@@ -6,7 +6,7 @@ Pageviews is the default sort order for legal content.
 
 Updating the page views is a multi-step process:
 
-* Pull pageviews from Google Analytics
+* Pull pageviews from Google Analytics using https://ga-dev-tools.google/ga4/query-explorer/ 
 * Pull node ID/UUID data from the CMS
 * Pull the legal content report from the CMS
 * Run these 3 files through the Tableau GA-pageviews-import to create a single CSV file
@@ -44,7 +44,7 @@ Combine the data
 
 The resulting CSV to import should look like:
 
-.. image:: ..assets/pageview-flow.png
+.. image:: ../assets/pageview-flow.png
 
 Upload the CSV
 =================
