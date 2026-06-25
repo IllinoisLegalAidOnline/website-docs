@@ -16,16 +16,16 @@ Updating the page views is a multi-step process:
 Pull Pageviews from Google Analytics
 =====================================
 
+.. note:: Download the JSON and then Gwen strips out the headers and totals (at the bottom) to create a single JSON array. Then run it through https://konklone.io/json/ to create a CSV file.
+
 .. image:: ../assets/ga-for-pageviews.png
 
 Pull CMS data
 ================
 
-There are 2 reports that need to be run and exported to CSV to update the page views from the CMS:
 
 * Download the Legal Content UUID report as a CSV file. This includes all published legal content node IDs, their unique UUID, and page path. This report can be found at https://www.illinoislegalaid.org/admin/legal-content-uuid
 
-* Download the full Find Legal Content report
 
 Combine the data
 ===================
@@ -49,8 +49,8 @@ The resulting CSV to import should look like:
 Upload the CSV
 =================
 
-The file should be uploaded to the google-analytics-pageviews path.
+The file should be uploaded to https://www.illinoislegalaid.org/google-analytics-pageviews path.
 
-.. note:: Once imported, this will set up the queue manager to update page views on a scheduled basis. It may take time for this to take effect. If you need a more immediate run, please reach out to Gwen or Mike.
+.. note:: Once imported, this will set up the `queue manager <https://www.illinoislegalaid.org/admin/config/system/queue-ui>`_ to update page views on a scheduled basis. It may take time for this to take effect. If you need a more immediate run, please reach out to Gwen or Mike.
 
 
