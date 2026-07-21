@@ -10,6 +10,7 @@ Content of type "LTF resources" are accessible based on two roles:
 
 * LTF Grantee has the ability to view any LTF resources. Registered users with an email domain that is on LTF's grantee list are automatically given this role except for law school clinics. Because law school clinics have a university domain, ILAO must assign the role to those individuals manually.
 
+.. note:: LTF expanded access and anyone with the pro bono or legal aid role has access to the resources.
 
 Content type
 ================
