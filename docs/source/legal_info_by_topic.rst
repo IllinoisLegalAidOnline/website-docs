@@ -17,9 +17,8 @@ The primary way our legal information is displayed to websites users is by topic
 * Estates & Powers of Attorney
 * Law Practice (legal professional resources)
 
-From the home page, five topics display, ordered by the navigational IA row weight.
+From the home page, five level 2 categories display, ordered by the navigational IA row weight.
 
-The general structure of the content navigation is:
 
 
 .. note:: Legal content is tagged to 2 different taxonomies. Navigational IA drives the browsing content; the legal issues IA powers Get Legal Help.
