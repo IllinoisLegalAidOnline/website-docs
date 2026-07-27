@@ -3,7 +3,7 @@ Translation Management
 =============================
 
 
-Since March 2025, IllinoisLegalAid.org uses Motionpoint to manage translation on the website. Do not use any native Drupal translation features.
+IllinoisLegalAid.org and DebtHelpIllinois.org use Motionpoint to manage translation on the website. Do not use any native Drupal translation features.
 
 .. toctree::
    :maxdepth: 2
@@ -12,4 +12,5 @@ Since March 2025, IllinoisLegalAid.org uses Motionpoint to manage translation on
 
    translation_motionpoint
    otis_sms_translations
+
 

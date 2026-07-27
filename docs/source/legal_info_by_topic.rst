@@ -14,14 +14,44 @@ The primary way our legal information is displayed to websites users is by topic
 * Voting & Civil Rights
 * Crime & Traffic
 * Court & Hearings
+* Estates & Powers of Attorney
+* Law Practice (legal professional resources)
 
 From the home page, five topics display, ordered by the navigational IA row weight.
 
+The general structure of the content navigation is:
+
+
 .. note:: Legal content is tagged to 2 different taxonomies. Navigational IA drives the browsing content; the legal issues IA powers Get Legal Help.
 
-The main landing page for each of the 9 top-level categories shows all of the second level terms with the top 4 articles in each level 2 category. 
+Category Page Hierarchy
+=======================
 
-Clicking on the "View all" when there are more than 4 items will open the subcategory page. This page shows an image, the category title and description and then all of the various pieces of legal content organized by level 3 category.
+Level 1: Top-Level Category Landing Page
+-----------------------------------------
+
+Displays all Level 2 terms, each showing its top 4 articles.
+
+Level 2: Subcategory Page
+--------------------------
+
+Accessed by clicking **View all** (appears when a Level 2 category has more than 4 items).
+
+Contains:
+
+- Category image
+- Category title and description
+- All legal content, organized by Level 3 category
+
+Level 3: Term Page
+-------------------
+
+Accessed by clicking a Level 3 category title or its **View all** link. 
+
+- Category image
+- Category title and description
+- Lists all content within that Level 3 term.
+
 
 See :ref:`manual_reordering`.
 
