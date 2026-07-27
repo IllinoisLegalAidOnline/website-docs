@@ -2,6 +2,9 @@
 Glossary / Glossify
 ==========================
 
+.. note:: In general practice, we are not using Glossify in new legal content or when revising existing content due to translation and usability issues on IllinoisLegalAid.org. It is used on DebtHelpIllinois.org
+
+
 ILAO uses the Glossify module to add glossary terms to content.
 
 This module adds links and tooltips to content and:
@@ -11,7 +14,12 @@ This module adds links and tooltips to content and:
 * Uses the Glossary taxonomy to identify glossary terms
 
 
-To exclude text from being linked to:
+To exclude text from being linked to
+=======================================
+
+Option 1: Set the text format for an entire section to "Full text without Glossify." This will prevent glossify from being applied to the entire block of text.
+
+Option 2: Exclude a specific segment
 
 * Switch to the source view in the WYSIWYG
 * Wrap the text in the tags below:
@@ -20,8 +28,9 @@ To exclude text from being linked to:
    
    <span class="glossify-exclude">TERM</span>
 
-To add or edit glossary terms, edit the `Glossary taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/glossary/overview>`_.
+.. note:: 
+   To add or edit glossary terms, edit the `Glossary taxonomy <https://www.illinoislegalaid.org/admin/structure/taxonomy/manage/glossary/overview>`_.
 
-.. note:: The glossary taxonomy has not been actively used in a long time. The Spanish terms can likely be deleted as those are managed via Motionpoint translation. The glossary linked to on the menu is a basic page that was created to have a link to a glossary and the two may be out of sync. We need to replace this page with a Glossary view in the future.
+
 
 
