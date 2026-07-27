@@ -18,23 +18,25 @@ Published - This is the live version on the website. Anyone can view published v
 
 "Unpublished" states
 ---------------------------
-* **Unpublished.** This is the default unpublished state.
 
-* **Archived.** This is a workflow similar to "Unpublished" but is used to indicate that we do not intend to bring the content back on the site and expect to ultimately delete it.
+Unpublishing content
+^^^^^^^^^^^^^^^^^^^^^^^
+Legal content that is unpublished:
+* Is not visible to website visitors*
+* Indicates that we may or may not publish the content again
+* Should have the last revised by staff date updated when the content is published
+* Will be automatically deleted 1 year from the date of last revised by staff.
 
+.. warning:: If the last revised by staff date is not changed when the content is unpublished, it may be deleted sooner than 1 year after being unpublished.
 
-Unpublishing
-======================
+Archived content
+^^^^^^^^^^^^^^^^^^^
+This is a workflow similar to "Unpublished" but is used to indicate that we do not intend to bring the content back on the site and expect to ultimately delete it.
 
-Selecting the unpublished state will unpublish the content for the language currently being edited. For example, if I unpublish or archive from the English edit form, the English translation will be unpublished. Spanish and Polish will still be published.
+* Should have the last revised by staff date updated when the content is published
+* Will be automatically deleted 60 days from the date of last revised by staff.
 
-Viewing the English edit form will show a current moderation state of "Unpublished" but Spanish and Polish will show "Published."
-
-.. warning:: To unpublish the content completely, you must go to the translate tab to edit and unpublish Spanish and Polish translations individually. This applies to both the "Unpublished" and "Archived" states.
-
-.. image:: ../assets/cms-english-unpublished.png
-
-
+.. warning:: If the last revised by staff date is not changed when the content is archived, it may be deleted sooner than 60 days after being archived.
 
 Permissions
 ==============
@@ -48,10 +50,5 @@ Permissions
 * Staff, interns, and subject matter experts can edit legal content. Subject matter experts can only move content from Published to Draft/Revise and Ready to Review states.
 
 
-A note about redirects
------------------------
 
-Redirects from a path alias will only redirect that path alias (so a url of /legal-information/english-title to /node/1 will only redirect the English title but will not impact /es/legal-information/spanish-title).
-
-A redirect from /node/2 to /node/1 will redirect for all languages.
 
