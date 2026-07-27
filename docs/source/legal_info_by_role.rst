@@ -18,7 +18,7 @@ We can also provide legal information targeted to specific user populations, bas
 
 Individual pieces of legal content can now be tagged to one of these populations and will then be available in the resources tab under a "I am ..." with the taxonomy terms listed.
 
-.. note:: It is not necessary to tag every piece of content to user types. These should be used when the article is particularly tailored for that population or especially relevant. Specifically tailored are more likely to be blog posts, videos, or text articles. Especially relevant are more likely to be guides and legal problems.
+.. note:: It is not necessary to tag every piece of content to user types. These should be used when the article is particularly tailored for that population or especially relevant. 
 
 Sample page (mobile view)
 ===========================
