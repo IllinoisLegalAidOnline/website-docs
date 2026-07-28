@@ -6,7 +6,7 @@ Get Legal Help Technical Specifications
    :maxdepth: 2
    :caption: Contents:
 
-   supported_integrations
+   glh_support_integrations
    otis_tech_guided_navigation
    otis_tech_guided_navigation_api
    otis_tech_guided_navigation_forms
