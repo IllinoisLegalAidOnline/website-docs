@@ -20,7 +20,6 @@ The primary way our legal information is displayed to websites users is by topic
 From the home page, five level 2 categories display, ordered by the navigational IA row weight.
 
 
-
 .. note:: Legal content is tagged to 2 different taxonomies. Navigational IA drives the browsing content; the legal issues IA powers Get Legal Help.
 
 Category Page Hierarchy
