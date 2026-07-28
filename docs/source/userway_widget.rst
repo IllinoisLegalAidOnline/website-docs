@@ -2,6 +2,8 @@
 UserWay Accessibility Widget
 ==============================
 
+.. note:: Individuals must enable the widget in their account profile. It is not available to anonymous users given that it may cause compatibility issues with screen readers.
+
 On all of the website pages (front and back end), we have the UserWay accessibility widget installed.
 
 .. image:: ../assets/userway_widget.png
