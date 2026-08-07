@@ -10,6 +10,7 @@ Contents
    :maxdepth: 1
 
    dhi_styleguide
+   dhi_designguide
    dhi_core
    dhi_taxonomies
    dhi_content_types
