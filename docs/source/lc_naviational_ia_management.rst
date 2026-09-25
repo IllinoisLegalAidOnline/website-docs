@@ -45,4 +45,21 @@ Legal content managers should unpublish terms that are no longer needed.
 
 Only administrators can delete terms. Please reach out to Gwen or Mike to have a term deleted from the system once sure it is no longer needed. We need to verify that the term ID is not in use anywhere else on the website.
 
+Redirecting the matching legal issues term
+============================================
 
+Breadcrumbs on legal content link to the legal issues taxonomy term (``/legal-issues/[term]``) instead of the navigational IA landing page by default. When a new navigational IA term is added that has a matching legal issues term, add a URL redirect so the breadcrumb link resolves correctly:
+
+* Go to `URL redirects <https://www.illinoislegalaid.org/admin/config/search/redirect>`_ and click Add redirect
+* **From:** ``/taxonomy/term/[legal issues term ID]``
+* **To:** ``/legal-information/[navigational IA term path]``
+* The legal issues term should remain published; it is still used by Get Legal Help
+
+.. admonition:: Example
+
+   * **From:** ``/taxonomy/term/542336``
+   * **To:** ``/legal-information/estates-powers-attorney``
+
+.. note:: Pages are cached by Varnish and Cloudflare for up to 24 hours. The
+   redirect may not appear for anonymous users until the cache expires or is purged.
+   A working redirect returns an ``x-redirect-id`` response header.
