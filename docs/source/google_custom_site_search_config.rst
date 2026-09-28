@@ -84,11 +84,13 @@ Google Vertex will update based on Google's crawling patterns. If there is a nee
 
 This tool can be used to:
 
-* Remove pages that have been redirected with a status code of 301. Once recrawled, Google Vertex will remove the page(s) from the website.
 * Crawl new pages that are not showing up
 * Re-crawl pages with significant changes.
+* Remove pages that now go to a 404 page not found.
 
-.. note:: The tool clears each night. If you are adding a URL and there are already URLs listed, add yours after. You must do urls for both Spanish and English separately. 
+.. warning:: The tool clears each night. If you are adding a URL and there are already URLs listed, add yours after. You must do urls for both Spanish and English separately. 
+
+.. note:: 301 redirects are not automatically removed from the Google vertex search. Google will only remove 40x and 50x paths. Reach out to Gwen or Mike with a list of redirected urls.
 
 To add one or more URLs:
 
